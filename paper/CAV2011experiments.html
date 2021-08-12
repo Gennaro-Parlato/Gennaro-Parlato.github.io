@@ -1,0 +1,564 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- saved from url=(0067)http://www.southampton.ac.uk/~gp1y10/papers/CAV2011experiments.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+  
+ 
+  
+  
+  
+  <title>Getting Rid of Store-Buffers in the Analysis of Weak Memory Models</title>
+  
+
+
+ 
+  
+  
+  <meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)">
+
+
+ 
+  
+  
+  <meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)">
+<!-- html -->
+
+ 
+ 
+  
+  
+  <meta name="src" content="cav11.tex">
+
+
+ 
+  
+  
+  <meta name="date" content="2011-03-10 22:32:00">
+
+
+ 
+  
+  
+  <link rel="stylesheet" type="text/css" href="./CAV2011experiments_files/cav11.css">
+</head>
+
+
+<body data-new-gr-c-s-check-loaded="14.1026.0" data-gr-ext-installed="">
+
+
+
+   
+<div class="maketitle">
+<div style="text-align: center;">
+                                                                  
+
+                                                                  
+                                                                  
+
+                                                                  
+
+</div>
+<h2>Getting Rid of Store-Buffers in the Analysis of
+Weak Memory Models</h2>
+
+
+
+ 
+
+
+
+
+
+   </div>
+
+
+
+   
+<h3 class="likesectionHead"><a id="x1-1000"></a>Experimental results:</h3>
+
+
+
+<p class="noindent">We have considered 4 mutual exclusion protocols: <a href="http://en.wikipedia.org/wiki/Dekker%27s_algorithm">Dekker</a>’s, <a href="http://en.wikipedia.org/wiki/Lamport%27s_bakery_algorithm">Lamport</a>’s, <a href="http://en.wikipedia.org/wiki/Peterson%27s_algorithm">Peterson</a>’s,
+and <a href="http://en.wikipedia.org/wiki/Szymanski%27s_Algorithm">Szymanski</a>’s. All these protocols become unsound under TSO, i.e., they do not
+ensure exclusive access to the critical section. We consider for each protocol two
+versions, one without fences (the original version of the protocol) that is buggy, and
+one with fences (neutralizing TSO) that is correct.&nbsp;</p>
+
+
+<p class="noindent">We have encoded each of these examples as C programs and manually translated
+each of them by using the K-store-age translation with K=2. Then, we have used two
+tools to analyze the translated programs: <a href="http://research.microsoft.com/en-us/projects/poirot">POIROT</a> (by MSR) and <a href="http://users.ecs.soton.ac.uk/lcc08r/esbmc">ESBMC</a> (by the
+university of Southampton). Both of these tools were able to answer correctly, i.e., by
+finding the bugs for the buggy versions. (Except that <a href="http://users.ecs.soton.ac.uk/lcc08r/esbmc">ESBMC</a> has not terminated the
+analysis in one case.)&nbsp;</p>
+
+
+<p class="noindent"><a href="http://research.microsoft.com/en-us/projects/poirot">POIROT</a> combines bounded model checking by bounding the number of loop
+unrolling and bounded delay analysis. In our experiments, we consider a bound L = 2
+on the number of loop unrolling, and a bound D = 1 or D = 2 (= to the number of
+delays + 1).&nbsp;</p>
+
+
+<p class="noindent"><a href="http://users.ecs.soton.ac.uk/lcc08r/esbmc">ESBMC</a> combines bounded model checking by bounding the number of loop
+unrolling and bounded context-switch analysis. In our experiments, we consider a
+bound L = 2 or L = 3 on the number of loop unrolling, and a bound C = 3 or C = 4
+on the number of context-switches.&nbsp;</p>
+
+
+<p class="noindent">We give hereafter tables reporting the execution times for our experiments for each of
+the two tools in the different cases mentioned above. For each case, we provide the
+source code of the programs.&nbsp;Notice that the symbol (-) stands for the fact that the tool runs out of resources.</p>
+
+
+<p style="text-align: center;" class="noindent"></p>
+
+
+<div style="text-align: center;"></div>
+
+
+<table style="width: 669px; height: 258px; text-align: left; margin-left: auto; margin-right: auto;" border="1" cellpadding="2" cellspacing="2">
+
+
+  <tbody>
+
+
+    <tr>
+
+
+      <td colspan="1" rowspan="3"></td>
+
+
+      <td style="text-align: center;" colspan="5" rowspan="1"><a href="http://research.microsoft.com/en-us/projects/poirot">POIROT</a> (with L=2)</td>
+
+
+    </tr>
+
+
+    <tr>
+
+
+      <td style="text-align: center;" colspan="2" rowspan="1">Version with <span style="color: rgb(255, 0, 0);">no</span> fences<br>
+
+
+(Buggy for TSO)</td>
+
+
+      <td style="text-align: center;" colspan="3" rowspan="1">Version with fences<br>
+
+
+(Correct for TSO)</td>
+
+
+    </tr>
+
+
+    <tr>
+
+
+      <td style="text-align: center;">Running time <br>
+
+
+(with D=1)</td>
+
+
+      <td>
+      
+      
+      <div style="text-align: center;">Source code of the</div>
+
+
+      
+      
+      <div style="text-align: center;">&nbsp;translated program</div>
+
+
+      </td>
+
+
+      <td>
+      
+      
+      <div style="text-align: center;">Running time <br>
+
+
+      </div>
+
+
+      
+      
+      <div style="text-align: center;">(with D=1)</div>
+
+
+      </td>
+
+
+      <td>
+      
+      
+      <div style="text-align: center;">Running time <br>
+
+
+      </div>
+
+
+      
+      
+      <div style="text-align: center;">(with D=2)</div>
+
+
+      </td>
+
+
+      <td>
+      
+      
+      <div style="text-align: center;">Source code of the</div>
+
+
+      
+      
+      <div style="text-align: center;">&nbsp;translated program</div>
+
+
+      </td>
+
+
+    </tr>
+
+
+    <tr>
+
+
+      <td><a href="http://en.wikipedia.org/wiki/Dekker%27s_algorithm">Dekker</a></td>
+
+
+      <td style="text-align: center;">&nbsp;7 sec</td>
+
+
+      <td style="text-align: center;">&nbsp;<a style="color: rgb(0, 102, 0);" href="http://www.southampton.ac.uk/~gp1y10/papers/examples_poirot/dekker_poirot_no_fence.c">Dekker</a></td>
+
+
+      <td style="text-align: center;">&nbsp;6 sec</td>
+
+
+      <td style="text-align: center;">72 sec</td>
+
+
+      <td style="text-align: center;"><a style="color: rgb(0, 102, 0);" href="http://www.southampton.ac.uk/~gp1y10/papers/examples_poirot/dekker_poirot_with_fence.c">Dekker</a></td>
+
+
+    </tr>
+
+
+    <tr>
+
+
+      <td><a href="http://en.wikipedia.org/wiki/Lamport%27s_bakery_algorithm">Lamport</a></td>
+
+
+      <td style="text-align: center;">26 sec</td>
+
+
+      <td style="text-align: center;"><a style="color: rgb(0, 102, 0);" href="http://www.southampton.ac.uk/~gp1y10/papers/examples_poirot/lamport_poirot_no_fence.c">Lamport</a></td>
+
+
+      <td style="text-align: center;">110 sec</td>
+
+
+      <td style="text-align: center;">1608 sec</td>
+
+
+      <td style="text-align: center;"><a style="color: rgb(0, 102, 0);" href="http://www.southampton.ac.uk/~gp1y10/papers/examples_poirot/lamport_poirot_with_fence.c">Lamport</a></td>
+
+
+    </tr>
+
+
+    <tr>
+
+
+      <td><a href="http://en.wikipedia.org/wiki/Peterson%27s_algorithm">Peterson</a></td>
+
+
+      <td style="text-align: center;">5 sec</td>
+
+
+      <td style="text-align: center;"><a style="color: rgb(0, 102, 0);" href="http://www.southampton.ac.uk/~gp1y10/papers/examples_poirot/peterson_poirot_no_fence.c">Peterson</a></td>
+
+
+      <td style="text-align: center;">6 sec</td>
+
+
+      <td style="text-align: center;">47 sec</td>
+
+
+      <td style="text-align: center;"><a style="color: rgb(0, 102, 0);" href="http://www.southampton.ac.uk/~gp1y10/papers/examples_poirot/peterson_poirot_with_fence.c">Peterson</a></td>
+
+
+    </tr>
+
+
+    <tr>
+
+
+      <td><a href="http://en.wikipedia.org/wiki/Szymanski%27s_Algorithm">Szymanski</a></td>
+
+
+      <td style="text-align: center;">8 sec</td>
+
+
+      <td style="text-align: center; color: rgb(0, 102, 0);"><a style="color: rgb(0, 102, 0);" href="http://www.southampton.ac.uk/~gp1y10/papers/examples_poirot/szymanski_poirot_no_fence.c">Szymanski</a><br>
+
+
+      </td>
+
+
+      <td style="text-align: center;">6 sec</td>
+
+
+      <td style="text-align: center;">978 sec</td>
+
+
+      <td style="text-align: center;"><a style="color: rgb(0, 102, 0);" href="http://www.southampton.ac.uk/~gp1y10/papers/examples_poirot/szymanski_poirot_with_fence.c">Szymanski</a></td>
+
+
+    </tr>
+
+
+  
+  
+  </tbody>
+</table>
+
+
+<div style="text-align: center;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<br>
+
+
+<br>
+
+
+<br>
+
+
+<br>
+
+
+<p style="text-align: center;" class="noindent"></p>
+
+
+<div style="text-align: center;"></div>
+
+
+<table style="width: 669px; height: 258px; text-align: left; margin-left: auto; margin-right: auto;" border="1" cellpadding="2" cellspacing="2">
+
+
+  <tbody>
+
+
+    <tr>
+
+
+      <td colspan="1" rowspan="3"></td>
+
+
+      <td style="text-align: center;" colspan="4" rowspan="1">&nbsp;<a href="http://users.ecs.soton.ac.uk/lcc08r/esbmc">ESBMC</a>&nbsp;</td>
+
+
+    </tr>
+
+
+    <tr>
+
+
+      <td style="text-align: center;" colspan="2" rowspan="1">Version with <span style="color: rgb(255, 0, 0);">no</span> fences<br>
+
+
+(Buggy for TSO)</td>
+
+
+      <td style="text-align: center;" colspan="2" rowspan="1">Version with fences<br>
+
+
+(Correct for TSO)</td>
+
+
+    </tr>
+
+
+    <tr>
+
+
+      <td style="text-align: center;">Running time <br>
+
+
+(with L=2, C=3)</td>
+
+
+      <td>
+      
+      
+      <div style="text-align: center;">Source code of the</div>
+
+
+      
+      
+      <div style="text-align: center;">&nbsp;translated program</div>
+
+
+      </td>
+
+
+      <td>
+      
+      
+      <div style="text-align: center;">Running time <br>
+
+
+      </div>
+
+
+      
+      
+      <div style="text-align: center;">(with L=3, C=4)</div>
+
+
+      </td>
+
+
+      <td>
+      
+      
+      <div style="text-align: center;">Source code of the</div>
+
+
+      
+      
+      <div style="text-align: center;">&nbsp;translated program</div>
+
+
+      </td>
+
+
+    </tr>
+
+
+    <tr>
+
+
+      <td><a href="http://en.wikipedia.org/wiki/Dekker%27s_algorithm">Dekker</a></td>
+
+
+      <td style="text-align: center;">&nbsp;-</td>
+
+
+      <td style="text-align: center;">&nbsp;<a style="color: rgb(0, 102, 0);" href="http://www.southampton.ac.uk/~gp1y10/papers/examples_esbmc/dekker_esbmc_no_fence.c">Dekker</a></td>
+
+
+      <td style="text-align: center;">&nbsp;-</td>
+
+
+      <td style="text-align: center;"><a style="color: rgb(0, 102, 0);" href="http://www.southampton.ac.uk/~gp1y10/papers/examples_esbmc/dekker_esbmc_with_fence.c">Dekker</a></td>
+
+
+    </tr>
+
+
+    <tr>
+
+
+      <td><a href="http://en.wikipedia.org/wiki/Lamport%27s_bakery_algorithm">Lamport</a></td>
+
+
+      <td style="text-align: center;">1&nbsp;sec</td>
+
+
+      <td style="text-align: center;"><a style="color: rgb(0, 102, 0);" href="http://www.southampton.ac.uk/~gp1y10/papers/examples_esbmc/lamport_esbmc_no_fence.c">Lamport</a></td>
+
+
+      <td style="text-align: center;">7 sec</td>
+
+
+      <td style="text-align: center;"><a style="color: rgb(0, 102, 0);" href="http://www.southampton.ac.uk/~gp1y10/papers/examples_esbmc/lamport_esbmc_with_fence.c">Lamport</a></td>
+
+
+    </tr>
+
+
+    <tr>
+
+
+      <td><a href="http://en.wikipedia.org/wiki/Peterson%27s_algorithm">Peterson</a></td>
+
+
+      <td style="text-align: center;">1&nbsp;sec</td>
+
+
+      <td style="text-align: center;"><a style="color: rgb(0, 102, 0);" href="http://www.southampton.ac.uk/~gp1y10/papers/examples_esbmc/peterson_esbmc_no_fence.c">Peterson</a></td>
+
+
+      <td style="text-align: center;">1&nbsp;sec</td>
+
+
+      <td style="text-align: center;"><a style="color: rgb(0, 102, 0);" href="http://www.southampton.ac.uk/~gp1y10/papers/examples_esbmc/peterson_esbmc_with_fence.c">Peterson</a></td>
+
+
+    </tr>
+
+
+    <tr>
+
+
+      <td><a href="http://en.wikipedia.org/wiki/Szymanski%27s_Algorithm">Szymanski</a></td>
+
+
+      <td style="text-align: center;">1&nbsp;sec</td>
+
+
+      <td style="text-align: center; color: rgb(0, 102, 0);"><a style="color: rgb(0, 102, 0);" href="http://www.southampton.ac.uk/~gp1y10/papers/examples_esbmc/szymanski_esbmc_no_fence.c">Szymanski</a><br>
+
+
+      </td>
+
+
+      <td style="text-align: center;">6 sec</td>
+
+
+      <td style="text-align: center;"><a style="color: rgb(0, 102, 0);" href="http://www.southampton.ac.uk/~gp1y10/papers/examples_esbmc/szymanski_esbmc_with_fence.c">Szymanski</a></td>
+
+
+    </tr>
+
+
+  
+  
+  </tbody>
+</table>
+
+
+<div style="text-align: center;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</div>
+
+
+<br>
+
+
+<br>
+
+
+<div style="text-align: justify;"></div>
+
+
+</div>
+
+
+
+
+</body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>
