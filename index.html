@@ -33,11 +33,19 @@
              padding: 0;
          }
          
-         /* Modern Link Styling */
-         a { color: #0056b3; text-decoration: none; }
-         a:visited { color: #6a1b9a; }
-         a:active { color: #d32f2f; }
-         a:hover { color: #0056b3; text-decoration: underline; }
+         /* Modern Link Styling - Coordinato con lo sfondo e l'H1 rosso */
+         a { 
+             color: #2C2C2C; 
+             text-decoration: underline; 
+             text-decoration-color: #888888; 
+             text-underline-offset: 3px; 
+         }
+         a:visited { color: #4A4A4A; text-decoration-color: #999999; }
+         a:active { color: #FF0000; }
+         a:hover { 
+             color: #FF0000; 
+             text-decoration-color: #FF0000; 
+         }
 
          /* Main Layout Container (Flexbox) */
          .page-container {
@@ -269,8 +277,8 @@
 
             <div class="content-section">
                 <h2>Short Bio</h2>
-                <p>Gennaro Parlato is a Full Professor of Computer Science at the <a href="https://unimol.it/english/" target="_blank" rel="noopener noreferrer">University of Molise</a> (UNIMOL), where he directs the Program Analysis in the Clouds Lab (PAC Lab) within the <a href="https://www3.unimol.it/dipartimenti/bioscienze-e-territorio/home" target="_blank" rel="noopener noreferrer">Department of Biosciences and Territory</a> (DiBT). His research is driven by a core philosophy: translating foundational theoretical novelty—such as advances in automata theory, formal logics, and constrained Horn clauses—into high-performance engineering ingenuity.</p>
-                <p>By bridging the gap between rigorous mathematics and practical software engineering, his lab develops highly scalable, automated verification frameworks to secure complex concurrent systems. This synergy of theory and engineering has led to the creation of robust tools like <em>CSeq</em> and <em>Iekkë</em>, which have collectively won 14 medals at the prestigious International Competition on Software Verification (SV-COMP) and earned him an <a href="https://www.amazon.science/research-awards/recipients/gennaro-parlato" target="_blank" rel="noopener noreferrer">Amazon Research Award</a>.</p>
+                <p>Gennaro Parlato is a Full Professor of Computer Science at the <a href="https://unimol.it/english/" target="_blank" rel="noopener noreferrer">University of Molise</a> (UNIMOL), where he directs the Program Analysis in the Clouds Lab (PAC Lab) within the <a href="https://www3.unimol.it/dipartimenti/bioscienze-e-territorio/home" target="_blank" rel="noopener noreferrer">Department of Biosciences and Territory</a> (DiBT). His research is driven by a core philosophy: translating foundational theoretical novelty&mdash;such as advances in automata theory, formal logics, and constrained Horn clauses&mdash;into high-performance engineering ingenuity.</p>
+                <p>By bridging the gap between rigorous mathematics and practical software engineering, his lab develops highly scalable, automated verification frameworks to secure complex concurrent systems. This synergy of theory and engineering has led to the creation of robust tools like <em>CSeq</em> and <em>Iekk&euml;</em>, which have collectively won 14 medals at the prestigious International Competition on Software Verification (SV-COMP) and earned him an <a href="https://www.amazon.science/research-awards/recipients/gennaro-parlato" target="_blank" rel="noopener noreferrer">Amazon Research Award</a>.</p>
                 <p>Before joining UNIMOL, Gennaro established a prominent international academic profile. Following his Ph.D. in Computer Science from the <a href="https://web.unisa.it/en/home" target="_blank" rel="noopener noreferrer">University of Salerno</a> (2006), he held postdoctoral roles at <a href="https://cs.illinois.edu" target="_blank" rel="noopener noreferrer">UIUC</a> (Urbana, USA) and the <a href="https://www.irif.fr/en/index" target="_blank" rel="noopener noreferrer">IRIF</a> Laboratory (Paris, France). From 2011 to 2018, he served on the faculty at the <a href="https://www.southampton.ac.uk" target="_blank" rel="noopener noreferrer">University of Southampton</a> (UK), progressing to Associate Professor in the <a href="https://www.ecs.soton.ac.uk" target="_blank" rel="noopener noreferrer">School of Electronics and Computer Science</a> (ECS) and actively contributing to the GCHQ/EPSRC Academic Centre of Excellence for Cyber Security Research.</p>
                 <p>His full CV is available <a href="https://gennaro-parlato.github.io/paper/gennaroparlato-cv-en.pdf" target="_blank" rel="noopener noreferrer">here</a>.</p>
             </div>
@@ -288,10 +296,10 @@
             <div class="content-section">
                 <h2>Grants</h2>
                 <ul class="clean-list">
-                    <li><strong><a href="https://www.amazon.science/research-awards/recipients/gennaro-parlato" target="_blank" rel="noopener noreferrer" style="color:#000000; text-decoration:underline;">Amazon Research Awards (ARA)</a></strong> (Principal Investigator):<span class="sub-line">Program Analysis in the Clouds (PAC). <em>(Aug 2021–Aug 2022)</em></span></li>
-                    <li><strong>EPSRC Grant EP/P022413/1</strong> (Co-Investigator):<span class="sub-line">VAC+: Verifier of Access Control. <em>(Aug 2017–Aug 2018)</em></span></li>
-                    <li><strong>EPSRC Grant EP/M008991/1</strong> (Principal Investigator):<span class="sub-line">CONSEQUENCER. <em>(Mar 2015–Aug 2016)</em></span></li>
-                    <li><strong>GCHQ Grant</strong> (Co-Investigator):<span class="sub-line">Language-based security for smart contracts. <em>(Dec 2015–Mar 2016)</em></span></li>
+                    <li><strong><a href="https://www.amazon.science/research-awards/recipients/gennaro-parlato" target="_blank" rel="noopener noreferrer">Amazon Research Awards (ARA)</a></strong> (Principal Investigator):<span class="sub-line">Program Analysis in the Clouds (PAC). <em>(Aug 2021&ndash;Aug 2022)</em></span></li>
+                    <li><strong>EPSRC Grant EP/P022413/1</strong> (Co-Investigator):<span class="sub-line">VAC+: Verifier of Access Control. <em>(Aug 2017&ndash;Aug 2018)</em></span></li>
+                    <li><strong>EPSRC Grant EP/M008991/1</strong> (Principal Investigator):<span class="sub-line">CONSEQUENCER. <em>(Mar 2015&ndash;Aug 2016)</em></span></li>
+                    <li><strong>GCHQ Grant</strong> (Co-Investigator):<span class="sub-line">Language-based security for smart contracts. <em>(Dec 2015&ndash;Mar 2016)</em></span></li>
                 </ul>
             </div>
             
@@ -307,7 +315,7 @@
             <div class="content-section">
                 <h2>Software/Tools</h2>
                 <ul class="clean-list">
-                    <li><a href="https://github.com/pac-lab00/Iekke" target="_blank" rel="noopener noreferrer">Iekkë</a>: Bounded Model Checker for Concurrent C Programs</li>
+                    <li><a href="https://github.com/pac-lab00/Iekke" target="_blank" rel="noopener noreferrer">Iekk&euml;</a>: Bounded Model Checker for Concurrent C Programs</li>
                     <li><a href="https://github.com/CSeq/Overview" target="_blank" rel="noopener noreferrer">CSeq</a>: Sequentialization framework for concurrent C programs</li>
                     <li><a href="https://madhu.cs.illinois.edu/getafix/" target="_blank" rel="noopener noreferrer">GetAFix</a>: A Boolean program checker</li>
                     <li><a href="https://engineering.purdue.edu/~xqiu/strand/index.html" target="_blank" rel="noopener noreferrer">STRAND</a>: <span style="color:#343434;">Decidable logics/SMT solver for reasoning with heaps</span></li>
@@ -319,17 +327,17 @@
             <div class="content-section">
                 <h2>PhD Students Supervised</h2>
                 <ul class="clean-list">
-                    <li><a href="https://www.linkedin.com/in/enrico-steffinlongo-461364161/" target="_blank" rel="noopener noreferrer">Enrico Steffinlongo</a> (Oct 2016–Feb 2018)<span class="sub-line">Currently Software Engineer at <strong>GitHub</strong>, UK.</span></li>
-                    <li><a href="https://www.linkedin.com/in/trucnguyenlam" target="_blank" rel="noopener noreferrer">Truc Lam Nguyen</a> (Oct 2013–May 2017)<span class="sub-line">Currently Senior Data Engineer at <strong>Jagex</strong>, Cambridge, UK.</span></li>
-                    <li><a href="https://gildotomasco.github.io" target="_blank" rel="noopener noreferrer">Ermenegildo Tomasco</a> (May 2012–May 2017)<span class="sub-line">Currently Official at <strong>Italian Income Revenue Authority</strong>, Italy.</span></li>
-                    <li><a href="https://www.gssi.it/people/professors/lectures-computer-science/item/1018-inverso-omar" target="_blank" rel="noopener noreferrer">Omar Inverso</a> (Oct 2011–Oct 2015)<span class="sub-line">Currently Associate Professor at <strong>Gran Sasso Science Institute (GSSI)</strong>, Italy.</span></li>
+                    <li><a href="https://www.linkedin.com/in/enrico-steffinlongo-461364161/" target="_blank" rel="noopener noreferrer">Enrico Steffinlongo</a> (Oct 2016&ndash;Feb 2018)<span class="sub-line">Currently Software Engineer at <strong>GitHub</strong>, UK.</span></li>
+                    <li><a href="https://www.linkedin.com/in/trucnguyenlam" target="_blank" rel="noopener noreferrer">Truc Lam Nguyen</a> (Oct 2013&ndash;May 2017)<span class="sub-line">Currently Senior Data Engineer at <strong>Jagex</strong>, Cambridge, UK.</span></li>
+                    <li><a href="https://gildotomasco.github.io" target="_blank" rel="noopener noreferrer">Ermenegildo Tomasco</a> (May 2012&ndash;May 2017)<span class="sub-line">Currently Official at <strong>Italian Income Revenue Authority</strong>, Italy.</span></li>
+                    <li><a href="https://www.gssi.it/people/professors/lectures-computer-science/item/1018-inverso-omar" target="_blank" rel="noopener noreferrer">Omar Inverso</a> (Oct 2011&ndash;Oct 2015)<span class="sub-line">Currently Associate Professor at <strong>Gran Sasso Science Institute (GSSI)</strong>, Italy.</span></li>
                 </ul>
             </div>
             
             <div class="content-section">
                 <h2>Postdoctoral Researchers</h2>
                 <ul class="clean-list">
-                    <li><a href="https://www.linkedin.com/in/giulio-garbi-19013186/" target="_blank" rel="noopener noreferrer">Giulio Garbi</a> (2022–2024)</li>
+                    <li><a href="https://www.linkedin.com/in/giulio-garbi-19013186/" target="_blank" rel="noopener noreferrer">Giulio Garbi</a> (2022&ndash;2024)</li>
                     <li>Mikhail Ramalho (2016)</li>
                     <li><a href="https://www.linkedin.com/in/trucnguyenlam" target="_blank" rel="noopener noreferrer">Truc Lam Nguyen</a> (2016)</li>
                     <li><a href="https://www.gssi.it/people/professors/lectures-computer-science/item/1018-inverso-omar" target="_blank" rel="noopener noreferrer">Omar Inverso</a> (2015)</li>
@@ -339,7 +347,7 @@
             <div class="content-section">
                 <h2>BSc &amp; MSc Research Students</h2>
                 <ul class="clean-list">
-                    <li><a href="https://paolo-di-biase.github.io/" target="_blank" rel="noopener noreferrer">Paolo Di Biase</a><span class="sub-line">Currently PhD student at GSSI. Co-author of the <em>Iekkë</em> verifier (TACAS '26).</span></li>
+                    <li><a href="https://paolo-di-biase.github.io/" target="_blank" rel="noopener noreferrer">Paolo Di Biase</a><span class="sub-line">Currently PhD student at GSSI. Co-author of the <em>Iekk&euml;</em> verifier (TACAS '26).</span></li>
                     <li><a href="https://github.com/nicola-gentile" target="_blank" rel="noopener noreferrer">Nicola Gentile</a><span class="sub-line">Research focus: Verification of Heap-manipulating programs</span></li>
                     <li><a href="https://github.com/apdc1312" target="_blank" rel="noopener noreferrer">Andrea Pino di Cristofaro</a><span class="sub-line">Research focus: Symbolic partial order reduction</span></li>
                 </ul>
@@ -497,12 +505,12 @@
 
                 <div class="paper-entry">
                    <div class="bullet">&#8226;</div>
-                   <div class="item"><strong>Static Data Race Detection via Lazy Sequentialization<br></strong><a href="https://wpage.unina.it/m.faella/" target="_blank" rel="noopener noreferrer">M. Faella</a>, <a href="https://www.linkedin.com/in/giulio-garbi-19013186/" target="_blank" rel="noopener noreferrer">G. Garbi</a>, <a href="https://docenti.unisa.it/004821/en/home" target="_blank" rel="noopener noreferrer">S. La Torre</a>, and G. Parlato<br>12<sup>th</sup> International Conference on Networked Systems (<a href="https://netys.net/" target="_blank" rel="noopener noreferrer">NETYS</a>)<br>Rabat, Morocco, 2024&nbsp;&nbsp;<br><a href="https://gennaro-parlato.github.io/paper/netys24.pdf" target="_blank" rel="noopener noreferrer">PDF</a> &nbsp;&nbsp;<span style="color: #D32F2F; font-style: italic;">(Best paper award)</span></div>
+                   <div class="item"><strong>Static Data Race Detection via Lazy Sequentialization<br></strong><a href="https://wpage.unina.it/m.faella/" target="_blank" rel="noopener noreferrer">M. Faella</a>, <a href="https://www.linkedin.com/in/giulio-garbi-19013186/" target="_blank" rel="noopener noreferrer">G. Garbi</a>, <a href="https://docenti.unisa.it/004821/en/home" target="_blank" rel="noopener noreferrer">S. La Torre</a>, and G. Parlato<br>12<sup>th</sup> International Conference on Networked Systems (<a href="https://netys.net/" target="_blank" rel="noopener noreferrer">NETYS</a>)<br>Rabat, Morocco, 2024<br><a href="https://gennaro-parlato.github.io/paper/netys24.pdf" target="_blank" rel="noopener noreferrer">PDF</a> &nbsp;&nbsp;<span style="color: #D32F2F; font-style: italic;">(Best paper award)</span></div>
                 </div>
 
                 <div class="paper-entry">
                    <div class="bullet">&#8226;</div>
-                   <div class="item"><strong>CHC-Based Verification of Programs Through Graph Decompositions<br></strong><a href="https://bfischer.pages.cs.sun.ac.za" target="_blank" rel="noopener noreferrer">B. Fischer</a>, <a href="https://www.linkedin.com/in/giulio-garbi-19013186/" target="_blank" rel="noopener noreferrer">G. Garbi</a>, <a href="https://docenti.unisa.it/004821/en/home" target="_blank" rel="noopener noreferrer">S. La Torre</a>, G. Parlato, and <a href="http://www.schrammel.it/" target="_blank" rel="noopener noreferrer">P. Schrammel</a><br><a href="https://link.springer.com/journal/42979" target="_blank" rel="noopener noreferrer">SN Computer Science</a> journal (accepted for publication), 2024&nbsp;&nbsp;<br><a href="https://gennaro-parlato.github.io/paper/SNjournal.pdf" target="_blank" rel="noopener noreferrer">PDF</a></div>
+                   <div class="item"><strong>CHC-Based Verification of Programs Through Graph Decompositions<br></strong><a href="https://bfischer.pages.cs.sun.ac.za" target="_blank" rel="noopener noreferrer">B. Fischer</a>, <a href="https://www.linkedin.com/in/giulio-garbi-19013186/" target="_blank" rel="noopener noreferrer">G. Garbi</a>, <a href="https://docenti.unisa.it/004821/en/home" target="_blank" rel="noopener noreferrer">S. La Torre</a>, G. Parlato, and <a href="http://www.schrammel.it/" target="_blank" rel="noopener noreferrer">P. Schrammel</a><br><a href="https://link.springer.com/journal/42979" target="_blank" rel="noopener noreferrer">SN Computer Science</a> journal (accepted for publication), 2024<br><a href="https://gennaro-parlato.github.io/paper/SNjournal.pdf" target="_blank" rel="noopener noreferrer">PDF</a></div>
                 </div>
                 
                 <div class="paper-entry">
@@ -527,7 +535,7 @@
                 
                 <div class="paper-entry">
                    <div class="bullet">&#8226;</div>
-                   <div class="item"><strong>Bounded Verification of Multi-Threaded Programs via Lazy Sequentialization<br></strong><a href="https://www.gssi.it/people/professors/lectures-computer-science/item/1018-inverso-omar" target="_blank" rel="noopener noreferrer">O. Inverso</a>, <a href="https://gildotomasco.github.io" target="_blank" rel="noopener noreferrer">E. Tomasco</a>, <a href="https://bfischer.pages.cs.sun.ac.za" target="_blank" rel="noopener noreferrer">B. Fischer</a>, <a href="https://docenti.unisa.it/004821/en/home" target="_blank" rel="noopener noreferrer">S. La Torre</a>, and G. Parlato<br>ACM Transactions on Programming Languages and Systems (<a href="https://dl.acm.org/journal/toplas" target="_blank" rel="noopener noreferrer">TOPLAS</a>) 44(1): 1:1-1:50, 2022 <br><a href="https://gennaro-parlato.github.io/paper/toplas21.pdf" target="_blank" rel="noopener noreferrer">PDF</a></div>
+                   <div class="item"><strong>Bounded Verification of Multi-Threaded Programs via Lazy Sequentialization<br></strong><a href="https://www.gssi.it/people/professors/lectures-computer-science/item/1018-inverso-omar" target="_blank" rel="noopener noreferrer">O. Inverso</a>, <a href="https://gildotomasco.github.io" target="_blank" rel="noopener noreferrer">E. Tomasco</a>, <a href="https://bfischer.pages.cs.sun.ac.za" target="_blank" relnoopener noreferrer">B. Fischer</a>, <a href="https://docenti.unisa.it/004821/en/home" target="_blank" rel="noopener noreferrer">S. La Torre</a>, and G. Parlato<br>ACM Transactions on Programming Languages and Systems (<a href="https://dl.acm.org/journal/toplas" target="_blank" rel="noopener noreferrer">TOPLAS</a>) 44(1): 1:1-1:50, 2022 <br><a href="https://gennaro-parlato.github.io/paper/toplas21.pdf" target="_blank" rel="noopener noreferrer">PDF</a></div>
                 </div>
                 
                 <div class="paper-entry">
@@ -607,7 +615,7 @@
             
             <div class="paper-entry">
                <div class="bullet">&#8226;</div>
-               <div class="item"><strong>Lazy-CSeq: A Context-Bounded Model Checking Tool for Multi-Threaded C-Programs <br>(Tool Demonstration)<br></strong><a href="https://www.gssi.it/people/professors/lectures-computer-science/item/1018-inverso-omar" target="_blank" rel="noopener noreferrer">O. Inverso</a>, <a href="https://www.linkedin.com/in/trucnguyenlam" target="_blank" rel="noopener noreferrer">T. L. Nguyen</a>, <a href="https://bfischer.pages.cs.sun.ac.za" target="_blank" rel="noopener noreferrer">B. Fischer</a>, <a href="https://docenti.unisa.it/004821/en/home" target="_blank" rel="noopener noreferrer">S. La Torre</a>, and G. Parlato<br>30th IEEE/ACM International Conference on Automated Software Engineering (<a href="https://conf.researchr.org/home/ase-2015" target="_blank" rel="noopener noreferrer">ASE</a>)<br>Lincoln, Nebraska, USA, 2015<br><a href="https://eprints.soton.ac.uk/379595/" target="_blank" rel="noopener noreferrer">PDF</a>, <a href="https://github.com/CSeq/Overview" target="_blank" rel="noopener noreferrer">CSeq webpage</a> for tools and experiments<br>[<a href="https://sv-comp.sosy-lab.org/2016/" target="_blank" rel="noopener noreferrer">SV-COMP 2016</a>: <em>Lazy-CSeq 1.0 won the silver medal in the concurrency category</em>]</div>
+               <div class="item"><strong>Lazy-CSeq: A Context-Bounded Model Checking Tool for Multi-Threaded C-Programs <br>(Tool Demonstration)<br></strong><a href="https://www.gssi.it/people/professors/lectures-computer-science/item/1018-inverso-omar" target="_blank" rel="noopener noreferrer">O. Inverso</a>, <a href="https://www.linkedin.com/in/trucnguyenlam" target="_blank" rel="noopener noreferrer">T. L. Nguyen</a>, <a href="https://bfischer.pages.cs.sun.ac.za" target="_blank" rel="noopener noreferrer">B. Fischer</a>, <a href="https://docenti.unisa.it/004821/en/home" target="_blank" rel="noopener noreferrer">S. La Torre</a>, and G. Parlato<br>30th IEEE/ACM International Conference on Automated Software Engineering (<a href="https://conf.researchr.org/home/ase-2015" target="_blank" rel="noopener noreferrer">ASE</a>)<br>Lincoln, Nebraska, USA, 2015<br><a href="https://eprints.soton.ac.uk/379595/" target="_blank" rel="noopener noreferrer">PDF</a>, <a href="https://github.com/CSeq/Overview" target="_blank" rel="noopener noreferrer">CSeq webpage</a> for tools and experiments<br>[<em>Lazy-CSeq 1.0 won the silver medal in the concurrency category</em>]</div>
             </div>
             
             <div class="paper-entry">
