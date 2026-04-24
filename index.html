@@ -33,19 +33,11 @@
              padding: 0;
          }
          
-         /* Modern Link Styling - Coordinato con lo sfondo e l'H1 rosso */
-         a { 
-             color: #2C2C2C; 
-             text-decoration: underline; 
-             text-decoration-color: #888888; 
-             text-underline-offset: 3px; 
-         }
-         a:visited { color: #4A4A4A; text-decoration-color: #999999; }
-         a:active { color: #FF0000; }
-         a:hover { 
-             color: #FF0000; 
-             text-decoration-color: #FF0000; 
-         }
+         /* Modern Link Styling */
+         a { color: #0056b3; text-decoration: none; }
+         a:visited { color: #6a1b9a; }
+         a:active { color: #d32f2f; }
+         a:hover { color: #0056b3; text-decoration: underline; }
 
          /* Main Layout Container (Flexbox) */
          .page-container {
@@ -277,29 +269,31 @@
 
             <div class="content-section">
                 <h2>Short Bio</h2>
-                <p>Gennaro Parlato is a Full Professor of Computer Science at the <a href="https://unimol.it/english/" target="_blank" rel="noopener noreferrer">University of Molise</a> (UNIMOL), where he directs the Program Analysis in the Clouds Lab (PAC Lab) within the <a href="https://www3.unimol.it/dipartimenti/bioscienze-e-territorio/home" target="_blank" rel="noopener noreferrer">Department of Biosciences and Territory</a> (DiBT). His research is driven by a core philosophy: translating foundational theoretical novelty&mdash;such as advances in automata theory, formal logics, and constrained Horn clauses&mdash;into high-performance engineering ingenuity.</p>
-                <p>By bridging the gap between rigorous mathematics and practical software engineering, his lab develops highly scalable, automated verification frameworks to secure complex concurrent systems. This synergy of theory and engineering has led to the creation of robust tools like <em>CSeq</em> and <em>Iekk&euml;</em>, which have collectively won 14 medals at the prestigious International Competition on Software Verification (SV-COMP) and earned him an <a href="https://www.amazon.science/research-awards/recipients/gennaro-parlato" target="_blank" rel="noopener noreferrer">Amazon Research Award</a>.</p>
-                <p>Before joining UNIMOL, Gennaro established a prominent international academic profile. Following his Ph.D. in Computer Science from the <a href="https://web.unisa.it/en/home" target="_blank" rel="noopener noreferrer">University of Salerno</a> (2006), he held postdoctoral roles at <a href="https://cs.illinois.edu" target="_blank" rel="noopener noreferrer">UIUC</a> (Urbana, USA) and the <a href="https://www.irif.fr/en/index" target="_blank" rel="noopener noreferrer">IRIF</a> Laboratory (Paris, France). From 2011 to 2018, he served on the faculty at the <a href="https://www.southampton.ac.uk" target="_blank" rel="noopener noreferrer">University of Southampton</a> (UK), progressing to Associate Professor in the <a href="https://www.ecs.soton.ac.uk" target="_blank" rel="noopener noreferrer">School of Electronics and Computer Science</a> (ECS) and actively contributing to the GCHQ/EPSRC Academic Centre of Excellence for Cyber Security Research.</p>
+                <p>Gennaro Parlato is a Full Professor of Computer Science at the <a href="https://unimol.it/english/" target="_blank" rel="noopener noreferrer">University of Molise</a> (UNIMOL), where he leads the Program Analysis in the Clouds Lab (PAC Lab). His research is in formal methods, with a focus on automated verification, program analysis, logic, automata theory, and constrained Horn clauses.</p>
+                <p>His work develops rigorous and scalable techniques for proving correctness properties of complex systems. He has worked on concurrent and recursive programs, heap- and tree-manipulating programs, access-control policies, and security-critical software. This research combines theoretical foundations with tool development, including decidable logics, automata-based methods, symbolic model checking, CHC-based verification, and game-based approaches to synthesis and planning.</p>
+                <p>At PAC Lab, his team develops verification techniques and tools for analysing real software systems. These include <em>CSeq</em> and <em>Iekkë</em> for concurrent C programs, <em>STRAND</em> for reasoning about heap structures, <em>VAC</em> for access-control policy analysis, and <em>GetAFix</em> for recursive programs. Tools developed in his research group have received 14 medals in the Concurrency category of the International Competition on Software Verification (SV-COMP), and his work on distributed symbolic analysis received an <a href="https://www.amazon.science/research-awards/recipients/gennaro-parlato" target="_blank" rel="noopener noreferrer">Amazon Research Award</a>.</p>
+                <p>Before joining UNIMOL, Gennaro held postdoctoral positions at the <a href="https://cs.illinois.edu/" target="_blank" rel="noopener noreferrer">University of Illinois at Urbana-Champaign</a> and at <a href="https://www.irif.fr/en/index" target="_blank" rel="noopener noreferrer">LIAFA/IRIF</a> in Paris. From 2011 to 2018, he was a faculty member at the <a href="https://www.southampton.ac.uk" target="_blank" rel="noopener noreferrer">University of Southampton</a> (UK), where he became Associate Professor in the <a href="https://www.ecs.soton.ac.uk" target="_blank" rel="noopener noreferrer">School of Electronics and Computer Science</a> and contributed to the GCHQ/EPSRC Academic Centre of Excellence for Cyber Security Research.</p>
                 <p>His full CV is available <a href="https://gennaro-parlato.github.io/paper/gennaroparlato-cv-en.pdf" target="_blank" rel="noopener noreferrer">here</a>.</p>
             </div>
             
             <div class="content-section">
-                <h2>Research Interests</h2>
+                <h2>Research Areas</h2>
                 <ul class="clean-list">
-                    <li>Software verification and formal methods</li>
-                    <li>Program Synthesis and Machine Learning</li>
-                    <li>Security and Privacy</li>
-                    <li>Logic and automata theory</li>
+                    <li>Automated software verification and program analysis</li>
+                    <li>Formal methods for concurrent, recursive, heap- and tree-manipulating programs</li>
+                    <li>Constrained Horn clauses, automata theory, and decidable logics</li>
+                    <li>Program synthesis, games, planning, and temporal reasoning</li>
+                    <li>Security verification and access-control policies</li>
                 </ul>
             </div>
             
             <div class="content-section">
                 <h2>Grants</h2>
                 <ul class="clean-list">
-                    <li><strong><a href="https://www.amazon.science/research-awards/recipients/gennaro-parlato" target="_blank" rel="noopener noreferrer">Amazon Research Awards (ARA)</a></strong> (Principal Investigator):<span class="sub-line">Program Analysis in the Clouds (PAC). <em>(Aug 2021&ndash;Aug 2022)</em></span></li>
-                    <li><strong>EPSRC Grant EP/P022413/1</strong> (Co-Investigator):<span class="sub-line">VAC+: Verifier of Access Control. <em>(Aug 2017&ndash;Aug 2018)</em></span></li>
-                    <li><strong>EPSRC Grant EP/M008991/1</strong> (Principal Investigator):<span class="sub-line">CONSEQUENCER. <em>(Mar 2015&ndash;Aug 2016)</em></span></li>
-                    <li><strong>GCHQ Grant</strong> (Co-Investigator):<span class="sub-line">Language-based security for smart contracts. <em>(Dec 2015&ndash;Mar 2016)</em></span></li>
+                    <li><strong><a href="https://www.amazon.science/research-awards/recipients/gennaro-parlato" target="_blank" rel="noopener noreferrer" style="color:#000000; text-decoration:underline;">Amazon Research Awards (ARA)</a></strong> (Principal Investigator):<span class="sub-line">Program Analysis in the Clouds (PAC). <em>(Aug 2021–Aug 2022)</em></span></li>
+                    <li><strong>EPSRC Grant EP/P022413/1</strong> (Co-Investigator):<span class="sub-line">VAC+: Verifier of Access Control. <em>(Aug 2017–Aug 2018)</em></span></li>
+                    <li><strong>EPSRC Grant EP/M008991/1</strong> (Principal Investigator):<span class="sub-line">CONSEQUENCER. <em>(Mar 2015–Aug 2016)</em></span></li>
+                    <li><strong>GCHQ Grant</strong> (Co-Investigator):<span class="sub-line">Language-based security for distributed ledgers. <em>(Dec 2015–Mar 2016)</em></span></li>
                 </ul>
             </div>
             
@@ -307,7 +301,8 @@
                 <h2>Honors and Awards</h2>
                 <ul class="clean-list">
                     <li><a href="https://www.amazon.science/research-awards/recipients/gennaro-parlato" target="_blank" rel="noopener noreferrer">Amazon Research Award</a>, Spring 2021</li>
-                    <li><strong>14 Medals at the Int'l Competition on Software Verification (SV-COMP)</strong><span class="sub-line">(5 Gold, 7 Silver, 2 Bronze in Concurrency Category)</span></li>
+                    <li><strong>Best Paper Award</strong> at the 12th International Conference on Networked Systems (NETYS), 2024</li>
+                    <li><strong>14 Medals at the International Competition on Software Verification (SV-COMP)</strong><span class="sub-line">(5 Gold, 7 Silver, 2 Bronze in Concurrency Category)</span></li>
                     <li>Fellow of The Higher Education Academy (UKSPF Descriptor 2), Mar 2014</li>
                 </ul>
             </div>
@@ -315,11 +310,11 @@
             <div class="content-section">
                 <h2>Software/Tools</h2>
                 <ul class="clean-list">
-                    <li><a href="https://github.com/pac-lab00/Iekke" target="_blank" rel="noopener noreferrer">Iekk&euml;</a>: Bounded Model Checker for Concurrent C Programs</li>
-                    <li><a href="https://github.com/CSeq/Overview" target="_blank" rel="noopener noreferrer">CSeq</a>: Sequentialization framework for concurrent C programs</li>
-                    <li><a href="https://madhu.cs.illinois.edu/getafix/" target="_blank" rel="noopener noreferrer">GetAFix</a>: A Boolean program checker</li>
-                    <li><a href="https://engineering.purdue.edu/~xqiu/strand/index.html" target="_blank" rel="noopener noreferrer">STRAND</a>: <span style="color:#343434;">Decidable logics/SMT solver for reasoning with heaps</span></li>
-                    <li><a href="https://users.ecs.soton.ac.uk/gp4/VAC.html" target="_blank" rel="noopener noreferrer">VAC</a>: Verifier for Role Based Access Control Systems</li>
+                    <li><a href="https://github.com/pac-lab00/Iekke" target="_blank" rel="noopener noreferrer">Iekkë</a>: SAT-based bounded-round verifier for multi-threaded C programs; bronze medal at SV-COMP 2026.</li>
+                    <li><a href="https://github.com/CSeq/Overview" target="_blank" rel="noopener noreferrer">CSeq</a>: Sequentialization framework for concurrent C program verification; basis for several SV-COMP medal-winning tools.</li>
+                    <li><a href="https://madhu.cs.illinois.edu/getafix/" target="_blank" rel="noopener noreferrer">GetAFix</a>: A Symbolic Model-Checker for Recursive Programs</li>
+                    <li><a href="https://engineering.purdue.edu/~xqiu/strand/index.html" target="_blank" rel="noopener noreferrer">STRAND</a>: Decidable Logics / SMT Solver for Reasoning with Heaps</li>
+                    <li><a href="https://users.ecs.soton.ac.uk/gp4/VAC.html" target="_blank" rel="noopener noreferrer">VAC</a>: Verifier of Access Control</li>
                     <li>PAC: Program Analysis in the Clouds</li>
                 </ul>
             </div>
@@ -327,17 +322,17 @@
             <div class="content-section">
                 <h2>PhD Students Supervised</h2>
                 <ul class="clean-list">
-                    <li><a href="https://www.linkedin.com/in/enrico-steffinlongo-461364161/" target="_blank" rel="noopener noreferrer">Enrico Steffinlongo</a> (Oct 2016&ndash;Feb 2018)<span class="sub-line">Currently Software Engineer at <strong>GitHub</strong>, UK.</span></li>
-                    <li><a href="https://www.linkedin.com/in/trucnguyenlam" target="_blank" rel="noopener noreferrer">Truc Lam Nguyen</a> (Oct 2013&ndash;May 2017)<span class="sub-line">Currently Senior Data Engineer at <strong>Jagex</strong>, Cambridge, UK.</span></li>
-                    <li><a href="https://gildotomasco.github.io" target="_blank" rel="noopener noreferrer">Ermenegildo Tomasco</a> (May 2012&ndash;May 2017)<span class="sub-line">Currently Official at <strong>Italian Income Revenue Authority</strong>, Italy.</span></li>
-                    <li><a href="https://www.gssi.it/people/professors/lectures-computer-science/item/1018-inverso-omar" target="_blank" rel="noopener noreferrer">Omar Inverso</a> (Oct 2011&ndash;Oct 2015)<span class="sub-line">Currently Associate Professor at <strong>Gran Sasso Science Institute (GSSI)</strong>, Italy.</span></li>
+                    <li><a href="https://www.linkedin.com/in/enrico-steffinlongo-461364161/" target="_blank" rel="noopener noreferrer">Enrico Steffinlongo</a> (Oct 2016–Feb 2018)<span class="sub-line">Currently Software Engineer at <strong>GitHub</strong>, UK.</span></li>
+                    <li><a href="https://www.linkedin.com/in/trucnguyenlam" target="_blank" rel="noopener noreferrer">Truc Lam Nguyen</a> (Oct 2013–May 2017)<span class="sub-line">Currently Senior Data Engineer at <strong>Jagex</strong>, Cambridge, UK.</span></li>
+                    <li><a href="https://gildotomasco.github.io" target="_blank" rel="noopener noreferrer">Ermenegildo Tomasco</a> (May 2012–May 2017)<span class="sub-line">Currently Official at <strong>Italian Income Revenue Authority</strong>, Italy.</span></li>
+                    <li><a href="https://www.gssi.it/people/professors/lectures-computer-science/item/1018-inverso-omar" target="_blank" rel="noopener noreferrer">Omar Inverso</a> (Oct 2011–Oct 2015)<span class="sub-line">Currently Associate Professor at <strong>Gran Sasso Science Institute (GSSI)</strong>, Italy.</span></li>
                 </ul>
             </div>
             
             <div class="content-section">
                 <h2>Postdoctoral Researchers</h2>
                 <ul class="clean-list">
-                    <li><a href="https://www.linkedin.com/in/giulio-garbi-19013186/" target="_blank" rel="noopener noreferrer">Giulio Garbi</a> (2022&ndash;2024)</li>
+                    <li><a href="https://www.linkedin.com/in/giulio-garbi-19013186/" target="_blank" rel="noopener noreferrer">Giulio Garbi</a> (2022–2024)</li>
                     <li>Mikhail Ramalho (2016)</li>
                     <li><a href="https://www.linkedin.com/in/trucnguyenlam" target="_blank" rel="noopener noreferrer">Truc Lam Nguyen</a> (2016)</li>
                     <li><a href="https://www.gssi.it/people/professors/lectures-computer-science/item/1018-inverso-omar" target="_blank" rel="noopener noreferrer">Omar Inverso</a> (2015)</li>
@@ -347,19 +342,20 @@
             <div class="content-section">
                 <h2>BSc &amp; MSc Research Students</h2>
                 <ul class="clean-list">
-                    <li><a href="https://paolo-di-biase.github.io/" target="_blank" rel="noopener noreferrer">Paolo Di Biase</a><span class="sub-line">Currently PhD student at GSSI. Co-author of the <em>Iekk&euml;</em> verifier (TACAS '26).</span></li>
+                    <li><a href="https://paolo-di-biase.github.io/" target="_blank" rel="noopener noreferrer">Paolo Di Biase</a><span class="sub-line">Currently PhD student at GSSI. Co-author of the <em>Iekkë</em> verifier (TACAS '26).</span></li>
                     <li><a href="https://github.com/nicola-gentile" target="_blank" rel="noopener noreferrer">Nicola Gentile</a><span class="sub-line">Research focus: Verification of Heap-manipulating programs</span></li>
                     <li><a href="https://github.com/apdc1312" target="_blank" rel="noopener noreferrer">Andrea Pino di Cristofaro</a><span class="sub-line">Research focus: Symbolic partial order reduction</span></li>
                 </ul>
             </div>
             
             <div class="content-section">
-                <h2>Professional Activities &amp; Service</h2>
-                <p>Served as a Program Committee or Jury member for over 26 international conferences, workshops, and competitions. Selected top-tier venues include:</p>
+                <h2>Program Committee Membership &amp; Reviewing</h2>
+                <p>Served as a Program Committee, Jury, or reviewer for over 26 international conferences, workshops, and competitions, including:</p>
                 <ul class="clean-list">
                     <li>International Conference on Computer-Aided Verification (<strong>CAV</strong>)</li>
                     <li>International Conference on Software Engineering (<strong>ICSE</strong>)</li>
-                    <li>Int'l Conference on Verification, Model Checking, and Abstract Interpretation (<strong>VMCAI</strong>)</li>
+                    <li>Verification, Model Checking, and Abstract Interpretation (<strong>VMCAI</strong>)</li>
+                    <li>International Competition on Software Verification (<strong>SV-COMP</strong>)</li>
                 </ul>
             </div>
             
@@ -385,7 +381,7 @@
                     
                     <li><strong>Finding Rare Concurrent Programming Bugs</strong>
                         <ul class="sub-list">
-                            <li>15th Int'l Colloquium on Theoretical Aspects of Computing (ICTAC), Stellenbosch, Oct 2018</li>
+                            <li>15th Int'l Colloquium on Theoretical Aspects of Computing (ICTAC), Stellenbosch, South Africa, Oct 2018</li>
                             <li>Workshop on Verification of Distributed Systems (VDS), Marrakesh, Morocco, June 2018</li>
                         </ul>
                     </li>
@@ -394,7 +390,7 @@
                     
                     <li><strong>Security Analysis of Self-Administrated RBAC through Program Verification</strong><span class="sub-line">Information Security Group, Dept. of Computer Science, UCL, London, UK, July 2015</span></li>
                     
-                    <li><strong>On BMC Sequentializations of Concurrent Programs</strong><span class="sub-line">Computer Science Department, U. of Oxford, Oxford, UK, June 2015</span></li>
+                    <li><strong>On BMC Sequentializations of Concurrent Programs</strong><span class="sub-line">Computer Science Department, University of Oxford, Oxford, UK, June 2015</span></li>
                     
                     <li><strong>On Sequentializing Concurrent Programs</strong><span class="sub-line">UPMARC 7th Summer School on Multicore Computing, Uppsala University, Sweden, June 2015</span></li>
                     
@@ -402,7 +398,7 @@
                     
                     <li><strong>The Tree-width of Decidable Problems</strong><span class="sub-line">FSTTCS post-conference workshop on Verification of Infinite-State Systems, Hyderabad, India, Dec 2012</span></li>
                     
-                    <li><strong>Sequentializing Concurrent Programs</strong><span class="sub-line">Computer Science Department, U. of Oxford, Oxford, UK, Jan 2012</span></li>
+                    <li><strong>Sequentializing Concurrent Programs</strong><span class="sub-line">Computer Science Department, University of Oxford, Oxford, UK, Jan 2012</span></li>
                     
                     <li><strong>Decidable Logics Combining Heap Structures and Data</strong>
                         <ul class="sub-list">
@@ -505,7 +501,7 @@
 
                 <div class="paper-entry">
                    <div class="bullet">&#8226;</div>
-                   <div class="item"><strong>Static Data Race Detection via Lazy Sequentialization<br></strong><a href="https://wpage.unina.it/m.faella/" target="_blank" rel="noopener noreferrer">M. Faella</a>, <a href="https://www.linkedin.com/in/giulio-garbi-19013186/" target="_blank" rel="noopener noreferrer">G. Garbi</a>, <a href="https://docenti.unisa.it/004821/en/home" target="_blank" rel="noopener noreferrer">S. La Torre</a>, and G. Parlato<br>12<sup>th</sup> International Conference on Networked Systems (<a href="https://netys.net/" target="_blank" rel="noopener noreferrer">NETYS</a>)<br>Rabat, Morocco, 2024<br><a href="https://gennaro-parlato.github.io/paper/netys24.pdf" target="_blank" rel="noopener noreferrer">PDF</a> &nbsp;&nbsp;<span style="color: #D32F2F; font-style: italic;">(Best paper award)</span></div>
+                   <div class="item"><strong>Static Data Race Detection via Lazy Sequentialization<br></strong><a href="https://wpage.unina.it/m.faella/" target="_blank" rel="noopener noreferrer">M. Faella</a>, <a href="https://www.linkedin.com/in/giulio-garbi-19013186/" target="_blank" rel="noopener noreferrer">G. Garbi</a>, <a href="https://docenti.unisa.it/004821/en/home" target="_blank" rel="noopener noreferrer">S. La Torre</a>, and G. Parlato<br>12<sup>th</sup> International Conference on Networked Systems (<a href="https://netys.net/" target="_blank" rel="noopener noreferrer">NETYS</a>)<br>Rabat, Morocco, 2024&nbsp;&nbsp;<br><a href="https://gennaro-parlato.github.io/paper/netys24.pdf" target="_blank" rel="noopener noreferrer">PDF</a> &nbsp;&nbsp;<span style="color: #D32F2F; font-style: italic;">(Best paper award)</span></div>
                 </div>
 
                 <div class="paper-entry">
@@ -535,7 +531,7 @@
                 
                 <div class="paper-entry">
                    <div class="bullet">&#8226;</div>
-                   <div class="item"><strong>Bounded Verification of Multi-Threaded Programs via Lazy Sequentialization<br></strong><a href="https://www.gssi.it/people/professors/lectures-computer-science/item/1018-inverso-omar" target="_blank" rel="noopener noreferrer">O. Inverso</a>, <a href="https://gildotomasco.github.io" target="_blank" rel="noopener noreferrer">E. Tomasco</a>, <a href="https://bfischer.pages.cs.sun.ac.za" target="_blank" relnoopener noreferrer">B. Fischer</a>, <a href="https://docenti.unisa.it/004821/en/home" target="_blank" rel="noopener noreferrer">S. La Torre</a>, and G. Parlato<br>ACM Transactions on Programming Languages and Systems (<a href="https://dl.acm.org/journal/toplas" target="_blank" rel="noopener noreferrer">TOPLAS</a>) 44(1): 1:1-1:50, 2022 <br><a href="https://gennaro-parlato.github.io/paper/toplas21.pdf" target="_blank" rel="noopener noreferrer">PDF</a></div>
+                   <div class="item"><strong>Bounded Verification of Multi-Threaded Programs via Lazy Sequentialization<br></strong><a href="https://www.gssi.it/people/professors/lectures-computer-science/item/1018-inverso-omar" target="_blank" rel="noopener noreferrer">O. Inverso</a>, <a href="https://gildotomasco.github.io" target="_blank" rel="noopener noreferrer">E. Tomasco</a>, <a href="https://bfischer.pages.cs.sun.ac.za" target="_blank" rel="noopener noreferrer">B. Fischer</a>, <a href="https://docenti.unisa.it/004821/en/home" target="_blank" rel="noopener noreferrer">S. La Torre</a>, and G. Parlato<br>ACM Transactions on Programming Languages and Systems (<a href="https://dl.acm.org/journal/toplas" target="_blank" rel="noopener noreferrer">TOPLAS</a>) 44(1): 1:1-1:50, 2022 <br><a href="https://gennaro-parlato.github.io/paper/toplas21.pdf" target="_blank" rel="noopener noreferrer">PDF</a></div>
                 </div>
                 
                 <div class="paper-entry">
@@ -575,7 +571,7 @@
                 
                 <div class="paper-entry">
                    <div class="bullet">&#8226;</div>
-                   <div class="item"><strong>Preventing Unauthorized Data Flows<br></strong>E. Uzun, G. Parlato, <a href="https://sites.rutgers.edu/vijay-atluri/" target="_blank" rel="noopener noreferrer">V. Atluri</a>, <a href="http://docenti.unimol.it/index.php?u=a.ferrara8" target="_blank" rel="noopener noreferrer">A. L. Ferrara</a>, <a href="https://www.business.rutgers.edu/faculty/jaideep-vaidya" target="_blank" rel="noopener noreferrer">J. Vaidya</a>, <a href="http://www.facweb.iitkgp.ernet.in/~shamik/" target="_blank" rel="noopener noreferrer">S. Sural</a>, and D. Lorenzi<br>Conference on Data and Applications Security and Privacy (<a href="https://dbsec2017.ittc.ku.edu/" target="_blank" rel="noopener noreferrer">DBSec</a>)<br>Philadelphia, PA, USA, 2017<br><a href="https://eprints.soton.ac.uk/410623/" target="_blank" rel="noopener noreferrer">PDF</a></div>
+                   <div class="item"><strong>Preventing Unauthorized Data Flows<br></strong>E. Uzun, <a href="https://sites.rutgers.edu/vijay-atluri/" target="_blank" rel="noopener noreferrer">V. Atluri</a>, <a href="http://docenti.unimol.it/index.php?u=a.ferrara8" target="_blank" rel="noopener noreferrer">A. L. Ferrara</a>, <a href="https://www.business.rutgers.edu/faculty/jaideep-vaidya" target="_blank" rel="noopener noreferrer">J. Vaidya</a>, <a href="http://www.facweb.iitkgp.ernet.in/~shamik/" target="_blank" rel="noopener noreferrer">S. Sural</a>, and D. Lorenzi<br>Conference on Data and Applications Security and Privacy (<a href="https://dbsec2017.ittc.ku.edu/" target="_blank" rel="noopener noreferrer">DBSec</a>)<br>Philadelphia, PA, USA, 2017<br><a href="https://eprints.soton.ac.uk/410623/" target="_blank" rel="noopener noreferrer">PDF</a></div>
                 </div>
                 
                 <div class="paper-entry">
