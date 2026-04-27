@@ -8,6 +8,7 @@
       <meta name="description" content="Official academic homepage of Gennaro Parlato, Full Professor of Computer Science at the University of Molise (UNIMOL). Head of the PAC Lab. Research in Formal Methods, Software Verification, and Automata Theory.">
       <meta name="keywords" content="Gennaro Parlato, Computer Science, UNIMOL, Formal Methods, Software Verification, PAC Lab, Automata Theory">
       <meta name="author" content="Gennaro Parlato">
+      <link rel="canonical" href="https://gennaro-parlato.github.io/">
       
       <meta property="og:title" content="Gennaro Parlato | Full Professor of Computer Science">
       <meta property="og:description" content="Official academic homepage of Gennaro Parlato, Full Professor of Computer Science at the University of Molise (UNIMOL).">
@@ -17,50 +18,80 @@
 
       <link rel="icon" type="image/jpeg" href="https://gennaro-parlato.github.io/images/img0001.jpg">
       
+      <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Gennaro Parlato",
+        "jobTitle": "Full Professor of Computer Science",
+        "url": "https://gennaro-parlato.github.io/",
+        "image": "https://gennaro-parlato.github.io/images/img0001.jpg",
+        "affiliation": {
+          "@type": "Organization",
+          "name": "University of Molise",
+          "url": "https://unimol.it/english/"
+        },
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Department of Biosciences and Territory"
+        }
+      }
+      </script>
+
       <style>
          /* Global Resets */
          * {
              box-sizing: border-box;
          }
          body {
-             background-color: #C0C0C0;
-             color: #000000;
-             font-family: "Times New Roman", Times, serif;
-             font-weight: normal;
-             font-size: 21px;
-             line-height: 1.25;
+             background-color: #C0C0C0; /* Restored classic silver background */
+             color: #222222;
+             font-family: Georgia, "Times New Roman", Times, serif;
+             font-size: 19px;
+             line-height: 1.6;
              margin: 0;
-             padding: 0;
+             padding: 20px 0;
          }
          
          /* Modern Link Styling */
-         a { color: #0056b3; text-decoration: none; }
+         a { 
+             color: #0056b3; 
+             text-decoration: underline; 
+             text-decoration-color: transparent; 
+             text-underline-offset: 3px; 
+             transition: text-decoration-color 0.2s ease, color 0.2s ease;
+         }
          a:visited { color: #6a1b9a; }
-         a:active { color: #d32f2f; }
-         a:hover { color: #0056b3; text-decoration: underline; }
+         a:hover, a:active { 
+             color: #d32f2f; 
+             text-decoration-color: #d32f2f; 
+         }
 
-         /* Main Layout Container (Flexbox) */
+         /* Main Layout Container (Card Style) */
          .page-container {
-             max-width: 1350px;
-             width: 100%;
+             max-width: 1250px;
+             width: 95%;
              margin: 0 auto;
-             padding: 60px 40px;
+             padding: 60px;
+             background-color: #FFFFFF;
+             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+             border-radius: 8px;
              display: flex;
-             flex-direction: row-reverse; /* Sidebar on right, Main Content on left */
+             flex-direction: row-reverse;
              justify-content: space-between;
-             gap: 80px;
+             gap: 60px;
          }
 
          /* Left Column: Main Content */
          .main-content {
              flex: 1;
              min-width: 0;
-             text-align: left;
+             max-width: 850px;
          }
 
          /* Right Column: Sidebar */
          .sidebar {
-             width: 320px;
+             width: 280px;
              flex-shrink: 0;
              display: flex;
              flex-direction: column;
@@ -68,32 +99,35 @@
          }
 
          /* Semantic Heading Styles */
+         h1, h2, h3 {
+             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+             color: #111111;
+             line-height: 1.3;
+         }
          h1 {
-             color: #FF0000;
-             font-family: 'Microsoft Sans Serif', Arial, sans-serif;
-             font-size: 40px;
-             margin: 0 0 45px 0;
+             color: #d32f2f;
+             font-size: 38px;
+             margin: 0 0 40px 0;
              padding: 0;
-             line-height: 1.1;
          }
          h2 {
-             color: #000000;
-             font-family: 'Microsoft Sans Serif', Arial, sans-serif;
-             font-size: 21px;
-             margin: 0 0 15px 0;
-             font-weight: bold;
+             font-size: 22px;
+             margin: 45px 0 20px 0;
+             border-bottom: 1px solid #E0E0E0;
+             padding-bottom: 8px;
+         }
+         .sidebar h2 {
+             margin-top: 0;
+             border-bottom: none;
+             padding-bottom: 0;
          }
 
          /* Section Styling */
          .content-section {
-             font-family: 'Microsoft Sans Serif', Arial, sans-serif;
-             font-size: 19px;
-             color: #000000;
-             margin-bottom: 45px;
+             margin-bottom: 40px;
          }
          .content-section p {
-             margin: 0 0 15px 0;
-             line-height: 1.3;
+             margin: 0 0 18px 0;
          }
          
          /* Clean Bullet Lists */
@@ -104,102 +138,115 @@
          }
          .clean-list > li {
              position: relative;
-             padding-left: 20px;
+             padding-left: 22px;
              margin-bottom: 15px;
-             line-height: 1.35;
          }
          .clean-list > li::before {
-             content: "-";
+             content: "—";
              position: absolute;
              left: 0;
-             font-weight: normal;
+             color: #666;
          }
          .clean-list li .sub-line {
              display: block;
-             margin-top: 4px;
+             margin-top: 5px;
+             color: #444;
          }
 
          /* Sub-lists for multiple venues (Invited Lectures) */
          .sub-list {
              list-style-type: none;
              padding-left: 0;
-             margin: 6px 0 0 0;
+             margin: 8px 0 0 0;
          }
          .sub-list li {
              position: relative;
-             padding-left: 20px;
-             margin-bottom: 4px;
+             padding-left: 22px;
+             margin-bottom: 6px;
              font-size: 18px;
-             line-height: 1.3;
          }
          .sub-list li::before {
              content: "◦";
              position: absolute;
              left: 0;
-             font-size: 22px;
-             line-height: 1;
              top: 0px;
          }
 
          /* Papers specific layout */
          .papers-list {
-             margin-top: 20px;
-             padding-bottom: 30px;
+             margin-top: 25px;
+             padding-bottom: 10px;
          }
          .paper-entry {
              display: flex;
              align-items: flex-start;
-             margin-bottom: 35px; 
+             margin-bottom: 30px; 
          }
          .paper-entry .bullet {
              width: 25px;
              flex-shrink: 0;
-             color: #000000;
-             font-family: "Times New Roman", Times, serif;
-             font-size: 21px;
-             line-height: 1.35;
+             color: #444;
          }
          .paper-entry .item {
              flex: 1;
              min-width: 0;
-             color: #000000;
-             font-family: 'Microsoft Sans Serif', Arial, sans-serif;
-             font-size: 19px;
-             line-height: 1.35;
+         }
+
+         /* Toggle for Full Publications */
+         details.full-pubs {
+             margin-top: 10px;
+             margin-bottom: 30px;
+         }
+         summary.pubs-toggle {
+             cursor: pointer;
+             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+             font-size: 17px;
+             font-weight: bold;
+             color: #0056b3;
+             background-color: #F8F9FA;
+             border: 1px solid #DCDCDC;
+             padding: 12px 24px;
+             border-radius: 6px;
+             display: inline-block;
+             transition: all 0.2s ease;
+             user-select: none;
+         }
+         summary.pubs-toggle:hover {
+             background-color: #E9ECEF;
+             color: #d32f2f;
+         }
+         details.full-pubs[open] summary.pubs-toggle {
+             margin-bottom: 20px;
+             background-color: #E9ECEF;
          }
 
          /* Responsive Teaching Table */
          .teaching-table {
              width: 100%;
              max-width: 750px;
-             border: 2px solid #C0C0C0;
-             border-collapse: separate;
-             border-spacing: 1px;
-             margin: 15px 0 40px 0;
+             border-collapse: collapse;
+             margin: 20px 0 40px 0;
          }
          .teaching-table td { 
-             padding: 8px 12px; 
-             border: 1px solid #C0C0C0; 
+             padding: 10px 12px; 
+             border-bottom: 1px solid #EEEEEE; 
              vertical-align: top;
          }
-         .teaching-table td:first-child { width: 60%; }
-         .teaching-table td:last-child { width: 40%; }
-         .table-text {
-             font-family: 'Microsoft Sans Serif', Arial, sans-serif;
-             font-size: 17px;
-             line-height: 1.2;
-         }
+         .teaching-table td:first-child { width: 65%; }
+         .teaching-table td:last-child { width: 35%; color: #555; }
          .table-heading {
-             font-family: 'Microsoft Sans Serif', Arial, sans-serif;
-             font-size: 19px;
+             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
              font-weight: bold;
+             background-color: #FAFAFA;
+             border-top: 2px solid #E0E0E0;
          }
 
          /* Sidebar specific elements */
          .profile-pic {
              width: 100%;
              height: auto;
-             border: 3px solid #808080;
+             border-radius: 4px;
+             box-shadow: 0 2px 8px rgba(0,0,0,0.1);
              margin-bottom: 30px;
          }
          .contact-widget {
@@ -208,7 +255,7 @@
          }
          .contact-divider {
              border: 0;
-             border-bottom: 3px solid #808080;
+             border-bottom: 2px solid #E0E0E0;
              margin: 10px 0 20px 0;
              width: 100%;
          }
@@ -217,31 +264,34 @@
              height: auto;
          }
          .unimol-logo {
-             max-width: 226px;
+             max-width: 200px;
              width: 100%;
              height: auto;
          }
          .shinystat-container {
-             margin-top: 30px;
-             padding-bottom: 50px;
+             margin-top: 40px;
+             padding-bottom: 30px;
          }
 
          /* --- MOBILE RESPONSIVENESS --- */
          @media (max-width: 1000px) {
+             body { padding: 0; }
              .page-container {
                  flex-direction: column;
+                 width: 100%;
                  padding: 30px 20px;
+                 border-radius: 0;
+                 box-shadow: none;
                  gap: 40px;
              }
              .sidebar {
                  width: 100%;
-                 max-width: 350px;
+                 max-width: 320px;
                  margin: 0 auto;
                  align-items: center;
                  text-align: center;
              }
-             .sidebar h2 { text-align: center; }
-             h1 { margin-bottom: 30px; font-size: 34px; text-align: center; }
+             h1 { margin-bottom: 30px; font-size: 32px; text-align: center; }
              .teaching-table td:first-child, .teaching-table td:last-child {
                  width: 50%;
              }
@@ -251,19 +301,19 @@
    <body>
       <div class="page-container">
          
-         <aside class="sidebar">
-            <img src="https://gennaro-parlato.github.io/images/img0001.jpg" alt="Gennaro Parlato Profile Picture" class="profile-pic">
+         <aside class="sidebar" aria-label="Profile and Contact Information">
+            <img src="https://gennaro-parlato.github.io/images/img0001.jpg" alt="Portrait of Gennaro Parlato, Full Professor of Computer Science" class="profile-pic">
             
             <div class="contact-widget">
                <h2>Contact Information</h2>
                <hr class="contact-divider">
-               <img src="https://gennaro-parlato.github.io/images/img00005.gif" alt="Contact Details" class="contact-gif">
+               <img src="https://gennaro-parlato.github.io/images/img00005.gif" alt="Email address and contact details of Gennaro Parlato" class="contact-gif">
             </div>
             
-            <img src="https://gennaro-parlato.github.io/images/UNIMOL-logo_negativo.png" alt="UNIMOL Logo" class="unimol-logo">
+            <img src="https://gennaro-parlato.github.io/images/UNIMOL-logo_negativo.png" alt="University of Molise official logo" class="unimol-logo">
          </aside>
 
-         <main class="main-content">
+         <main class="main-content" aria-label="Main Academic Content">
             
             <h1>Gennaro Parlato</h1>
 
@@ -303,7 +353,7 @@
                     <li><a href="https://www.amazon.science/research-awards/recipients/gennaro-parlato" target="_blank" rel="noopener noreferrer">Amazon Research Award</a>, Spring 2021</li>
                     <li><strong>Best Paper Award</strong> at the 12th International Conference on Networked Systems (NETYS), 2024</li>
                     <li><strong>14 Medals at the International Competition on Software Verification (SV-COMP)</strong><span class="sub-line">(5 Gold, 7 Silver, 2 Bronze in Concurrency Category)</span></li>
-                    <li>Fellow of The Higher Education Academy (UKSPF Descriptor 2), Mar 2014</li>
+                    <li>Fellow of the Higher Education Academy (UKSPF Descriptor 2), Mar 2014</li>
                 </ul>
             </div>
             
@@ -324,7 +374,7 @@
                 <ul class="clean-list">
                     <li><a href="https://www.linkedin.com/in/enrico-steffinlongo-461364161/" target="_blank" rel="noopener noreferrer">Enrico Steffinlongo</a> (Oct 2016–Feb 2018)<span class="sub-line">Currently Software Engineer at <strong>GitHub</strong>, UK.</span></li>
                     <li><a href="https://www.linkedin.com/in/trucnguyenlam" target="_blank" rel="noopener noreferrer">Truc Lam Nguyen</a> (Oct 2013–May 2017)<span class="sub-line">Currently Senior Data Engineer at <strong>Jagex</strong>, Cambridge, UK.</span></li>
-                    <li><a href="https://gildotomasco.github.io" target="_blank" rel="noopener noreferrer">Ermenegildo Tomasco</a> (May 2012–May 2017)<span class="sub-line">Currently Official at <strong>Italian Income Revenue Authority</strong>, Italy.</span></li>
+                    <li><a href="https://gildotomasco.github.io" target="_blank" rel="noopener noreferrer">Ermenegildo Tomasco</a> (May 2012–May 2017)<span class="sub-line">Currently Official at the <strong>Italian Revenue Agency</strong>, Italy.</span></li>
                     <li><a href="https://www.gssi.it/people/professors/lectures-computer-science/item/1018-inverso-omar" target="_blank" rel="noopener noreferrer">Omar Inverso</a> (Oct 2011–Oct 2015)<span class="sub-line">Currently Associate Professor at <strong>Gran Sasso Science Institute (GSSI)</strong>, Italy.</span></li>
                 </ul>
             </div>
@@ -343,7 +393,7 @@
                 <h2>BSc &amp; MSc Research Students</h2>
                 <ul class="clean-list">
                     <li><a href="https://paolo-di-biase.github.io/" target="_blank" rel="noopener noreferrer">Paolo Di Biase</a><span class="sub-line">Currently PhD student at GSSI. Co-author of the <em>Iekkë</em> verifier (TACAS '26).</span></li>
-                    <li><a href="https://github.com/nicola-gentile" target="_blank" rel="noopener noreferrer">Nicola Gentile</a><span class="sub-line">Research focus: Verification of Heap-manipulating programs</span></li>
+                    <li><a href="https://github.com/nicola-gentile" target="_blank" rel="noopener noreferrer">Nicola Gentile</a><span class="sub-line">Research focus: Verification of heap-manipulating programs</span></li>
                     <li><a href="https://github.com/apdc1312" target="_blank" rel="noopener noreferrer">Andrea Pino di Cristofaro</a><span class="sub-line">Research focus: Symbolic partial order reduction</span></li>
                 </ul>
             </div>
@@ -377,7 +427,7 @@
                     
                     <li><strong>C2C-trans as a Design Methodology for Software Verification Tools</strong><span class="sub-line">Workshop on Democratizing Software Verification (at CAV), Haifa, Israel, Aug 2022</span></li>
                     
-                    <li><strong>Parallel Bug-finding in Concurrent Programs Via Reduced Interleaving Instances</strong><span class="sub-line">Guest talk at Amazon (Amazon Chime), Sept 2020</span></li>
+                    <li><strong>Parallel bug-finding in Concurrent Programs Via Reduced Interleaving Instances</strong><span class="sub-line">Guest talk at Amazon (Amazon Chime), Sept 2020</span></li>
                     
                     <li><strong>Finding Rare Concurrent Programming Bugs</strong>
                         <ul class="sub-list">
@@ -386,7 +436,7 @@
                         </ul>
                     </li>
                     
-                    <li><strong>A Pragmatic Bug-finding Approach for Concurrent Programs</strong><span class="sub-line">Institut de Recherche en Informatique Fondamentale (IRIF), Paris, France, Nov 2016</span></li>
+                    <li><strong>A Pragmatic bug-finding Approach for Concurrent Programs</strong><span class="sub-line">Institut de Recherche en Informatique Fondamentale (IRIF), Paris, France, Nov 2016</span></li>
                     
                     <li><strong>Security Analysis of Self-Administrated RBAC through Program Verification</strong><span class="sub-line">Information Security Group, Dept. of Computer Science, UCL, London, UK, July 2015</span></li>
                     
@@ -418,7 +468,7 @@
                         </ul>
                     </li>
                     
-                    <li><strong>Writing Model-Checkers for Boolean Recursive Programs using a Fixed-Point Calculus</strong><span class="sub-line">LIAFA, Paris, France, Sept 2009</span></li>
+                    <li><strong>Writing Model-Checkers for Boolean Recursive Programs using a fixed-point Calculus</strong><span class="sub-line">LIAFA, Paris, France, Sept 2009</span></li>
                 </ul>
             </div>
 
@@ -426,314 +476,402 @@
 
             <table class="teaching-table">
                 <tr>
-                   <td class="table-heading">&nbsp; University of Molise, Italy</td>
-                   <td>&nbsp;</td>
+                   <td class="table-heading" colspan="2">University of Molise, Italy</td>
                 </tr>
                 <tr>
-                   <td class="table-text">&nbsp; - <a href="https://unimol.esse3.cineca.it/AttivitaDidatticaContestualizzata.do?ad_id=31309476&cds_id=10018&pds_id=9999&aa_ord_id=2017&aa_off_id=2020&cod_lingua=ita" target="_blank" rel="noopener noreferrer">Algorithms and Data Structures</a></td>
-                   <td class="table-text">&nbsp; ( 2018/19 – present )</td>
+                   <td><a href="https://unimol.esse3.cineca.it/AttivitaDidatticaContestualizzata.do?ad_id=31309476&cds_id=10018&pds_id=9999&aa_ord_id=2017&aa_off_id=2020&cod_lingua=ita" target="_blank" rel="noopener noreferrer">Algorithms and Data Structures</a></td>
+                   <td>2018/19 – present</td>
                 </tr>
                 <tr>
-                   <td class="table-text">&nbsp; - Program Analysis &amp; Security</td>
-                   <td class="table-text">&nbsp; ( 2019/20 – present )</td>
+                   <td>Program Analysis &amp; Security</td>
+                   <td>2019/20 – present</td>
                 </tr>
                 <tr>
-                   <td class="table-text">&nbsp; - Theory of Computing</td>
-                   <td class="table-text">&nbsp; ( 2022/23 – present )</td>
-                </tr>
-                
-                <tr>
-                   <td class="table-heading" style="padding-top:20px;">&nbsp; University of Southampton, UK</td>
-                   <td>&nbsp;</td>
-                </tr>
-                <tr>
-                   <td class="table-text">&nbsp; - Theory of Computing</td>
-                   <td class="table-text">&nbsp; ( 2012/13 – 2018/19 )</td>
-                </tr>
-                <tr>
-                   <td class="table-text">&nbsp; - Formal Methods &amp; Automated Verif.</td>
-                   <td class="table-text">&nbsp; ( 2011/12 – 2014/15 )</td>
-                </tr>
-                <tr>
-                   <td class="table-text">&nbsp; - Advanced Topics in Computer Science</td>
-                   <td class="table-text">&nbsp; ( 2015/16 – 2016/17 )</td>
+                   <td>Theory of Computing</td>
+                   <td>2022/23 – present</td>
                 </tr>
                 
                 <tr>
-                   <td class="table-heading" style="padding-top:20px;">&nbsp; PhD Schools</td>
-                   <td>&nbsp;</td>
+                   <td class="table-heading" colspan="2" style="border-top-width: 15px; border-top-color: transparent;">University of Southampton, UK</td>
                 </tr>
                 <tr>
-                   <td class="table-text">&nbsp; - Lecture series at <br>&nbsp;&nbsp;&nbsp; <a href="https://www.it.uu.se/research/upmarc/events/SS2015/ss2015/Start.html" target="_blank" rel="noopener noreferrer">UPMARC Summer School on Multicore Computing</a>,<br>&nbsp;&nbsp;&nbsp; Uppsala, Sweden</td>
-                   <td class="table-text">&nbsp; ( June 2015 )</td>
+                   <td>Theory of Computing</td>
+                   <td>2012/13 – 2018/19</td>
                 </tr>
                 <tr>
-                   <td class="table-text">&nbsp; - Module on Program Verification, PhD program, <br>&nbsp;&nbsp;&nbsp; <a href="https://www.imtlucca.it/en" target="_blank" rel="noopener noreferrer">IMT School for Advanced Studies</a>, Lucca, Italy</td>
-                   <td class="table-text">&nbsp; ( Apr 2016 &amp; July 2018 )</td>
+                   <td>Formal Methods &amp; Automated Verif.</td>
+                   <td>2011/12 – 2014/15</td>
+                </tr>
+                <tr>
+                   <td>Advanced Topics in Computer Science</td>
+                   <td>2015/16 – 2016/17</td>
+                </tr>
+                
+                <tr>
+                   <td class="table-heading" colspan="2" style="border-top-width: 15px; border-top-color: transparent;">PhD Schools</td>
+                </tr>
+                <tr>
+                   <td>Lecture series at <br><a href="https://www.it.uu.se/research/upmarc/events/SS2015/ss2015/Start.html" target="_blank" rel="noopener noreferrer">UPMARC Summer School on Multicore Computing</a>,<br>Uppsala, Sweden</td>
+                   <td>June 2015</td>
+                </tr>
+                <tr>
+                   <td>Module on Program Verification, PhD program, <br><a href="https://www.imtlucca.it/en" target="_blank" rel="noopener noreferrer">IMT School for Advanced Studies</a>, Lucca, Italy</td>
+                   <td>Apr 2016 &amp; July 2018</td>
                 </tr>
             </table>
 
-            <div>
-                <h2>Papers <span style="font-size:17px; font-weight:normal;">(<a href="https://dblp.uni-trier.de/pers/hd/p/Parlato:Gennaro" target="_blank" rel="noopener noreferrer">DBLP</a>, <a href="https://scholar.google.co.uk/citations?user=qH4ssmQAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a>)</span></h2>
-            </div>
+            <div class="content-section">
+                <h2>Selected Publications <span style="font-size:16px; font-weight:normal; color:#555;">(<a href="https://dblp.uni-trier.de/pers/hd/p/Parlato:Gennaro" target="_blank" rel="noopener noreferrer">DBLP</a>, <a href="https://scholar.google.co.uk/citations?user=qH4ssmQAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a>)</span></h2>
 
-            <div class="papers-list">
+                <div class="papers-list">
+                    
+                    <div class="paper-entry">
+                       <div class="bullet">&#8226;</div>
+                       <div class="item"><strong>Verifying Tree-Manipulating Programs via CHCs</strong><br><a href="https://wpage.unina.it/m.faella/" target="_blank" rel="noopener noreferrer">M. Faella</a> and G. Parlato<br>37<sup>th</sup> International Conference on Computer Aided Verification (<a href="https://conferences.i-cav.org/2025/" target="_blank" rel="noopener noreferrer">CAV</a>)<br>Zagreb, Croatia, 2025<br><a href="https://gennaro-parlato.github.io/paper/cav25.pdf" target="_blank" rel="noopener noreferrer">PDF</a>, <a href="https://arxiv.org/abs/2505.14092" target="_blank" rel="noopener noreferrer">Extended Version</a>
+                       <div style="margin-top: 10px; font-size: 16.5px; line-height: 1.4; color: #555;"><em>Representative of my current work on the verification of heap- and tree-manipulating programs through CHC-based techniques, combining logical and symbolic methods with practically motivated verification questions.</em></div>
+                       </div>
+                    </div>
+                    
+                    <div class="paper-entry">
+                       <div class="bullet">&#8226;</div>
+                       <div class="item"><strong>Reasoning about Data Trees using CHCs</strong><br><a href="https://wpage.unina.it/m.faella/" target="_blank" rel="noopener noreferrer">M. Faella</a> and G. Parlato<br>34<sup>th</sup> Int'l Conference on Computer Aided Verification (<a href="https://i-cav.org/2022/" target="_blank" rel="noopener noreferrer">CAV</a>)<br>Haifa, Israel, 2022<br><a href="https://gennaro-parlato.github.io/paper/cav22.pdf" target="_blank" rel="noopener noreferrer">PDF</a>, <a href="https://gennaro-parlato.github.io/paper/cav22.pptx" target="_blank" rel="noopener noreferrer">PPT</a>, <a href="https://gennaro-parlato.github.io/paper/CAV22-Artifact.zip" target="_blank" rel="noopener noreferrer">Artifact</a>
+                       <div style="margin-top: 10px; font-size: 16.5px; line-height: 1.4; color: #555;"><em>A theoretically grounded contribution based on automata-theoretic and logical methods for reasoning about data trees, representative of my current work on verification problems involving rich heap- and tree-structured data.</em></div>
+                       </div>
+                    </div>
+                    
+                    <div class="paper-entry">
+                       <div class="bullet">&#8226;</div>
+                       <div class="item">
+                           <strong>Bounded Model Checking of Multi-Threaded C Programs via Lazy Sequentialization</strong><br><a href="https://www.gssi.it/people/professors/lectures-computer-science/item/1018-inverso-omar" target="_blank" rel="noopener noreferrer">O. Inverso</a>, <a href="https://gildotomasco.github.io" target="_blank" rel="noopener noreferrer">E. Tomasco</a>, <a href="https://bfischer.pages.cs.sun.ac.za" target="_blank" rel="noopener noreferrer">B. Fischer</a>, <a href="https://docenti.unisa.it/004821/en/home" target="_blank" rel="noopener noreferrer">S. La Torre</a>, and G. Parlato<br>26<sup>th</sup> Int'l Conference on Computer Aided Verification (<a href="https://i-cav.org/2014/" target="_blank" rel="noopener noreferrer">CAV</a>)<br>Vienna, Austria, 2014<br><a href="https://eprints.soton.ac.uk/365365/" target="_blank" rel="noopener noreferrer">PDF</a>, <a href="https://gennaro-parlato.github.io/paper/LazyCseq.pptx" target="_blank" rel="noopener noreferrer">PPT</a>
+                           
+                           <div style="margin-top: 12px;"><strong>Bounded Verification of Multi-Threaded Programs via Lazy Sequentialization</strong><br><a href="https://www.gssi.it/people/professors/lectures-computer-science/item/1018-inverso-omar" target="_blank" rel="noopener noreferrer">O. Inverso</a>, <a href="https://gildotomasco.github.io" target="_blank" rel="noopener noreferrer">E. Tomasco</a>, <a href="https://bfischer.pages.cs.sun.ac.za" target="_blank" rel="noopener noreferrer">B. Fischer</a>, <a href="https://docenti.unisa.it/004821/en/home" target="_blank" rel="noopener noreferrer">S. La Torre</a>, and G. Parlato<br>ACM Transactions on Programming Languages and Systems (<a href="https://dl.acm.org/journal/toplas" target="_blank" rel="noopener noreferrer">TOPLAS</a>) 44(1): 1:1-1:50, 2022 <br><a href="https://gennaro-parlato.github.io/paper/toplas21.pdf" target="_blank" rel="noopener noreferrer">PDF</a></div>
+                           
+                           <div style="margin-top: 10px; font-size: 16.5px; line-height: 1.4; color: #555;"><em>Conference and journal milestones in a core research line on sequentialization-based verification of concurrent software.</em></div>
+                       </div>
+                    </div>
+                    
+                    <div class="paper-entry">
+                       <div class="bullet">&#8226;</div>
+                       <div class="item"><strong>Reducing Context-bounded Concurrent Reachability to Sequential Reachability</strong><br><a href="https://docenti.unisa.it/004821/en/home" target="_blank" rel="noopener noreferrer">S. La Torre</a>, <a href="https://madhu.cs.illinois.edu" target="_blank" rel="noopener noreferrer">P. Madhusudan</a>, and G. Parlato<br>21<sup>st</sup> Int'l Conference on Computer Aided Verification (<a href="https://i-cav.org/2009" target="_blank" rel="noopener noreferrer">CAV</a>)<br>Grenoble, France, 2009<br><a href="https://eprints.soton.ac.uk/272456/" target="_blank" rel="noopener noreferrer">PDF</a>, <a href="https://gennaro-parlato.github.io/paper/ParlatoCAV09.ppt" target="_blank" rel="noopener noreferrer">PPT</a>
+                       <div style="margin-top: 10px; font-size: 16.5px; line-height: 1.4; color: #555;"><em>An early foundational contribution to my long-term work on concurrent program verification via sequential reasoning.</em></div>
+                       </div>
+                    </div>
+                    
+                    <div class="paper-entry">
+                       <div class="bullet">&#8226;</div>
+                       <div class="item"><strong>Model-checking Parameterized Concurrent Programs Using Linear Interfaces</strong><br><a href="https://docenti.unisa.it/004821/en/home" target="_blank" rel="noopener noreferrer">S. La Torre</a>, <a href="https://madhu.cs.illinois.edu" target="_blank" rel="noopener noreferrer">P. Madhusudan</a>, and G. Parlato<br>22<sup>nd</sup> Int'l Conference on Computer Aided Verification (<a href="http://www.liafa.jussieu.fr/~touili/cav2010/" target="_blank" rel="noopener noreferrer">CAV</a>)<br>Edinburgh, UK, 2010<br><a href="https://eprints.soton.ac.uk/272454/" target="_blank" rel="noopener noreferrer">PDF</a>
+                       <div style="margin-top: 10px; font-size: 16.5px; line-height: 1.4; color: #555;"><em>A significant step in my work on algorithmic verification techniques for concurrent and parameterized systems.</em></div>
+                       </div>
+                    </div>
+                    
+                    <div class="paper-entry">
+                       <div class="bullet">&#8226;</div>
+                       <div class="item"><strong>Getting Rid of Store-Buffers in the Analysis of Weak Memory Models</strong><br><a href="https://www.uu.se/en/contact-and-organisation/staff?query=N10-529" target="_blank" rel="noopener noreferrer">F. M. Atig</a>, <a href="https://www.irif.fr/~abou/" target="_blank" rel="noopener noreferrer">A. Bouajjani</a>, and G. Parlato<br>23<sup>rd</sup> Int'l Conference on Computer Aided Verification (<a href="https://www.cs.utah.edu/events/conferences/cav2011/" target="_blank" rel="noopener noreferrer">CAV</a>)<br>Cliff Lodge, Snowbird, Utah, USA, 2011<br><a href="https://eprints.soton.ac.uk/272450/" target="_blank" rel="noopener noreferrer">PDF</a>, <a href="https://gennaro-parlato.github.io/paper/CAV2011.pptx" target="_blank" rel="noopener noreferrer">PPT</a>
+                       <div style="margin-top: 10px; font-size: 16.5px; line-height: 1.4; color: #555;"><em>This paper extends my work on concurrency verification to weak memory semantics and realistic execution models.</em></div>
+                       </div>
+                    </div>
+                    
+                    <div class="paper-entry">
+                       <div class="bullet">&#8226;</div>
+                       <div class="item"><strong>Reachability Games Modulo Theories with a Bounded Safety Player</strong><br><a href="https://wpage.unina.it/m.faella/" target="_blank" rel="noopener noreferrer">M. Faella</a> and G. Parlato<br>37<sup>th</sup> AAAI Conference on Artificial Intelligence (<a href="https://aaai.org/Conferences/AAAI-23/" target="_blank" rel="noopener noreferrer">AAAI</a>)<br>Washington, DC, USA, 2023<br><a href="https://gennaro-parlato.github.io/paper/aaai23.pdf" target="_blank" rel="noopener noreferrer">PDF</a>, <a href="https://gennaro-parlato.github.io/paper/AAAI-23-recorded-presentation.mp4" target="_blank" rel="noopener noreferrer">Recorded Presentation</a>
+                       <div style="margin-top: 10px; font-size: 16.5px; line-height: 1.4; color: #555;"><em>Representative of my work on synthesis-oriented problems at the intersection of formal methods, logic, and artificial intelligence, with particular emphasis on game-based and theory-aware reasoning.</em></div>
+                       </div>
+                    </div>
 
-                <div class="paper-entry">
-                   <div class="bullet">&#8226;</div>
-                   <div class="item"><strong><span style="font-variant: small-caps;">Iekkë</span>: A SAT-Based Bounded-Round Verifier for Multi-Threaded Programs<br>(Competition Contribution)<br></strong><a href="https://paolo-di-biase.github.io/" target="_blank" rel="noopener noreferrer">P. Di Biase</a>, <a href="https://bfischer.pages.cs.sun.ac.za" target="_blank" rel="noopener noreferrer">B. Fischer</a>, <a href="https://docenti.unisa.it/004821/en/home" target="_blank" rel="noopener noreferrer">S. La Torre</a>, <a href="http://www.schrammel.it/" target="_blank" rel="noopener noreferrer">P. Schrammel</a>, and G. Parlato<br>32<sup>nd</sup> International Conference on Tools and Algorithms for the Construction and Analysis of Systems (<a href="https://etaps.org/" target="_blank" rel="noopener noreferrer">TACAS</a>)<br>Turin, Italy, 2026<br><a href="https://gennaro-parlato.github.io/paper/svcomp26.pdf" target="_blank" rel="noopener noreferrer">PDF</a></div>
-                </div>
+                    <div class="paper-entry">
+                       <div class="bullet">&#8226;</div>
+                       <div class="item"><strong>Decidable Logics Combining Heap Structures and Data</strong><br><a href="https://madhu.cs.illinois.edu" target="_blank" rel="noopener noreferrer">P. Madhusudan</a>, G. Parlato, and <a href="http://people.csail.mit.edu/xkqiu/" target="_blank" rel="noopener noreferrer">X. Qiu</a><br>38<sup>th</sup> ACM SIGACT-SIGPLAN Symposium on Principles of Programming Languages (<a href="https://www.cse.psu.edu/popl/11/" target="_blank" rel="noopener noreferrer">POPL</a>)<br>Austin, Texas, USA, 2011<br><a href="https://eprints.soton.ac.uk/272448/" target="_blank" rel="noopener noreferrer">PDF</a>, <a href="https://gennaro-parlato.github.io/paper/strand.pptx" target="_blank" rel="noopener noreferrer">PPT</a>
+                       <div style="margin-top: 10px; font-size: 16.5px; line-height: 1.4; color: #555;"><em>A foundational contribution on logical methods for reasoning about dynamically allocated data structures, closely connected to my current work on heap-manipulating programs.</em></div>
+                       </div>
+                    </div>
 
-                <div class="paper-entry">
-                   <div class="bullet">&#8226;</div>
-                   <div class="item"><strong>Adaptive Bitwidth Abstraction for Distributed Bounded Model Checking of Concurrent Programs<br></strong><a href="http://docenti.unimol.it/index.php?u=a.ferrara8" target="_blank" rel="noopener noreferrer">A. L. Ferrara</a>, <a href="https://bfischer.pages.cs.sun.ac.za" target="_blank" rel="noopener noreferrer">B. Fischer</a>, <a href="https://docenti.unisa.it/004821/en/home" target="_blank" rel="noopener noreferrer">S. La Torre</a>, G. Parlato, and <a href="http://www.schrammel.it/" target="_blank" rel="noopener noreferrer">P. Schrammel</a><br>14<sup>th</sup> International Conference on Networked Systems (<a href="https://netys.net/" target="_blank" rel="noopener noreferrer">NETYS</a>)<br>Agadir, Morocco, 2026</div>
-                </div>
+                    <div class="paper-entry">
+                       <div class="bullet">&#8226;</div>
+                       <div class="item"><strong>The Tree Width of Automata with Auxiliary Storage</strong><br><a href="https://madhu.cs.illinois.edu" target="_blank" rel="noopener noreferrer">P. Madhusudan</a> and G. Parlato <br>38<sup>th</sup> ACM SIGACT-SIGPLAN Symposium on Principles of Programming Languages (<a href="https://www.cse.psu.edu/popl/11/" target="_blank" rel="noopener noreferrer">POPL</a>)<br>Austin, Texas, USA, 2011<br><a href="https://eprints.soton.ac.uk/272444/" target="_blank" rel="noopener noreferrer">PDF</a>, <a href="https://gennaro-parlato.github.io/paper/graphautomata.pptx" target="_blank" rel="noopener noreferrer">PPT</a>
+                       <div style="margin-top: 10px; font-size: 16.5px; line-height: 1.4; color: #555;"><em>Representative of a broader line of work on automata with auxiliary storage, decidability, and structural methods, developed both as foundational results and as tools for verification.</em></div>
+                       </div>
+                    </div>
 
-                <div class="paper-entry">
-                   <div class="bullet">&#8226;</div>
-                   <div class="item"><strong>Verifying Tree-Manipulating Programs via CHCs<br></strong><a href="https://wpage.unina.it/m.faella/" target="_blank" rel="noopener noreferrer">M. Faella</a> and G. Parlato<br>37<sup>th</sup> International Conference on Computer Aided Verification (<a href="https://conferences.i-cav.org/2025/" target="_blank" rel="noopener noreferrer">CAV</a>)<br>Zagreb, Croatia, 2025<br><a href="https://gennaro-parlato.github.io/paper/cav25.pdf" target="_blank" rel="noopener noreferrer">PDF</a>, <a href="https://arxiv.org/abs/2505.14092" target="_blank" rel="noopener noreferrer">Extended Version</a></div>
-                </div>
+                    <div class="paper-entry">
+                       <div class="bullet">&#8226;</div>
+                       <div class="item"><strong>Analyzing Recursive Programs using Fixed-point Calculus</strong><br><a href="https://docenti.unisa.it/004821/en/home" target="_blank" rel="noopener noreferrer">S. La Torre</a>, <a href="https://madhu.cs.illinois.edu" target="_blank" rel="noopener noreferrer">P. Madhusudan</a>, and G. Parlato<br>30<sup>th</sup> annual ACM SIGPLAN 2009 Conference on Programming Language Design and Implementation (<a href="http://www-plan.cs.colorado.edu/~pldi09/" target="_blank" rel="noopener noreferrer">PLDI</a>)<br>Dublin, Ireland, 2009<br><a href="https://eprints.soton.ac.uk/272457/" target="_blank" rel="noopener noreferrer">PDF</a>, <a href="https://gennaro-parlato.github.io/paper/Getafix.pptx" target="_blank" rel="noopener noreferrer">PPT</a>
+                       <div style="margin-top: 10px; font-size: 16.5px; line-height: 1.4; color: #555;"><em>A signature contribution on recursive program verification and fixed-point methods in formal methods.</em></div>
+                       </div>
+                    </div>
 
-                <div class="paper-entry">
-                   <div class="bullet">&#8226;</div>
-                   <div class="item"><strong>A Unified Automata-Theoretic Approach to <em>LTL<sub>f</sub></em> Modulo Theories<br></strong><a href="https://wpage.unina.it/m.faella/" target="_blank" rel="noopener noreferrer">M. Faella</a> and G. Parlato<br>27<sup>th</sup> European Conference on Artificial Intelligence (<a href="https://www.ecai2024.eu/" target="_blank" rel="noopener noreferrer">ECAI</a>)<br>Santiago de Compostela, Spain, 2024<br><a href="https://gennaro-parlato.github.io/paper/ecai24.pdf" target="_blank" rel="noopener noreferrer">PDF</a>, <a href="https://arxiv.org/abs/2408.08817" target="_blank" rel="noopener noreferrer">Extended Version</a></div>
-                </div>
+                    <div class="paper-entry">
+                       <div class="bullet">&#8226;</div>
+                       <div class="item"><strong>A Robust Class of Context-Sensitive Languages</strong><br><a href="https://docenti.unisa.it/004821/en/home" target="_blank" rel="noopener noreferrer">S. La Torre</a>, <a href="https://madhu.cs.illinois.edu" target="_blank" rel="noopener noreferrer">P. Madhusudan</a>, and G. Parlato<br>22<sup>nd</sup> IEEE Symp. on Logic in Computer Science (<a href="https://lics.siglog.org/archive/2007/" target="_blank" rel="noopener noreferrer">LICS</a>) <br>Wroclaw, Poland, 2007<br><a href="https://eprints.soton.ac.uk/272465/" target="_blank" rel="noopener noreferrer">PDF</a>
+                       <div style="margin-top: 10px; font-size: 16.5px; line-height: 1.4; color: #555;"><em>A foundational contribution in a broader research line on decidability, formal languages, and automata-theoretic methods that informs much of my later work in verification.</em></div>
+                       </div>
+                    </div>
 
-                <div class="paper-entry">
-                   <div class="bullet">&#8226;</div>
-                   <div class="item"><strong>Static Data Race Detection via Lazy Sequentialization<br></strong><a href="https://wpage.unina.it/m.faella/" target="_blank" rel="noopener noreferrer">M. Faella</a>, <a href="https://www.linkedin.com/in/giulio-garbi-19013186/" target="_blank" rel="noopener noreferrer">G. Garbi</a>, <a href="https://docenti.unisa.it/004821/en/home" target="_blank" rel="noopener noreferrer">S. La Torre</a>, and G. Parlato<br>12<sup>th</sup> International Conference on Networked Systems (<a href="https://netys.net/" target="_blank" rel="noopener noreferrer">NETYS</a>)<br>Rabat, Morocco, 2024&nbsp;&nbsp;<br><a href="https://gennaro-parlato.github.io/paper/netys24.pdf" target="_blank" rel="noopener noreferrer">PDF</a> &nbsp;&nbsp;<span style="color: #D32F2F; font-style: italic;">(Best paper award)</span></div>
-                </div>
+                    <div class="paper-entry">
+                       <div class="bullet">&#8226;</div>
+                       <div class="item"><strong>Parallel bug-finding in concurrent programs via reduced interleaving instances</strong><br><a href="https://www.linkedin.com/in/trucnguyenlam" target="_blank" rel="noopener noreferrer">T. L. Nguyen</a>, <a href="http://www.schrammel.it/" target="_blank" rel="noopener noreferrer">P. Schrammel</a>, <a href="https://bfischer.pages.cs.sun.ac.za" target="_blank" rel="noopener noreferrer">B. Fischer</a>, <a href="https://docenti.unisa.it/004821/en/home" target="_blank" rel="noopener noreferrer">S. La Torre</a>, and G. Parlato<br>32<sup>nd</sup> IEEE/ACM International Conference on Automated Software Engineering (<a href="https://conf.researchr.org/home/ase-2017" target="_blank" rel="noopener noreferrer">ASE</a>)<br><a href="https://cs.illinois.edu/" target="_blank" rel="noopener noreferrer">University of Illinois at Urbana-Champaign</a>, Illinois, USA, 2017<br><a href="https://eprints.soton.ac.uk/413917/" target="_blank" rel="noopener noreferrer">PDF</a>, <a href="https://gennaro-parlato.github.io/paper/ase17.pptx" target="_blank" rel="noopener noreferrer">PPT</a>
+                       <div style="margin-top: 10px; font-size: 16.5px; line-height: 1.4; color: #555;"><em>This paper highlights the practical and tool-oriented side of my work on concurrent software verification.</em></div>
+                       </div>
+                    </div>
 
-                <div class="paper-entry">
-                   <div class="bullet">&#8226;</div>
-                   <div class="item"><strong>CHC-Based Verification of Programs Through Graph Decompositions<br></strong><a href="https://bfischer.pages.cs.sun.ac.za" target="_blank" rel="noopener noreferrer">B. Fischer</a>, <a href="https://www.linkedin.com/in/giulio-garbi-19013186/" target="_blank" rel="noopener noreferrer">G. Garbi</a>, <a href="https://docenti.unisa.it/004821/en/home" target="_blank" rel="noopener noreferrer">S. La Torre</a>, G. Parlato, and <a href="http://www.schrammel.it/" target="_blank" rel="noopener noreferrer">P. Schrammel</a><br><a href="https://link.springer.com/journal/42979" target="_blank" rel="noopener noreferrer">SN Computer Science</a> journal (accepted for publication), 2024<br><a href="https://gennaro-parlato.github.io/paper/SNjournal.pdf" target="_blank" rel="noopener noreferrer">PDF</a></div>
-                </div>
-                
-                <div class="paper-entry">
-                   <div class="bullet">&#8226;</div>
-                   <div class="item"><strong>Reachability Games Modulo Theories with a Bounded Safety Player<br></strong><a href="https://wpage.unina.it/m.faella/" target="_blank" rel="noopener noreferrer">M. Faella</a> and G. Parlato<br>37<sup>th</sup> AAAI Conference on Artificial Intelligence (<a href="https://aaai.org/Conferences/AAAI-23/" target="_blank" rel="noopener noreferrer">AAAI</a>)<br>Washington, DC, USA, 2023<br><a href="https://gennaro-parlato.github.io/paper/aaai23.pdf" target="_blank" rel="noopener noreferrer">PDF</a>, <a href="https://gennaro-parlato.github.io/paper/AAAI-23-recorded-presentation.mp4" target="_blank" rel="noopener noreferrer">Recorded Presentation</a>, <a href="https://gennaro-parlato.github.io/paper/AAAI23-Artifact.zip" target="_blank" rel="noopener noreferrer">Artifact</a></div>
-                </div>
-                
-                <div class="paper-entry">
-                   <div class="bullet">&#8226;</div>
-                   <div class="item"><strong>Verifying Programs by Bounded Tree-Width Behavior Graphs<br></strong><a href="https://www.gssi.it/people/professors/lectures-computer-science/item/1018-inverso-omar" target="_blank" rel="noopener noreferrer">O. Inverso</a>, <a href="https://docenti.unisa.it/004821/en/home" target="_blank" rel="noopener noreferrer">S. La Torre</a>, G. Parlato, and <a href="https://gildotomasco.github.io" target="_blank" rel="noopener noreferrer">E. Tomasco</a><br>Multi-Agent Systems - 20th European Conference (<a href="https://eumas23.github.io/home/" target="_blank" rel="noopener noreferrer">EUMAS</a>), <br>Naples, Italy, 2023 <br><a href="https://gennaro-parlato.github.io/paper/eumas23.pdf" target="_blank" rel="noopener noreferrer">PDF</a></div>
-                </div>
-                
-                <div class="paper-entry">
-                   <div class="bullet">&#8226;</div>
-                   <div class="item"><strong>CBMC-SSM: Bounded Model Checking of C Programs with Symbolic Shadow Memory<br></strong><a href="https://bfischer.pages.cs.sun.ac.za" target="_blank" rel="noopener noreferrer">B. Fischer</a>, <a href="https://docenti.unisa.it/004821/en/home" target="_blank" rel="noopener noreferrer">S. La Torre</a>, G. Parlato, and <a href="http://www.schrammel.it/" target="_blank" rel="noopener noreferrer">P. Schrammel</a><br>37<sup>th</sup> IEEE/ACM International Conference on Automated Software Engineering (<a href="https://conf.researchr.org/home/ase-2022" target="_blank" rel="noopener noreferrer">ASE</a>)<br>Oakland Center, Michigan, USA, 2022<br><a href="https://gennaro-parlato.github.io/paper/ase22.pdf" target="_blank" rel="noopener noreferrer">PDF</a>, <a href="https://gennaro-parlato.github.io/paper/ase22.pptx" target="_blank" rel="noopener noreferrer">PPT</a>, <a href="https://gennaro-parlato.github.io/paper/ase22.c" target="_blank" rel="noopener noreferrer">semantics example</a></div>
-                </div>
-                
-                <div class="paper-entry">
-                   <div class="bullet">&#8226;</div>
-                   <div class="item"><strong>Reasoning about Data Trees using CHCs<br></strong><a href="https://wpage.unina.it/m.faella/" target="_blank" rel="noopener noreferrer">M. Faella</a> and G. Parlato<br>34<sup>th</sup> Int'l Conference on Computer Aided Verification (<a href="https://i-cav.org/2022/" target="_blank" rel="noopener noreferrer">CAV</a>)<br>Haifa, Israel, 2022<br><a href="https://gennaro-parlato.github.io/paper/cav22.pdf" target="_blank" rel="noopener noreferrer">PDF</a>, <a href="https://gennaro-parlato.github.io/paper/cav22.pptx" target="_blank" rel="noopener noreferrer">PPT</a>, <a href="https://gennaro-parlato.github.io/paper/CAV22-Artifact.zip" target="_blank" rel="noopener noreferrer">Artifact (10MB zip)</a></div>
-                </div>
-                
-                <div class="paper-entry">
-                   <div class="bullet">&#8226;</div>
-                   <div class="item"><strong>Bounded Verification of Multi-Threaded Programs via Lazy Sequentialization<br></strong><a href="https://www.gssi.it/people/professors/lectures-computer-science/item/1018-inverso-omar" target="_blank" rel="noopener noreferrer">O. Inverso</a>, <a href="https://gildotomasco.github.io" target="_blank" rel="noopener noreferrer">E. Tomasco</a>, <a href="https://bfischer.pages.cs.sun.ac.za" target="_blank" rel="noopener noreferrer">B. Fischer</a>, <a href="https://docenti.unisa.it/004821/en/home" target="_blank" rel="noopener noreferrer">S. La Torre</a>, and G. Parlato<br>ACM Transactions on Programming Languages and Systems (<a href="https://dl.acm.org/journal/toplas" target="_blank" rel="noopener noreferrer">TOPLAS</a>) 44(1): 1:1-1:50, 2022 <br><a href="https://gennaro-parlato.github.io/paper/toplas21.pdf" target="_blank" rel="noopener noreferrer">PDF</a></div>
-                </div>
-                
-                <div class="paper-entry">
-                   <div class="bullet">&#8226;</div>
-                   <div class="item"><strong>On the Model-Checking of Branching-time Temporal Logics with BDI Modalities<br></strong><a href="https://docenti.unisa.it/004821/en/home" target="_blank" rel="noopener noreferrer">S. La Torre</a> and G. Parlato<br>19<sup>th</sup> International Conference on Autonomous Agents and Multiagent Systems (<a href="https://aamas2020.conference.auckland.ac.nz" target="_blank" rel="noopener noreferrer">AAMAS</a>)<br>Auckland, New Zealand, 2020 <br><a href="https://gennaro-parlato.github.io/paper/aamas20.pdf" target="_blank" rel="noopener noreferrer">PDF</a></div>
-                </div>
-                
-                <div class="paper-entry">
-                   <div class="bullet">&#8226;</div>
-                   <div class="item"><strong>Reachability of Scope-bounded Multistack Pushdown Systems<br></strong><a href="https://docenti.unisa.it/004821/en/home" target="_blank" rel="noopener noreferrer">S. La Torre</a>, <a href="https://www.di-srv.unisa.it/professori/napoli/" target="_blank" rel="noopener noreferrer">M. Napoli</a>, and G. Parlato<br><a href="https://www.journals.elsevier.com/information-and-computation/" target="_blank" rel="noopener noreferrer">Information and Computation</a>, 2020<br><a href="https://gennaro-parlato.github.io/paper/infandcomp20.pdf" target="_blank" rel="noopener noreferrer">PDF</a></div>
-                </div>
-                
-                <div class="paper-entry">
-                   <div class="bullet">&#8226;</div>
-                   <div class="item"><strong>A Fixed-point Model-checker for BDI Logics over Finite-state Worlds<br></strong><a href="https://docenti.unisa.it/004821/en/home" target="_blank" rel="noopener noreferrer">S. La Torre</a> and G. Parlato<br>2<sup>nd</sup> Workshop on Artificial Intelligence and Formal Verification, Logic, Automata, <br>and Synthesis (<a href="https://overlay.uniud.it/workshop/2020/" target="_blank" rel="noopener noreferrer">OVERLAY</a>)<br>Bolzano, Italy, 2020 <br><a href="https://gennaro-parlato.github.io/paper/overlay20.pdf" target="_blank" rel="noopener noreferrer">PDF</a></div>
-                </div>
-                
-                <div class="paper-entry">
-                   <div class="bullet">&#8226;</div>
-                   <div class="item"><strong>VeriSmart 2.0: Swarm-Based Bug-Finding for Multi-threaded Programs with Lazy-CSeq<br></strong><a href="https://bfischer.pages.cs.sun.ac.za" target="_blank" rel="noopener noreferrer">B. Fischer</a>, <a href="https://docenti.unisa.it/004821/en/home" target="_blank" rel="noopener noreferrer">S. La Torre</a>, and G. Parlato<br>34<sup>th</sup> IEEE/ACM International Conference on Automated Software Engineering (<a href="https://2019.ase-conferences.org" target="_blank" rel="noopener noreferrer">ASE</a>)<br>San Diego, CA, USA, 2019<br><a href="https://gennaro-parlato.github.io/paper/ase19.pdf" target="_blank" rel="noopener noreferrer">PDF</a></div>
-                </div>
-                
-                <div class="paper-entry">
-                   <div class="bullet">&#8226;</div>
-                   <div class="item"><strong>Model Checking BDI Logics over Finite-state Worlds<br></strong><a href="https://docenti.unisa.it/004821/en/home" target="_blank" rel="noopener noreferrer">S. La Torre</a> and G. Parlato<br>1<sup>st</sup> Workshop on Artificial Intelligence and Formal Verification, Logic, Automata, <br>and Synthesis (<a href="https://overlay.uniud.it/workshop/2019/" target="_blank" rel="noopener noreferrer">OVERLAY</a>)<br>Rende, Italy, 2019 <br><a href="https://gennaro-parlato.github.io/paper/overlay19.pdf" target="_blank" rel="noopener noreferrer">PDF</a></div>
-                </div>
-                
-                <div class="paper-entry">
-                   <div class="bullet">&#8226;</div>
-                   <div class="item"><strong>Parallel bug-finding in concurrent programs via reduced interleaving instances<br></strong><a href="https://www.linkedin.com/in/trucnguyenlam" target="_blank" rel="noopener noreferrer">T. L. Nguyen</a>, <a href="http://www.schrammel.it/" target="_blank" rel="noopener noreferrer">P. Schrammel</a>, <a href="https://bfischer.pages.cs.sun.ac.za" target="_blank" rel="noopener noreferrer">B. Fischer</a>, <a href="https://docenti.unisa.it/004821/en/home" target="_blank" rel="noopener noreferrer">S. La Torre</a>, and G. Parlato<br>32<sup>nd</sup> IEEE/ACM International Conference on Automated Software Engineering (<a href="https://conf.researchr.org/home/ase-2017" target="_blank" rel="noopener noreferrer">ASE</a>)<br><a href="https://cs.illinois.edu/" target="_blank" rel="noopener noreferrer">University of Illinois at Urbana-Champaign</a>, Illinois, USA, 2017<br><a href="https://eprints.soton.ac.uk/413917/" target="_blank" rel="noopener noreferrer">PDF</a>, <a href="https://gennaro-parlato.github.io/paper/ase17.pptx" target="_blank" rel="noopener noreferrer">PPT</a></div>
-                </div>
-                
-                <div class="paper-entry">
-                   <div class="bullet">&#8226;</div>
-                   <div class="item"><strong>Using Shared Memory Abstractions to Design Eager Sequentializations for Weak Memory Models</strong><br><a href="https://gildotomasco.github.io" target="_blank" rel="noopener noreferrer">E. Tomasco</a>, <a href="https://www.linkedin.com/in/trucnguyenlam" target="_blank" rel="noopener noreferrer">T. L. Nguyen</a>, <a href="https://bfischer.pages.cs.sun.ac.za" target="_blank" rel="noopener noreferrer">B. Fischer</a>, <a href="https://docenti.unisa.it/004821/en/home" target="_blank" rel="noopener noreferrer">S. La Torre</a>, and G. Parlato<br>International Conference on Software Engineering and Formal Methods (<a href="https://sefm17.fbk.eu/" target="_blank" rel="noopener noreferrer">SEFM</a>)<br>Trento, Italy, 2017<br><a href="https://eprints.soton.ac.uk/410622/" target="_blank" rel="noopener noreferrer">PDF</a>, <a href="https://gennaro-parlato.github.io/paper/sefm16.pptx" target="_blank" rel="noopener noreferrer">PPT</a></div>
-                </div>
-                
-                <div class="paper-entry">
-                   <div class="bullet">&#8226;</div>
-                   <div class="item"><strong>Preventing Unauthorized Data Flows<br></strong>E. Uzun, <a href="https://sites.rutgers.edu/vijay-atluri/" target="_blank" rel="noopener noreferrer">V. Atluri</a>, <a href="http://docenti.unimol.it/index.php?u=a.ferrara8" target="_blank" rel="noopener noreferrer">A. L. Ferrara</a>, <a href="https://www.business.rutgers.edu/faculty/jaideep-vaidya" target="_blank" rel="noopener noreferrer">J. Vaidya</a>, <a href="http://www.facweb.iitkgp.ernet.in/~shamik/" target="_blank" rel="noopener noreferrer">S. Sural</a>, and D. Lorenzi<br>Conference on Data and Applications Security and Privacy (<a href="https://dbsec2017.ittc.ku.edu/" target="_blank" rel="noopener noreferrer">DBSec</a>)<br>Philadelphia, PA, USA, 2017<br><a href="https://eprints.soton.ac.uk/410623/" target="_blank" rel="noopener noreferrer">PDF</a></div>
-                </div>
-                
-                <div class="paper-entry">
-                   <div class="bullet">&#8226;</div>
-                   <div class="item"><strong>Concurrent Program Verification with Lazy Sequentialization and Interval Analysis<br></strong><a href="https://www.linkedin.com/in/trucnguyenlam" target="_blank" rel="noopener noreferrer">T. L. Nguyen</a>, <a href="https://bfischer.pages.cs.sun.ac.za" target="_blank" rel="noopener noreferrer">B. Fischer</a>, <a href="https://docenti.unisa.it/004821/en/home" target="_blank" rel="noopener noreferrer">S. La Torre</a>, and G. Parlato<br>Networked Systems - 5<sup>th</sup> Intl. Conference (<a href="https://netys.net/" target="_blank" rel="noopener noreferrer">NETYS</a>)<br>Marrakech, Morocco, 2017<br><a href="https://eprints.soton.ac.uk/406362/" target="_blank" rel="noopener noreferrer">PDF</a>, <a href="https://gennaro-parlato.github.io/paper/netys17.pptx" target="_blank" rel="noopener noreferrer">PPT</a></div>
-                </div>
-                
-                <div class="paper-entry">
-                   <div class="bullet">&#8226;</div>
-                   <div class="item"><strong>Lazy-CSeq 2.0: Combining Lazy Sequentialization with Abstract Interpretation (Competition Contribution)<br></strong><a href="https://www.linkedin.com/in/trucnguyenlam" target="_blank" rel="noopener noreferrer">T. L. Nguyen</a>, <a href="https://www.gssi.it/people/professors/lectures-computer-science/item/1018-inverso-omar" target="_blank" rel="noopener noreferrer">O. Inverso</a>, <a href="https://bfischer.pages.cs.sun.ac.za" target="_blank" rel="noopener noreferrer">B. Fischer</a>, <a href="https://docenti.unisa.it/004821/en/home" target="_blank" rel="noopener noreferrer">S. La Torre</a>, and G. Parlato<br>6<sup>th</sup> Intl. Competition on Software Verification (<a href="https://sv-comp.sosy-lab.org/2017/index.php" target="_blank" rel="noopener noreferrer">SV-COMP</a>), held at <a href="https://www.etaps.org/index.php/2017/tacas" target="_blank" rel="noopener noreferrer">TACAS</a><br>Uppsala, Sweden, 2017<br><a href="https://eprints.soton.ac.uk/406349/" target="_blank" rel="noopener noreferrer">PDF</a></div>
-                </div>
-                
-                <div class="paper-entry">
-                   <div class="bullet">&#8226;</div>
-                   <div class="item"><strong>On the Path-Width of Integer Linear Programming<br></strong><a href="https://www.lix.polytechnique.fr/~cenea/" target="_blank" rel="noopener noreferrer">C. Enea</a>, <a href="https://www.irif.fr/~haberm/" target="_blank" rel="noopener noreferrer">P. Habermehl</a>, <a href="https://www.gssi.it/people/professors/lectures-computer-science/item/1018-inverso-omar" target="_blank" rel="noopener noreferrer">O. Inverso</a>, and G. Parlato<br><a href="https://www.journals.elsevier.com/information-and-computation/" target="_blank" rel="noopener noreferrer">Information and Computation</a>, 2017<br><a href="https://eprints.soton.ac.uk/386737/" target="_blank" rel="noopener noreferrer">PDF</a></div>
-                </div>
-            
-            <div class="paper-entry">
+                </div> <details class="full-pubs">
+                    <summary class="pubs-toggle">View Full Publications List (35 Papers)</summary>
+                    <div class="papers-list">
+                        
+                        <div class="paper-entry">
+                           <div class="bullet">&#8226;</div>
+                           <div class="item"><strong><span style="font-variant: small-caps;">Iekkë</span>: A SAT-Based Bounded-Round Verifier for Multi-Threaded Programs<br>(Competition Contribution)</strong><br><a href="https://paolo-di-biase.github.io/" target="_blank" rel="noopener noreferrer">P. Di Biase</a>, <a href="https://bfischer.pages.cs.sun.ac.za" target="_blank" rel="noopener noreferrer">B. Fischer</a>, <a href="https://docenti.unisa.it/004821/en/home" target="_blank" rel="noopener noreferrer">S. La Torre</a>, <a href="http://www.schrammel.it/" target="_blank" rel="noopener noreferrer">P. Schrammel</a>, and G. Parlato<br>32<sup>nd</sup> International Conference on Tools and Algorithms for the Construction and Analysis of Systems (<a href="https://etaps.org/" target="_blank" rel="noopener noreferrer">TACAS</a>)<br>Turin, Italy, 2026<br><a href="https://gennaro-parlato.github.io/paper/svcomp26.pdf" target="_blank" rel="noopener noreferrer">PDF</a></div>
+                        </div>
+
+                        <div class="paper-entry">
+                           <div class="bullet">&#8226;</div>
+                           <div class="item"><strong>Adaptive Bitwidth Abstraction for Distributed Bounded Model Checking of Concurrent Programs</strong><br><a href="http://docenti.unimol.it/index.php?u=a.ferrara8" target="_blank" rel="noopener noreferrer">A. L. Ferrara</a>, <a href="https://bfischer.pages.cs.sun.ac.za" target="_blank" rel="noopener noreferrer">B. Fischer</a>, <a href="https://docenti.unisa.it/004821/en/home" target="_blank" rel="noopener noreferrer">S. La Torre</a>, G. Parlato, and <a href="http://www.schrammel.it/" target="_blank" rel="noopener noreferrer">P. Schrammel</a><br>14<sup>th</sup> International Conference on Networked Systems (<a href="https://netys.net/" target="_blank" rel="noopener noreferrer">NETYS</a>)<br>Agadir, Morocco, 2026</div>
+                        </div>
+
+                        <div class="paper-entry">
+                           <div class="bullet">&#8226;</div>
+                           <div class="item"><strong>Verifying Tree-Manipulating Programs via CHCs</strong><br><a href="https://wpage.unina.it/m.faella/" target="_blank" rel="noopener noreferrer">M. Faella</a> and G. Parlato<br>37<sup>th</sup> International Conference on Computer Aided Verification (<a href="https://conferences.i-cav.org/2025/" target="_blank" rel="noopener noreferrer">CAV</a>)<br>Zagreb, Croatia, 2025<br><a href="https://gennaro-parlato.github.io/paper/cav25.pdf" target="_blank" rel="noopener noreferrer">PDF</a>, <a href="https://arxiv.org/abs/2505.14092" target="_blank" rel="noopener noreferrer">Extended Version</a></div>
+                        </div>
+
+                        <div class="paper-entry">
+                           <div class="bullet">&#8226;</div>
+                           <div class="item"><strong>A Unified Automata-Theoretic Approach to <em>LTL<sub>f</sub></em> Modulo Theories</strong><br><a href="https://wpage.unina.it/m.faella/" target="_blank" rel="noopener noreferrer">M. Faella</a> and G. Parlato<br>27<sup>th</sup> European Conference on Artificial Intelligence (<a href="https://www.ecai2024.eu/" target="_blank" rel="noopener noreferrer">ECAI</a>)<br>Santiago de Compostela, Spain, 2024<br><a href="https://gennaro-parlato.github.io/paper/ecai24.pdf" target="_blank" rel="noopener noreferrer">PDF</a>, <a href="https://arxiv.org/abs/2408.08817" target="_blank" rel="noopener noreferrer">Extended Version</a></div>
+                        </div>
+
+                        <div class="paper-entry">
+                           <div class="bullet">&#8226;</div>
+                           <div class="item"><strong>Static Data Race Detection via Lazy Sequentialization</strong><br><a href="https://wpage.unina.it/m.faella/" target="_blank" rel="noopener noreferrer">M. Faella</a>, <a href="https://www.linkedin.com/in/giulio-garbi-19013186/" target="_blank" rel="noopener noreferrer">G. Garbi</a>, <a href="https://docenti.unisa.it/004821/en/home" target="_blank" rel="noopener noreferrer">S. La Torre</a>, and G. Parlato<br>12<sup>th</sup> International Conference on Networked Systems (<a href="https://netys.net/" target="_blank" rel="noopener noreferrer">NETYS</a>)<br>Rabat, Morocco, 2024<br><a href="https://gennaro-parlato.github.io/paper/netys24.pdf" target="_blank" rel="noopener noreferrer">PDF</a> &nbsp;&nbsp;<span style="color: #d32f2f; font-style: italic;">(Best paper award)</span></div>
+                        </div>
+
+                        <div class="paper-entry">
+                           <div class="bullet">&#8226;</div>
+                           <div class="item"><strong>CHC-Based Verification of Programs Through Graph Decompositions</strong><br><a href="https://bfischer.pages.cs.sun.ac.za" target="_blank" rel="noopener noreferrer">B. Fischer</a>, <a href="https://www.linkedin.com/in/giulio-garbi-19013186/" target="_blank" rel="noopener noreferrer">G. Garbi</a>, <a href="https://docenti.unisa.it/004821/en/home" target="_blank" rel="noopener noreferrer">S. La Torre</a>, G. Parlato, and <a href="http://www.schrammel.it/" target="_blank" rel="noopener noreferrer">P. Schrammel</a><br><a href="https://link.springer.com/journal/42979" target="_blank" rel="noopener noreferrer">SN Computer Science</a> journal (accepted for publication), 2024<br><a href="https://gennaro-parlato.github.io/paper/SNjournal.pdf" target="_blank" rel="noopener noreferrer">PDF</a></div>
+                        </div>
+                        
+                        <div class="paper-entry">
+                           <div class="bullet">&#8226;</div>
+                           <div class="item"><strong>Reachability Games Modulo Theories with a Bounded Safety Player</strong><br><a href="https://wpage.unina.it/m.faella/" target="_blank" rel="noopener noreferrer">M. Faella</a> and G. Parlato<br>37<sup>th</sup> AAAI Conference on Artificial Intelligence (<a href="https://aaai.org/Conferences/AAAI-23/" target="_blank" rel="noopener noreferrer">AAAI</a>)<br>Washington, DC, USA, 2023<br><a href="https://gennaro-parlato.github.io/paper/aaai23.pdf" target="_blank" rel="noopener noreferrer">PDF</a>, <a href="https://gennaro-parlato.github.io/paper/AAAI-23-recorded-presentation.mp4" target="_blank" rel="noopener noreferrer">Recorded Presentation</a>, <a href="https://gennaro-parlato.github.io/paper/AAAI23-Artifact.zip" target="_blank" rel="noopener noreferrer">Artifact</a></div>
+                        </div>
+                        
+                        <div class="paper-entry">
+                           <div class="bullet">&#8226;</div>
+                           <div class="item"><strong>Verifying Programs by Bounded Tree-Width Behavior Graphs</strong><br><a href="https://www.gssi.it/people/professors/lectures-computer-science/item/1018-inverso-omar" target="_blank" rel="noopener noreferrer">O. Inverso</a>, <a href="https://docenti.unisa.it/004821/en/home" target="_blank" rel="noopener noreferrer">S. La Torre</a>, G. Parlato, and <a href="https://gildotomasco.github.io" target="_blank" rel="noopener noreferrer">E. Tomasco</a><br>Multi-Agent Systems - 20th European Conference (<a href="https://eumas23.github.io/home/" target="_blank" rel="noopener noreferrer">EUMAS</a>), <br>Naples, Italy, 2023 <br><a href="https://gennaro-parlato.github.io/paper/eumas23.pdf" target="_blank" rel="noopener noreferrer">PDF</a></div>
+                        </div>
+                        
+                        <div class="paper-entry">
+                           <div class="bullet">&#8226;</div>
+                           <div class="item"><strong>CBMC-SSM: Bounded Model Checking of C Programs with Symbolic Shadow Memory</strong><br><a href="https://bfischer.pages.cs.sun.ac.za" target="_blank" rel="noopener noreferrer">B. Fischer</a>, <a href="https://docenti.unisa.it/004821/en/home" target="_blank" rel="noopener noreferrer">S. La Torre</a>, G. Parlato, and <a href="http://www.schrammel.it/" target="_blank" rel="noopener noreferrer">P. Schrammel</a><br>37<sup>th</sup> IEEE/ACM International Conference on Automated Software Engineering (<a href="https://conf.researchr.org/home/ase-2022" target="_blank" rel="noopener noreferrer">ASE</a>)<br>Oakland Center, Michigan, USA, 2022<br><a href="https://gennaro-parlato.github.io/paper/ase22.pdf" target="_blank" rel="noopener noreferrer">PDF</a>, <a href="https://gennaro-parlato.github.io/paper/ase22.pptx" target="_blank" rel="noopener noreferrer">PPT</a>, <a href="https://gennaro-parlato.github.io/paper/ase22.c" target="_blank" rel="noopener noreferrer">semantics example</a></div>
+                        </div>
+                        
+                        <div class="paper-entry">
+                           <div class="bullet">&#8226;</div>
+                           <div class="item"><strong>Reasoning about Data Trees using CHCs</strong><br><a href="https://wpage.unina.it/m.faella/" target="_blank" rel="noopener noreferrer">M. Faella</a> and G. Parlato<br>34<sup>th</sup> Int'l Conference on Computer Aided Verification (<a href="https://i-cav.org/2022/" target="_blank" rel="noopener noreferrer">CAV</a>)<br>Haifa, Israel, 2022<br><a href="https://gennaro-parlato.github.io/paper/cav22.pdf" target="_blank" rel="noopener noreferrer">PDF</a>, <a href="https://gennaro-parlato.github.io/paper/cav22.pptx" target="_blank" rel="noopener noreferrer">PPT</a>, <a href="https://gennaro-parlato.github.io/paper/CAV22-Artifact.zip" target="_blank" rel="noopener noreferrer">Artifact (10MB zip)</a></div>
+                        </div>
+                        
+                        <div class="paper-entry">
+                           <div class="bullet">&#8226;</div>
+                           <div class="item"><strong>Bounded Verification of Multi-Threaded Programs via Lazy Sequentialization</strong><br><a href="https://www.gssi.it/people/professors/lectures-computer-science/item/1018-inverso-omar" target="_blank" rel="noopener noreferrer">O. Inverso</a>, <a href="https://gildotomasco.github.io" target="_blank" rel="noopener noreferrer">E. Tomasco</a>, <a href="https://bfischer.pages.cs.sun.ac.za" target="_blank" rel="noopener noreferrer">B. Fischer</a>, <a href="https://docenti.unisa.it/004821/en/home" target="_blank" rel="noopener noreferrer">S. La Torre</a>, and G. Parlato<br>ACM Transactions on Programming Languages and Systems (<a href="https://dl.acm.org/journal/toplas" target="_blank" rel="noopener noreferrer">TOPLAS</a>) 44(1): 1:1-1:50, 2022 <br><a href="https://gennaro-parlato.github.io/paper/toplas21.pdf" target="_blank" rel="noopener noreferrer">PDF</a></div>
+                        </div>
+                        
+                        <div class="paper-entry">
+                           <div class="bullet">&#8226;</div>
+                           <div class="item"><strong>On the Model-Checking of Branching-time Temporal Logics with BDI Modalities</strong><br><a href="https://docenti.unisa.it/004821/en/home" target="_blank" rel="noopener noreferrer">S. La Torre</a> and G. Parlato<br>19<sup>th</sup> International Conference on Autonomous Agents and Multiagent Systems (<a href="https://aamas2020.conference.auckland.ac.nz" target="_blank" rel="noopener noreferrer">AAMAS</a>)<br>Auckland, New Zealand, 2020 <br><a href="https://gennaro-parlato.github.io/paper/aamas20.pdf" target="_blank" rel="noopener noreferrer">PDF</a></div>
+                        </div>
+                        
+                        <div class="paper-entry">
+                           <div class="bullet">&#8226;</div>
+                           <div class="item"><strong>Reachability of Scope-bounded Multistack Pushdown Systems</strong><br><a href="https://docenti.unisa.it/004821/en/home" target="_blank" rel="noopener noreferrer">S. La Torre</a>, <a href="https://www.di-srv.unisa.it/professori/napoli/" target="_blank" rel="noopener noreferrer">M. Napoli</a>, and G. Parlato<br><a href="https://www.journals.elsevier.com/information-and-computation/" target="_blank" rel="noopener noreferrer">Information and Computation</a>, 2020<br><a href="https://gennaro-parlato.github.io/paper/infandcomp20.pdf" target="_blank" rel="noopener noreferrer">PDF</a></div>
+                        </div>
+                        
+                        <div class="paper-entry">
+                           <div class="bullet">&#8226;</div>
+                           <div class="item"><strong>A fixed-point Model-checker for BDI Logics over Finite-state Worlds</strong><br><a href="https://docenti.unisa.it/004821/en/home" target="_blank" rel="noopener noreferrer">S. La Torre</a> and G. Parlato<br>2<sup>nd</sup> Workshop on Artificial Intelligence and Formal Verification, Logic, Automata, <br>and Synthesis (<a href="https://overlay.uniud.it/workshop/2020/" target="_blank" rel="noopener noreferrer">OVERLAY</a>)<br>Bolzano, Italy, 2020 <br><a href="https://gennaro-parlato.github.io/paper/overlay20.pdf" target="_blank" rel="noopener noreferrer">PDF</a></div>
+                        </div>
+                        
+                        <div class="paper-entry">
+                           <div class="bullet">&#8226;</div>
+                           <div class="item"><strong>VeriSmart 2.0: Swarm-Based bug-finding for Multi-threaded Programs with Lazy-CSeq</strong><br><a href="https://bfischer.pages.cs.sun.ac.za" target="_blank" rel="noopener noreferrer">B. Fischer</a>, <a href="https://docenti.unisa.it/004821/en/home" target="_blank" rel="noopener noreferrer">S. La Torre</a>, and G. Parlato<br>34<sup>th</sup> IEEE/ACM International Conference on Automated Software Engineering (<a href="https://2019.ase-conferences.org" target="_blank" rel="noopener noreferrer">ASE</a>)<br>San Diego, CA, USA, 2019<br><a href="https://gennaro-parlato.github.io/paper/ase19.pdf" target="_blank" rel="noopener noreferrer">PDF</a></div>
+                        </div>
+                        
+                        <div class="paper-entry">
+                           <div class="bullet">&#8226;</div>
+                           <div class="item"><strong>Model Checking BDI Logics over Finite-state Worlds</strong><br><a href="https://docenti.unisa.it/004821/en/home" target="_blank" rel="noopener noreferrer">S. La Torre</a> and G. Parlato<br>1<sup>st</sup> Workshop on Artificial Intelligence and Formal Verification, Logic, Automata, <br>and Synthesis (<a href="https://overlay.uniud.it/workshop/2019/" target="_blank" rel="noopener noreferrer">OVERLAY</a>)<br>Rende, Italy, 2019 <br><a href="https://gennaro-parlato.github.io/paper/overlay19.pdf" target="_blank" rel="noopener noreferrer">PDF</a></div>
+                        </div>
+                        
+                        <div class="paper-entry">
+                           <div class="bullet">&#8226;</div>
+                           <div class="item"><strong>Parallel bug-finding in concurrent programs via reduced interleaving instances</strong><br><a href="https://www.linkedin.com/in/trucnguyenlam" target="_blank" rel="noopener noreferrer">T. L. Nguyen</a>, <a href="http://www.schrammel.it/" target="_blank" rel="noopener noreferrer">P. Schrammel</a>, <a href="https://bfischer.pages.cs.sun.ac.za" target="_blank" rel="noopener noreferrer">B. Fischer</a>, <a href="https://docenti.unisa.it/004821/en/home" target="_blank" rel="noopener noreferrer">S. La Torre</a>, and G. Parlato<br>32<sup>nd</sup> IEEE/ACM International Conference on Automated Software Engineering (<a href="https://conf.researchr.org/home/ase-2017" target="_blank" rel="noopener noreferrer">ASE</a>)<br><a href="https://cs.illinois.edu/" target="_blank" rel="noopener noreferrer">University of Illinois at Urbana-Champaign</a>, Illinois, USA, 2017<br><a href="https://eprints.soton.ac.uk/413917/" target="_blank" rel="noopener noreferrer">PDF</a>, <a href="https://gennaro-parlato.github.io/paper/ase17.pptx" target="_blank" rel="noopener noreferrer">PPT</a></div>
+                        </div>
+                        
+                        <div class="paper-entry">
+                           <div class="bullet">&#8226;</div>
+                           <div class="item"><strong>Using Shared Memory Abstractions to Design Eager Sequentializations for Weak Memory Models</strong><br><a href="https://gildotomasco.github.io" target="_blank" rel="noopener noreferrer">E. Tomasco</a>, <a href="https://www.linkedin.com/in/trucnguyenlam" target="_blank" rel="noopener noreferrer">T. L. Nguyen</a>, <a href="https://bfischer.pages.cs.sun.ac.za" target="_blank" rel="noopener noreferrer">B. Fischer</a>, <a href="https://docenti.unisa.it/004821/en/home" target="_blank" rel="noopener noreferrer">S. La Torre</a>, and G. Parlato<br>International Conference on Software Engineering and Formal Methods (<a href="https://sefm17.fbk.eu/" target="_blank" rel="noopener noreferrer">SEFM</a>)<br>Trento, Italy, 2017<br><a href="https://eprints.soton.ac.uk/410622/" target="_blank" rel="noopener noreferrer">PDF</a>, <a href="https://gennaro-parlato.github.io/paper/sefm16.pptx" target="_blank" rel="noopener noreferrer">PPT</a></div>
+                        </div>
+                        
+                        <div class="paper-entry">
+                           <div class="bullet">&#8226;</div>
+                           <div class="item"><strong>Preventing Unauthorized Data Flows</strong><br>E. Uzun, <a href="https://sites.rutgers.edu/vijay-atluri/" target="_blank" rel="noopener noreferrer">V. Atluri</a>, <a href="http://docenti.unimol.it/index.php?u=a.ferrara8" target="_blank" rel="noopener noreferrer">A. L. Ferrara</a>, <a href="https://www.business.rutgers.edu/faculty/jaideep-vaidya" target="_blank" rel="noopener noreferrer">J. Vaidya</a>, <a href="http://www.facweb.iitkgp.ernet.in/~shamik/" target="_blank" rel="noopener noreferrer">S. Sural</a>, G. Parlato, and D. Lorenzi<br>Conference on Data and Applications Security and Privacy (<a href="https://dbsec2017.ittc.ku.edu/" target="_blank" rel="noopener noreferrer">DBSec</a>)<br>Philadelphia, PA, USA, 2017<br><a href="https://eprints.soton.ac.uk/410623/" target="_blank" rel="noopener noreferrer">PDF</a></div>
+                        </div>
+                        
+                        <div class="paper-entry">
+                           <div class="bullet">&#8226;</div>
+                           <div class="item"><strong>Concurrent Program Verification with Lazy Sequentialization and Interval Analysis</strong><br><a href="https://www.linkedin.com/in/trucnguyenlam" target="_blank" rel="noopener noreferrer">T. L. Nguyen</a>, <a href="https://bfischer.pages.cs.sun.ac.za" target="_blank" rel="noopener noreferrer">B. Fischer</a>, <a href="https://docenti.unisa.it/004821/en/home" target="_blank" rel="noopener noreferrer">S. La Torre</a>, and G. Parlato<br>Networked Systems - 5<sup>th</sup> Intl. Conference (<a href="https://netys.net/" target="_blank" rel="noopener noreferrer">NETYS</a>)<br>Marrakech, Morocco, 2017<br><a href="https://eprints.soton.ac.uk/406362/" target="_blank" rel="noopener noreferrer">PDF</a>, <a href="https://gennaro-parlato.github.io/paper/netys17.pptx" target="_blank" rel="noopener noreferrer">PPT</a></div>
+                        </div>
+                        
+                        <div class="paper-entry">
+                           <div class="bullet">&#8226;</div>
+                           <div class="item"><strong>Lazy-CSeq 2.0: Combining Lazy Sequentialization with Abstract Interpretation (Competition Contribution)</strong><br><a href="https://www.linkedin.com/in/trucnguyenlam" target="_blank" rel="noopener noreferrer">T. L. Nguyen</a>, <a href="https://www.gssi.it/people/professors/lectures-computer-science/item/1018-inverso-omar" target="_blank" rel="noopener noreferrer">O. Inverso</a>, <a href="https://bfischer.pages.cs.sun.ac.za" target="_blank" rel="noopener noreferrer">B. Fischer</a>, <a href="https://docenti.unisa.it/004821/en/home" target="_blank" rel="noopener noreferrer">S. La Torre</a>, and G. Parlato<br>6<sup>th</sup> Intl. Competition on Software Verification (<a href="https://sv-comp.sosy-lab.org/2017/index.php" target="_blank" rel="noopener noreferrer">SV-COMP</a>), held at <a href="https://www.etaps.org/index.php/2017/tacas" target="_blank" rel="noopener noreferrer">TACAS</a><br>Uppsala, Sweden, 2017<br><a href="https://eprints.soton.ac.uk/406349/" target="_blank" rel="noopener noreferrer">PDF</a></div>
+                        </div>
+                        
+                        <div class="paper-entry">
+                           <div class="bullet">&#8226;</div>
+                           <div class="item"><strong>On the Path-Width of Integer Linear Programming</strong><br><a href="https://www.lix.polytechnique.fr/~cenea/" target="_blank" rel="noopener noreferrer">C. Enea</a>, <a href="https://www.irif.fr/~haberm/" target="_blank" rel="noopener noreferrer">P. Habermehl</a>, <a href="https://www.gssi.it/people/professors/lectures-computer-science/item/1018-inverso-omar" target="_blank" rel="noopener noreferrer">O. Inverso</a>, and G. Parlato<br><a href="https://www.journals.elsevier.com/information-and-computation/" target="_blank" rel="noopener noreferrer">Information and Computation</a>, 2017<br><a href="https://eprints.soton.ac.uk/386737/" target="_blank" rel="noopener noreferrer">PDF</a></div>
+                        </div>
+                    
+                    <div class="paper-entry">
+                       <div class="bullet">&#8226;</div>
+                       <div class="item"><strong>Lazy Sequentialization for TSO and PSO via Shared Memory Abstractions</strong><br><a href="https://gildotomasco.github.io" target="_blank" rel="noopener noreferrer">E. Tomasco</a>, <a href="https://www.linkedin.com/in/trucnguyenlam" target="_blank" rel="noopener noreferrer">T. L. Nguyen</a>, <a href="https://www.gssi.it/people/professors/lectures-computer-science/item/1018-inverso-omar" target="_blank" rel="noopener noreferrer">O. Inverso</a>, <a href="https://bfischer.pages.cs.sun.ac.za" target="_blank" rel="noopener noreferrer">B. Fischer</a>, <a href="https://docenti.unisa.it/004821/en/home" target="_blank" rel="noopener noreferrer">S. La Torre</a>, and G. Parlato<br>Formal Methods in Computer-Aided Design (<a href="https://fmcad.org/FMCAD16/" target="_blank" rel="noopener noreferrer">FMCAD</a>)<br>Mountain View, CA, USA, 2016<br><a href="https://eprints.soton.ac.uk/397759/" target="_blank" rel="noopener noreferrer">PDF</a><strong>, </strong><a href="https://gennaro-parlato.github.io/paper/fmcad16.pptx" target="_blank" rel="noopener noreferrer">PPT</a></div>
+                    </div>
+                    
+                    <div class="paper-entry">
+                       <div class="bullet">&#8226;</div>
+                       <div class="item"><strong>Lazy Sequentialization for the Safety Verification of Unbounded Concurrent Programs</strong><br><a href="https://www.linkedin.com/in/trucnguyenlam" target="_blank" rel="noopener noreferrer">T. L. Nguyen</a>, <a href="https://bfischer.pages.cs.sun.ac.za" target="_blank" rel="noopener noreferrer">B. Fischer</a>, <a href="https://docenti.unisa.it/004821/en/home" target="_blank" rel="noopener noreferrer">S. La Torre</a>, and G. Parlato<br>14<sup>th</sup> International Symposium on Automated Technology for Verification and Analysis (<a href="https://atva2016.gforge.inria.fr/" target="_blank" rel="noopener noreferrer">ATVA</a>)<br>Chiba, Japan, 2016<br><a href="https://eprints.soton.ac.uk/397033/" target="_blank" rel="noopener noreferrer">PDF</a>, <a href="https://gennaro-parlato.github.io/paper/ATVA16.pptx" target="_blank" rel="noopener noreferrer">PPT</a></div>
+                    </div>
+                    
+                    <div class="paper-entry">
+                       <div class="bullet">&#8226;</div>
+                       <div class="item"><strong>Scope-Bounded Pushdown Languages</strong><br><a href="https://docenti.unisa.it/004821/en/home" target="_blank" rel="noopener noreferrer">S. La Torre</a>, <a href="http://www.di-srv.unisa.it/professori/napoli/" target="_blank" rel="noopener noreferrer">M. Napoli</a>, and G. Parlato<br>International Journal of Foundations of Computer Science (<a href="https://www.worldscientific.com/worldscinet/ijfcs" target="_blank" rel="noopener noreferrer">IJFCS</a>)<br>Vol. 27, No. 2 (2016) 215-233, DOI: 10.1142/S0129054116400074<br><a href="https://eprints.soton.ac.uk/386738/" target="_blank" rel="noopener noreferrer">PDF</a></div>
+                    </div>
+                    
+                    <div class="paper-entry">
+                       <div class="bullet">&#8226;</div>
+                       <div class="item"><strong>MU-CSeq 0.4: Individual Memory Location Unwindings (Competition Contribution)</strong><br><a href="https://gildotomasco.github.io" target="_blank" rel="noopener noreferrer">E. Tomasco</a>, <a href="https://www.linkedin.com/in/trucnguyenlam" target="_blank" rel="noopener noreferrer">T. L. Nguyen</a>, <a href="https://www.gssi.it/people/professors/lectures-computer-science/item/1018-inverso-omar" target="_blank" rel="noopener noreferrer">O. Inverso</a>, <a href="https://bfischer.pages.cs.sun.ac.za" target="_blank" rel="noopener noreferrer">B. Fischer</a>, <a href="https://docenti.unisa.it/004821/en/home" target="_blank" rel="noopener noreferrer">S. La Torre</a>, and G. Parlato<br>5<sup>th</sup> Intl. Competition on Software Verification (<a href="https://sv-comp.sosy-lab.org/2016/" target="_blank" rel="noopener noreferrer">SV-COMP</a>), held at <a href="https://www.etaps.org/2016/tacas" target="_blank" rel="noopener noreferrer">TACAS</a><br>Eindhoven, The Netherlands, 2016<br>[<em>MU-CSeq 0.4 won the gold medal in the concurrency category</em>]<br><a href="https://eprints.soton.ac.uk/386736/" target="_blank" rel="noopener noreferrer">PDF</a>, <a href="https://github.com/CSeq/Overview" target="_blank" rel="noopener noreferrer">CSeq webpage</a> for tools and experiments</div>
+                    </div>
+                    
+                    <div class="paper-entry">
+                       <div class="bullet">&#8226;</div>
+                       <div class="item"><strong>Lazy-CSeq: A Context-Bounded Model Checking Tool for Multi-Threaded C-Programs <br>(Tool Demonstration)</strong><br><a href="https://www.gssi.it/people/professors/lectures-computer-science/item/1018-inverso-omar" target="_blank" rel="noopener noreferrer">O. Inverso</a>, <a href="https://www.linkedin.com/in/trucnguyenlam" target="_blank" rel="noopener noreferrer">T. L. Nguyen</a>, <a href="https://bfischer.pages.cs.sun.ac.za" target="_blank" rel="noopener noreferrer">B. Fischer</a>, <a href="https://docenti.unisa.it/004821/en/home" target="_blank" rel="noopener noreferrer">S. La Torre</a>, and G. Parlato<br>30th IEEE/ACM International Conference on Automated Software Engineering (<a href="https://conf.researchr.org/home/ase-2015" target="_blank" rel="noopener noreferrer">ASE</a>)<br>Lincoln, Nebraska, USA, 2015<br><a href="https://eprints.soton.ac.uk/379595/" target="_blank" rel="noopener noreferrer">PDF</a>, <a href="https://github.com/CSeq/Overview" target="_blank" rel="noopener noreferrer">CSeq webpage</a> for tools and experiments<br>[<em>Lazy-CSeq 1.0 won the silver medal in the concurrency category</em>]</div>
+                    </div>
+                    
+                    <div class="paper-entry">
+                       <div class="bullet">&#8226;</div>
+                       <div class="item"><strong>Verifying Concurrent Programs by Memory Unwinding</strong><br><a href="https://gildotomasco.github.io" target="_blank" rel="noopener noreferrer">E. Tomasco</a>, <a href="https://www.gssi.it/people/professors/lectures-computer-science/item/1018-inverso-omar" target="_blank" rel="noopener noreferrer">O. Inverso</a>, <a href="https://bfischer.pages.cs.sun.ac.za" target="_blank" rel="noopener noreferrer">B. Fischer</a>, <a href="https://docenti.unisa.it/004821/en/home" target="_blank" rel="noopener noreferrer">S. La Torre</a>, and G. Parlato<br>21<sup>st</sup> Int'l Conference on Tools and Algorithms for the Construction and Analysis of Systems (<a href="https://www.etaps.org/2015/tacas" target="_blank" rel="noopener noreferrer">TACAS</a>), <br>London, UK, 2015<br><a href="https://eprints.soton.ac.uk/370322/" target="_blank" rel="noopener noreferrer">PDF</a>, <a href="https://gennaro-parlato.github.io/paper/tacas2015.pptx" target="_blank" rel="noopener noreferrer">PPT</a>, see also <a href="https://github.com/CSeq/Overview" target="_blank" rel="noopener noreferrer">CSeq webpage</a> for the tool and experiments</div>
+                    </div>
+                    
+                    <div class="paper-entry">
+                       <div class="bullet">&#8226;</div>
+                       <div class="item"><strong>MU-CSeq 0.3: Sequentialization by Read-implicit and Coarse-grained Memory Unwindings <br>(Competition Contribution)</strong><br><a href="https://gildotomasco.github.io" target="_blank" rel="noopener noreferrer">E. Tomasco</a>, <a href="https://www.gssi.it/people/professors/lectures-computer-science/item/1018-inverso-omar" target="_blank" rel="noopener noreferrer">O. Inverso</a>, <a href="https://bfischer.pages.cs.sun.ac.za" target="_blank" rel="noopener noreferrer">B. Fischer</a>, <a href="https://docenti.unisa.it/004821/en/home" target="_blank" rel="noopener noreferrer">S. La Torre</a>, and G. Parlato<br>4<sup>th</sup> Intl. Competition on Software Verification (<a href="https://sv-comp.sosy-lab.org/2015/" target="_blank" rel="noopener noreferrer">SV-COMP</a>), held at <a href="https://www.etaps.org/2015/tacas" target="_blank" rel="noopener noreferrer">TACAS</a><br>London, UK, 2015<br>[<em>MU-CSeq won the gold medal in the concurrency category</em>]<br><a href="https://eprints.soton.ac.uk/370671/" target="_blank" rel="noopener noreferrer">PDF</a>, <a href="https://gennaro-parlato.github.io/paper/svcomp2015-mucseq.pptx" target="_blank" rel="noopener noreferrer">PPT</a>, <a href="https://github.com/CSeq/Overview" target="_blank" rel="noopener noreferrer">CSeq webpage</a></div>
+                    </div>
+                    
+                    <div class="paper-entry">
+                       <div class="bullet">&#8226;</div>
+                       <div class="item"><strong>Unbounded Lazy-CSeq: A Lazy Sequentialization Tool for C Programs with Unbounded <br>Context Switches (Competition Contribution)</strong><br><a href="https://www.linkedin.com/in/trucnguyenlam" target="_blank" rel="noopener noreferrer">T. L. Nguyen</a>, <a href="https://bfischer.pages.cs.sun.ac.za" target="_blank" rel="noopener noreferrer">B. Fischer</a>, <a href="https://docenti.unisa.it/004821/en/home" target="_blank" rel="noopener noreferrer">S. La Torre</a>, and G. Parlato<br>4<sup>th</sup> Intl. Competition on Software Verification (<a href="https://sv-comp.sosy-lab.org/2015/" target="_blank" rel="noopener noreferrer">SV-COMP</a>), held at <a href="https://www.etaps.org/2015/tacas" target="_blank" rel="noopener noreferrer">TACAS</a><br>London, UK, 2015<br><a href="https://eprints.soton.ac.uk/370672/" target="_blank" rel="noopener noreferrer">PDF</a>, <a href="https://gennaro-parlato.github.io/paper/svcomp2015-UL-lazycseq.pptx" target="_blank" rel="noopener noreferrer">PPT</a>, <a href="https://github.com/CSeq/Overview" target="_blank" rel="noopener noreferrer">CSeq webpage</a></div>
+                    </div>
+                    
+                    <div class="paper-entry">
+                       <div class="bullet">&#8226;</div>
+                       <div class="item"><strong>Bounded Model Checking of Multi-Threaded C Programs via Lazy Sequentialization</strong><br><a href="https://www.gssi.it/people/professors/lectures-computer-science/item/1018-inverso-omar" target="_blank" rel="noopener noreferrer">O. Inverso</a>, <a href="https://gildotomasco.github.io" target="_blank" rel="noopener noreferrer">E. Tomasco</a>, <a href="https://bfischer.pages.cs.sun.ac.za" target="_blank" rel="noopener noreferrer">B. Fischer</a>, <a href="https://docenti.unisa.it/004821/en/home" target="_blank" rel="noopener noreferrer">S. La Torre</a>, and G. Parlato<br>26<sup>th</sup> Int'l Conference on Computer Aided Verification (<a href="https://i-cav.org/2014/" target="_blank" rel="noopener noreferrer">CAV</a>)<br>Vienna, Austria, 2014<br><a href="https://eprints.soton.ac.uk/365365/" target="_blank" rel="noopener noreferrer">PDF</a>, <a href="https://gennaro-parlato.github.io/paper/LazyCseq.pptx" target="_blank" rel="noopener noreferrer">PPT</a>, see also <a href="https://github.com/CSeq/Overview" target="_blank" rel="noopener noreferrer">CSeq webpage</a> for tools and experiments</div>
+                    </div>
+                    
+                    <div class="paper-entry">
                <div class="bullet">&#8226;</div>
-               <div class="item"><strong>Lazy Sequentialization for TSO and PSO via Shared Memory Abstractions<br></strong><a href="https://gildotomasco.github.io" target="_blank" rel="noopener noreferrer">E. Tomasco</a>, <a href="https://www.linkedin.com/in/trucnguyenlam" target="_blank" rel="noopener noreferrer">T. L. Nguyen</a>, <a href="https://www.gssi.it/people/professors/lectures-computer-science/item/1018-inverso-omar" target="_blank" rel="noopener noreferrer">O. Inverso</a>, <a href="https://bfischer.pages.cs.sun.ac.za" target="_blank" rel="noopener noreferrer">B. Fischer</a>, <a href="https://docenti.unisa.it/004821/en/home" target="_blank" rel="noopener noreferrer">S. La Torre</a>, and G. Parlato<br>Formal Methods in Computer-Aided Design (<a href="https://fmcad.org/FMCAD16/" target="_blank" rel="noopener noreferrer">FMCAD</a>)<br>Mountain View, CA, USA, 2016<br><a href="https://eprints.soton.ac.uk/397759/" target="_blank" rel="noopener noreferrer">PDF</a><strong>, </strong><a href="https://gennaro-parlato.github.io/paper/fmcad16.pptx" target="_blank" rel="noopener noreferrer">PPT</a></div>
+               <div class="item"><strong>VAC - Verifier of Administrative Role-based Access Control Policies</strong><br><a href="http://docenti.unimol.it/index.php?u=a.ferrara8" target="_blank" rel="noopener noreferrer">A. L. Ferrara</a>, <a href="https://madhu.cs.illinois.edu" target="_blank" rel="noopener noreferrer">P. Madhusudan</a>, <a href="https://www.linkedin.com/in/trucnguyenlam" target="_blank" rel="noopener noreferrer">T. L. Nguyen</a>, and G. Parlato<br>26<sup>th</sup> Int'l Conference on Computer Aided Verification (<a href="https://i-cav.org/2014/" target="_blank" rel="noopener noreferrer">CAV</a>)<br>Vienna, Austria, 2014<br><a href="https://eprints.soton.ac.uk/365363/" target="_blank" rel="noopener noreferrer">PDF</a>, <a href="https://gennaro-parlato.github.io/paper/VACtool.pptx" target="_blank" rel="noopener noreferrer">PPT</a>, see also <a href="https://users.ecs.soton.ac.uk/gp4/VAC.html" target="_blank" rel="noopener noreferrer">VAC webpage</a> for the tool and experiments</div>
             </div>
             
             <div class="paper-entry">
                <div class="bullet">&#8226;</div>
-               <div class="item"><strong>Lazy Sequentialization for the Safety Verification of Unbounded Concurrent Programs<br></strong><a href="https://www.linkedin.com/in/trucnguyenlam" target="_blank" rel="noopener noreferrer">T. L. Nguyen</a>, <a href="https://bfischer.pages.cs.sun.ac.za" target="_blank" rel="noopener noreferrer">B. Fischer</a>, <a href="https://docenti.unisa.it/004821/en/home" target="_blank" rel="noopener noreferrer">S. La Torre</a>, and G. Parlato<br>14<sup>th</sup> International Symposium on Automated Technology for Verification and Analysis (<a href="https://atva2016.gforge.inria.fr/" target="_blank" rel="noopener noreferrer">ATVA</a>)<br>Chiba, Japan, 2016<br><a href="https://eprints.soton.ac.uk/397033/" target="_blank" rel="noopener noreferrer">PDF</a>, <a href="https://gennaro-parlato.github.io/paper/ATVA16.pptx" target="_blank" rel="noopener noreferrer">PPT</a></div>
+               <div class="item"><strong>Lazy-CSeq: A Lazy Sequentialization Tool for C (Competition Contribution)</strong><br><a href="https://www.gssi.it/people/professors/lectures-computer-science/item/1018-inverso-omar" target="_blank" rel="noopener noreferrer">O. Inverso</a>, <a href="https://gildotomasco.github.io" target="_blank" rel="noopener noreferrer">E. Tomasco</a>, <a href="https://docenti.unisa.it/004821/en/home" target="_blank" rel="noopener noreferrer">S. La Torre</a>, <a href="https://bfischer.pages.cs.sun.ac.za" target="_blank" rel="noopener noreferrer">B. Fischer</a>, and G. Parlato<br>3<sup>rd</sup> Intl. Competition on Software Verification (<a href="https://sv-comp.sosy-lab.org/2014/" target="_blank" rel="noopener noreferrer">SV-COMP</a>), held at <a href="https://www.etaps.org/2014/tacas" target="_blank" rel="noopener noreferrer">TACAS</a><br>Grenoble, France, 2014<br>[<em>CSeq-Lazy won the gold medal in the concurrency category</em>]<br><a href="https://eprints.soton.ac.uk/363742/" target="_blank" rel="noopener noreferrer">PDF</a>, <a href="https://gennaro-parlato.github.io/paper/cseq-lazy.pptx" target="_blank" rel="noopener noreferrer">PPT</a>, <a href="https://github.com/CSeq/Overview" target="_blank" rel="noopener noreferrer">CSeq webpage</a></div>
             </div>
             
             <div class="paper-entry">
                <div class="bullet">&#8226;</div>
-               <div class="item"><strong>Scope-Bounded Pushdown Languages<br></strong><a href="https://docenti.unisa.it/004821/en/home" target="_blank" rel="noopener noreferrer">S. La Torre</a>, <a href="http://www.di-srv.unisa.it/professori/napoli/" target="_blank" rel="noopener noreferrer">M. Napoli</a>, and G. Parlato<br>International Journal of Foundations of Computer Science (<a href="https://www.worldscientific.com/worldscinet/ijfcs" target="_blank" rel="noopener noreferrer">IJFCS</a>)<br>Vol. 27, No. 2 (2016) 215-233, DOI: 10.1142/S0129054116400074<br><a href="https://eprints.soton.ac.uk/386738/" target="_blank" rel="noopener noreferrer">PDF</a></div>
+               <div class="item"><strong>MU-CSeq: Sequentialization of C Programs by Shared Memory Unwindings <br>(Competition Contribution)</strong><br><a href="https://gildotomasco.github.io" target="_blank" rel="noopener noreferrer">E. Tomasco</a>, <a href="https://www.gssi.it/people/professors/lectures-computer-science/item/1018-inverso-omar" target="_blank" rel="noopener noreferrer">O. Inverso</a>, <a href="https://docenti.unisa.it/004821/en/home" target="_blank" rel="noopener noreferrer">S. La Torre</a>, <a href="https://bfischer.pages.cs.sun.ac.za" target="_blank" rel="noopener noreferrer">B. Fischer</a>, and G. Parlato<br>3<sup>rd</sup> Intl. Competition on Software Verification (<a href="https://sv-comp.sosy-lab.org/2014/" target="_blank" rel="noopener noreferrer">SV-COMP</a>), held at <a href="https://www.etaps.org/2014/tacas" target="_blank" rel="noopener noreferrer">TACAS</a><br>Grenoble, France, 2014<br>[<em>CSeq-MU won the silver medal in the concurrency category</em>]<br><a href="https://eprints.soton.ac.uk/363741/" target="_blank" rel="noopener noreferrer">PDF</a>, <a href="https://gennaro-parlato.github.io/paper/cseq-mu.pptx" target="_blank" rel="noopener noreferrer">PPT</a>, <a href="https://github.com/CSeq/Overview" target="_blank" rel="noopener noreferrer">CSeq webpage</a></div>
             </div>
             
             <div class="paper-entry">
                <div class="bullet">&#8226;</div>
-               <div class="item"><strong>MU-CSeq 0.4: Individual Memory Location Unwindings (Competition Contribution)<br></strong><a href="https://gildotomasco.github.io" target="_blank" rel="noopener noreferrer">E. Tomasco</a>, <a href="https://www.linkedin.com/in/trucnguyenlam" target="_blank" rel="noopener noreferrer">T. L. Nguyen</a>, <a href="https://www.gssi.it/people/professors/lectures-computer-science/item/1018-inverso-omar" target="_blank" rel="noopener noreferrer">O. Inverso</a>, <a href="https://bfischer.pages.cs.sun.ac.za" target="_blank" rel="noopener noreferrer">B. Fischer</a>, <a href="https://docenti.unisa.it/004821/en/home" target="_blank" rel="noopener noreferrer">S. La Torre</a>, and G. Parlato<br>5<sup>th</sup> Intl. Competition on Software Verification (<a href="https://sv-comp.sosy-lab.org/2016/" target="_blank" rel="noopener noreferrer">SV-COMP</a>), held at <a href="https://www.etaps.org/2016/tacas" target="_blank" rel="noopener noreferrer">TACAS</a><br>Eindhoven, The Netherlands, 2016<br>[<em>MU-CSeq 0.4 won the gold medal in the concurrency category</em>]<br><a href="https://eprints.soton.ac.uk/386736/" target="_blank" rel="noopener noreferrer">PDF</a>, <a href="https://github.com/CSeq/Overview" target="_blank" rel="noopener noreferrer">CSeq webpage</a> for tools and experiments</div>
+               <div class="item"><strong>Context-Bounded Analysis of TSO Systems</strong><br><a href="https://www.uu.se/en/contact-and-organisation/staff?query=N10-529" target="_blank" rel="noopener noreferrer">F. M. Atig</a>, <a href="https://www.irif.fr/~abou/" target="_blank" rel="noopener noreferrer">A. Bouajjani</a>, and G. Parlato<br><a href="https://www.etaps.org/2014/workshops?id=164" target="_blank" rel="noopener noreferrer">ETAPS Workshop in honor of Joseph Sifakis</a><br>Grenoble, France, 2014<br><a href="https://eprints.soton.ac.uk/365362/" target="_blank" rel="noopener noreferrer">PDF</a></div>
             </div>
             
             <div class="paper-entry">
                <div class="bullet">&#8226;</div>
-               <div class="item"><strong>Lazy-CSeq: A Context-Bounded Model Checking Tool for Multi-Threaded C-Programs <br>(Tool Demonstration)<br></strong><a href="https://www.gssi.it/people/professors/lectures-computer-science/item/1018-inverso-omar" target="_blank" rel="noopener noreferrer">O. Inverso</a>, <a href="https://www.linkedin.com/in/trucnguyenlam" target="_blank" rel="noopener noreferrer">T. L. Nguyen</a>, <a href="https://bfischer.pages.cs.sun.ac.za" target="_blank" rel="noopener noreferrer">B. Fischer</a>, <a href="https://docenti.unisa.it/004821/en/home" target="_blank" rel="noopener noreferrer">S. La Torre</a>, and G. Parlato<br>30th IEEE/ACM International Conference on Automated Software Engineering (<a href="https://conf.researchr.org/home/ase-2015" target="_blank" rel="noopener noreferrer">ASE</a>)<br>Lincoln, Nebraska, USA, 2015<br><a href="https://eprints.soton.ac.uk/379595/" target="_blank" rel="noopener noreferrer">PDF</a>, <a href="https://github.com/CSeq/Overview" target="_blank" rel="noopener noreferrer">CSeq webpage</a> for tools and experiments<br>[<em>Lazy-CSeq 1.0 won the silver medal in the concurrency category</em>]</div>
+               <div class="item"><strong>A Unifying Approach for Multistack Pushdown Automata</strong><br><a href="https://docenti.unisa.it/004821/en/home" target="_blank" rel="noopener noreferrer">S. La Torre</a>, <a href="http://www.di-srv.unisa.it/professori/napoli/" target="_blank" rel="noopener noreferrer">M. Napoli</a>, and G. Parlato<br>39<sup>th</sup> International Symposium on Mathematical Foundations of Computer Science (<a href="https://www.inf.u-szeged.hu/mfcs2014/?page_id=142" target="_blank" rel="noopener noreferrer">MFCS</a>)<br>Budapest, Hungary, 2014<br><a href="https://eprints.soton.ac.uk/365450/" target="_blank" rel="noopener noreferrer">PDF</a>, <a href="https://gennaro-parlato.github.io/paper/MFCS2014.pptx" target="_blank" rel="noopener noreferrer">PPT</a></div>
             </div>
             
             <div class="paper-entry">
                <div class="bullet">&#8226;</div>
-               <div class="item"><strong>Verifying Concurrent Programs by Memory Unwinding<br></strong><a href="https://gildotomasco.github.io" target="_blank" rel="noopener noreferrer">E. Tomasco</a>, <a href="https://www.gssi.it/people/professors/lectures-computer-science/item/1018-inverso-omar" target="_blank" rel="noopener noreferrer">O. Inverso</a>, <a href="https://bfischer.pages.cs.sun.ac.za" target="_blank" rel="noopener noreferrer">B. Fischer</a>, <a href="https://docenti.unisa.it/004821/en/home" target="_blank" rel="noopener noreferrer">S. La Torre</a>, and G. Parlato<br>21<sup>st</sup> Int'l Conference on Tools and Algorithms for the Construction and Analysis of Systems (<a href="https://www.etaps.org/2015/tacas" target="_blank" rel="noopener noreferrer">TACAS</a>), <br>London, UK, 2015<br><a href="https://eprints.soton.ac.uk/370322/" target="_blank" rel="noopener noreferrer">PDF</a>, <a href="https://gennaro-parlato.github.io/paper/tacas2015.pptx" target="_blank" rel="noopener noreferrer">PPT</a>, see also <a href="https://github.com/CSeq/Overview" target="_blank" rel="noopener noreferrer">CSeq webpage</a> for the tool and experiments</div>
+               <div class="item"><strong>Scope-Bounded Pushdown Languages</strong><br><a href="https://docenti.unisa.it/004821/en/home" target="_blank" rel="noopener noreferrer">S. La Torre</a>, <a href="http://www.di-srv.unisa.it/professori/napoli/" target="_blank" rel="noopener noreferrer">M. Napoli</a>, and G. Parlato<br>18<sup>th</sup> International Conference on Developments in Language Theory (<a href="https://dlt2014.sciencesconf.org" target="_blank" rel="noopener noreferrer">DLT</a>)<br>Ekaterinburg, Russia, 2014<br><a href="https://eprints.soton.ac.uk/365361/" target="_blank" rel="noopener noreferrer">PDF</a> (<a href="https://eprints.soton.ac.uk/386738/" target="_blank" rel="noopener noreferrer">full version</a>), <a href="https://gennaro-parlato.github.io/paper/DLT2014.pptx" target="_blank" rel="noopener noreferrer">PPT</a></div>
             </div>
             
             <div class="paper-entry">
                <div class="bullet">&#8226;</div>
-               <div class="item"><strong>MU-CSeq 0.3: Sequentialization by Read-implicit and Coarse-grained Memory Unwindings <br>(Competition Contribution)<br></strong><a href="https://gildotomasco.github.io" target="_blank" rel="noopener noreferrer">E. Tomasco</a>, <a href="https://www.gssi.it/people/professors/lectures-computer-science/item/1018-inverso-omar" target="_blank" rel="noopener noreferrer">O. Inverso</a>, <a href="https://bfischer.pages.cs.sun.ac.za" target="_blank" rel="noopener noreferrer">B. Fischer</a>, <a href="https://docenti.unisa.it/004821/en/home" target="_blank" rel="noopener noreferrer">S. La Torre</a>, and G. Parlato<br>4<sup>th</sup> Intl. Competition on Software Verification (<a href="https://sv-comp.sosy-lab.org/2015/" target="_blank" rel="noopener noreferrer">SV-COMP</a>), held at <a href="https://www.etaps.org/2015/tacas" target="_blank" rel="noopener noreferrer">TACAS</a><br>London, UK, 2015<br>[<em>MU-CSeq won the gold medal in the concurrency category</em>]<br><a href="https://eprints.soton.ac.uk/370671/" target="_blank" rel="noopener noreferrer">PDF</a>, <a href="https://gennaro-parlato.github.io/paper/svcomp2015-mucseq.pptx" target="_blank" rel="noopener noreferrer">PPT</a>, <a href="https://github.com/CSeq/Overview" target="_blank" rel="noopener noreferrer">CSeq webpage</a></div>
-            </div>
-            
-            <div class="paper-entry">
-               <div class="bullet">&#8226;</div>
-               <div class="item"><strong>Unbounded Lazy-CSeq: A Lazy Sequentialization Tool for C Programs with Unbounded <br>Context Switches (Competition Contribution)<br></strong><a href="https://www.linkedin.com/in/trucnguyenlam" target="_blank" rel="noopener noreferrer">T. L. Nguyen</a>, <a href="https://bfischer.pages.cs.sun.ac.za" target="_blank" rel="noopener noreferrer">B. Fischer</a>, <a href="https://docenti.unisa.it/004821/en/home" target="_blank" rel="noopener noreferrer">S. La Torre</a>, and G. Parlato<br>4<sup>th</sup> Intl. Competition on Software Verification (<a href="https://sv-comp.sosy-lab.org/2015/" target="_blank" rel="noopener noreferrer">SV-COMP</a>), held at <a href="https://www.etaps.org/2015/tacas" target="_blank" rel="noopener noreferrer">TACAS</a><br>London, UK, 2015<br><a href="https://eprints.soton.ac.uk/370672/" target="_blank" rel="noopener noreferrer">PDF</a>, <a href="https://gennaro-parlato.github.io/paper/svcomp2015-UL-lazycseq.pptx" target="_blank" rel="noopener noreferrer">PPT</a>, <a href="https://github.com/CSeq/Overview" target="_blank" rel="noopener noreferrer">CSeq webpage</a></div>
-            </div>
-            
-            <div class="paper-entry">
-               <div class="bullet">&#8226;</div>
-               <div class="item"><strong>Bounded Model Checking of Multi-Threaded C Programs via Lazy Sequentialization<br></strong><a href="https://www.gssi.it/people/professors/lectures-computer-science/item/1018-inverso-omar" target="_blank" rel="noopener noreferrer">O. Inverso</a>, <a href="https://gildotomasco.github.io" target="_blank" rel="noopener noreferrer">E. Tomasco</a>, <a href="https://bfischer.pages.cs.sun.ac.za" target="_blank" rel="noopener noreferrer">B. Fischer</a>, <a href="https://docenti.unisa.it/004821/en/home" target="_blank" rel="noopener noreferrer">S. La Torre</a>, and G. Parlato<br>26<sup>th</sup> Int'l Conference on Computer Aided Verification (<a href="https://i-cav.org/2014/" target="_blank" rel="noopener noreferrer">CAV</a>)<br>Vienna, Austria, 2014<br><a href="https://eprints.soton.ac.uk/365365/" target="_blank" rel="noopener noreferrer">PDF</a>, <a href="https://gennaro-parlato.github.io/paper/LazyCseq.pptx" target="_blank" rel="noopener noreferrer">PPT</a>, see also <a href="https://github.com/CSeq/Overview" target="_blank" rel="noopener noreferrer">CSeq webpage</a> for tools and experiments</div>
-            </div>
-            
-            <div class="paper-entry">
-               <div class="bullet">&#8226;</div>
-               <div class="item"><strong>VAC - Verifier of Administrative Role-based Access Control Policies<br></strong><a href="http://docenti.unimol.it/index.php?u=a.ferrara8" target="_blank" rel="noopener noreferrer">A. L. Ferrara</a>, <a href="https://madhu.cs.illinois.edu" target="_blank" rel="noopener noreferrer">P. Madhusudan</a>, <a href="https://www.linkedin.com/in/trucnguyenlam" target="_blank" rel="noopener noreferrer">T. L. Nguyen</a>, and G. Parlato<br>26<sup>th</sup> Int'l Conference on Computer Aided Verification (<a href="https://i-cav.org/2014/" target="_blank" rel="noopener noreferrer">CAV</a>)<br>Vienna, Austria, 2014<br><a href="https://eprints.soton.ac.uk/365363/" target="_blank" rel="noopener noreferrer">PDF</a>, <a href="https://gennaro-parlato.github.io/paper/VACtool.pptx" target="_blank" rel="noopener noreferrer">PPT</a>, see also <a href="https://users.ecs.soton.ac.uk/gp4/VAC.html" target="_blank" rel="noopener noreferrer">VAC webpage</a> for the tool and experiments</div>
-            </div>
-            
-            <div class="paper-entry">
-               <div class="bullet">&#8226;</div>
-               <div class="item"><strong>Lazy-CSeq: A Lazy Sequentialization Tool for C (Competition Contribution)<br></strong><a href="https://www.gssi.it/people/professors/lectures-computer-science/item/1018-inverso-omar" target="_blank" rel="noopener noreferrer">O. Inverso</a>, <a href="https://gildotomasco.github.io" target="_blank" rel="noopener noreferrer">E. Tomasco</a>, <a href="https://docenti.unisa.it/004821/en/home" target="_blank" rel="noopener noreferrer">S. La Torre</a>, <a href="https://bfischer.pages.cs.sun.ac.za" target="_blank" rel="noopener noreferrer">B. Fischer</a>, and G. Parlato<br>3<sup>rd</sup> Intl. Competition on Software Verification (<a href="https://sv-comp.sosy-lab.org/2014/" target="_blank" rel="noopener noreferrer">SV-COMP</a>), held at <a href="https://www.etaps.org/2014/tacas" target="_blank" rel="noopener noreferrer">TACAS</a><br>Grenoble, France, 2014<br>[<em>CSeq-Lazy won the gold medal in the concurrency category</em>]<br><a href="https://eprints.soton.ac.uk/363742/" target="_blank" rel="noopener noreferrer">PDF</a>, <a href="https://gennaro-parlato.github.io/paper/cseq-lazy.pptx" target="_blank" rel="noopener noreferrer">PPT</a>, <a href="https://github.com/CSeq/Overview" target="_blank" rel="noopener noreferrer">CSeq webpage</a></div>
-            </div>
-            
-            <div class="paper-entry">
-               <div class="bullet">&#8226;</div>
-               <div class="item"><strong>MU-CSeq: Sequentialization of C Programs by Shared Memory Unwindings <br>(Competition Contribution)<br></strong><a href="https://gildotomasco.github.io" target="_blank" rel="noopener noreferrer">E. Tomasco</a>, <a href="https://www.gssi.it/people/professors/lectures-computer-science/item/1018-inverso-omar" target="_blank" rel="noopener noreferrer">O. Inverso</a>, <a href="https://docenti.unisa.it/004821/en/home" target="_blank" rel="noopener noreferrer">S. La Torre</a>, <a href="https://bfischer.pages.cs.sun.ac.za" target="_blank" rel="noopener noreferrer">B. Fischer</a>, and G. Parlato<br>3<sup>rd</sup> Intl. Competition on Software Verification (<a href="https://sv-comp.sosy-lab.org/2014/" target="_blank" rel="noopener noreferrer">SV-COMP</a>), held at <a href="https://www.etaps.org/2014/tacas" target="_blank" rel="noopener noreferrer">TACAS</a><br>Grenoble, France, 2014<br>[<em>CSeq-MU won the silver medal in the concurrency category</em>]<br><a href="https://eprints.soton.ac.uk/363741/" target="_blank" rel="noopener noreferrer">PDF</a>, <a href="https://gennaro-parlato.github.io/paper/cseq-mu.pptx" target="_blank" rel="noopener noreferrer">PPT</a>, <a href="https://github.com/CSeq/Overview" target="_blank" rel="noopener noreferrer">CSeq webpage</a></div>
-            </div>
-            
-            <div class="paper-entry">
-               <div class="bullet">&#8226;</div>
-               <div class="item"><strong>Context-Bounded Analysis of TSO Systems<br></strong><a href="https://www.uu.se/en/contact-and-organisation/staff?query=N10-529" target="_blank" rel="noopener noreferrer">F. M. Atig</a>, <a href="https://www.irif.fr/~abou/" target="_blank" rel="noopener noreferrer">A. Bouajjani</a>, and G. Parlato<br><a href="https://www.etaps.org/2014/workshops?id=164" target="_blank" rel="noopener noreferrer">ETAPS Workshop in honor of Joseph Sifakis</a><br>Grenoble, France, 2014<br><a href="https://eprints.soton.ac.uk/365362/" target="_blank" rel="noopener noreferrer">PDF</a></div>
-            </div>
-            
-            <div class="paper-entry">
-               <div class="bullet">&#8226;</div>
-               <div class="item"><strong>A Unifying Approach for Multistack Pushdown Automata<br></strong><a href="https://docenti.unisa.it/004821/en/home" target="_blank" rel="noopener noreferrer">S. La Torre</a>, <a href="http://www.di-srv.unisa.it/professori/napoli/" target="_blank" rel="noopener noreferrer">M. Napoli</a>, and G. Parlato<br>39<sup>th</sup> International Symposium on Mathematical Foundations of Computer Science (<a href="https://www.inf.u-szeged.hu/mfcs2014/?page_id=142" target="_blank" rel="noopener noreferrer">MFCS</a>)<br>Budapest, Hungary, 2014<br><a href="https://eprints.soton.ac.uk/365450/" target="_blank" rel="noopener noreferrer">PDF</a>, <a href="https://gennaro-parlato.github.io/paper/MFCS2014.pptx" target="_blank" rel="noopener noreferrer">PPT</a></div>
-            </div>
-            
-            <div class="paper-entry">
-               <div class="bullet">&#8226;</div>
-               <div class="item"><strong>Scope-Bounded Pushdown Languages<br></strong><a href="https://docenti.unisa.it/004821/en/home" target="_blank" rel="noopener noreferrer">S. La Torre</a>, <a href="http://www.di-srv.unisa.it/professori/napoli/" target="_blank" rel="noopener noreferrer">M. Napoli</a>, and G. Parlato<br>18<sup>th</sup> International Conference on Developments in Language Theory (<a href="https://dlt2014.sciencesconf.org" target="_blank" rel="noopener noreferrer">DLT</a>)<br>Ekaterinburg, Russia, 2014<br><a href="https://eprints.soton.ac.uk/365361/" target="_blank" rel="noopener noreferrer">PDF</a> (<a href="https://eprints.soton.ac.uk/386738/" target="_blank" rel="noopener noreferrer">full version</a>), <a href="https://gennaro-parlato.github.io/paper/DLT2014.pptx" target="_blank" rel="noopener noreferrer">PPT</a></div>
-            </div>
-            
-            <div class="paper-entry">
-               <div class="bullet">&#8226;</div>
-               <div class="item"><strong>On the Path-Width of Integer Linear Programming<br></strong><a href="https://www.lix.polytechnique.fr/~cenea/" target="_blank" rel="noopener noreferrer">C. Enea</a>, <a href="https://www.irif.fr/~haberm/" target="_blank" rel="noopener noreferrer">P. Habermehl</a>, <a href="https://www.gssi.it/people/professors/lectures-computer-science/item/1018-inverso-omar" target="_blank" rel="noopener noreferrer">O. Inverso</a>, and G. Parlato<br>5<sup>th</sup> International Symposium on Games, Automata, Logics and Formal Verification (<a href="https://gandalf2014.di.univr.it/" target="_blank" rel="noopener noreferrer">GandALF</a>)<br>Verona, Italy, 2014<br><a href="https://eprints.soton.ac.uk/351912/" target="_blank" rel="noopener noreferrer">PDF</a> (<a href="https://eprints.soton.ac.uk/386737/" target="_blank" rel="noopener noreferrer">full version</a>)
+               <div class="item"><strong>On the Path-Width of Integer Linear Programming</strong><br><a href="https://www.lix.polytechnique.fr/~cenea/" target="_blank" rel="noopener noreferrer">C. Enea</a>, <a href="https://www.irif.fr/~haberm/" target="_blank" rel="noopener noreferrer">P. Habermehl</a>, <a href="https://www.gssi.it/people/professors/lectures-computer-science/item/1018-inverso-omar" target="_blank" rel="noopener noreferrer">O. Inverso</a>, and G. Parlato<br>5<sup>th</sup> International Symposium on Games, Automata, Logics and Formal Verification (<a href="https://gandalf2014.di.univr.it/" target="_blank" rel="noopener noreferrer">GandALF</a>)<br>Verona, Italy, 2014<br><a href="https://eprints.soton.ac.uk/351912/" target="_blank" rel="noopener noreferrer">PDF</a> (<a href="https://eprints.soton.ac.uk/386737/" target="_blank" rel="noopener noreferrer">full version</a>)
                <div style="margin-top: 12px; font-size: 17px; line-height: 1.4; color: #222;">Slides of a presentation I gave at the post-conference workshop on "Verification of Infinite-State Systems":<br><strong>The tree-width of Decidable Problems</strong>: <a href="https://gennaro-parlato.github.io/paper/tree-width-of-decidable-problems.ppt" target="_blank" rel="noopener noreferrer">PPT</a> (the definition of the open problem "abab problem" can be found in the last five slides)</div></div>
             </div>
             
             <div class="paper-entry">
                <div class="bullet">&#8226;</div>
-               <div class="item"><strong>Security Analysis for Temporal Role Based Access Control<br></strong> E. Uzun, <a href="https://sites.rutgers.edu/vijay-atluri/" target="_blank" rel="noopener noreferrer">V. Atluri</a>, <a href="https://www.business.rutgers.edu/faculty/jaideep-vaidya" target="_blank" rel="noopener noreferrer">J. Vaidya</a>, <a href="http://www.facweb.iitkgp.ernet.in/~shamik/" target="_blank" rel="noopener noreferrer">S. Sural</a>, <a href="http://docenti.unimol.it/index.php?u=a.ferrara8" target="_blank" rel="noopener noreferrer">A. L. Ferrara</a>, G. Parlato, and <a href="https://madhu.cs.illinois.edu" target="_blank" rel="noopener noreferrer">P. Madhusudan</a><br>Journal of Computer Security (<a href="http://jcs.stanford.edu/" target="_blank" rel="noopener noreferrer">JCS</a>), 2014<br><a href="https://eprints.soton.ac.uk/366414/" target="_blank" rel="noopener noreferrer">PDF</a></div>
+               <div class="item"><strong>Security Analysis for Temporal Role Based Access Control</strong><br> E. Uzun, <a href="https://sites.rutgers.edu/vijay-atluri/" target="_blank" rel="noopener noreferrer">V. Atluri</a>, <a href="https://www.business.rutgers.edu/faculty/jaideep-vaidya" target="_blank" rel="noopener noreferrer">J. Vaidya</a>, <a href="http://www.facweb.iitkgp.ernet.in/~shamik/" target="_blank" rel="noopener noreferrer">S. Sural</a>, <a href="http://docenti.unimol.it/index.php?u=a.ferrara8" target="_blank" rel="noopener noreferrer">A. L. Ferrara</a>, G. Parlato, and <a href="https://madhu.cs.illinois.edu" target="_blank" rel="noopener noreferrer">P. Madhusudan</a><br>Journal of Computer Security (<a href="http://jcs.stanford.edu/" target="_blank" rel="noopener noreferrer">JCS</a>), 2014<br><a href="https://eprints.soton.ac.uk/366414/" target="_blank" rel="noopener noreferrer">PDF</a></div>
             </div>
             
             <div class="paper-entry">
                <div class="bullet">&#8226;</div>
-               <div class="item"><strong>CSeq: A Concurrency Pre-Processor for Sequential C Verification Tools (Tool Demonstration)<br></strong><a href="https://bfischer.pages.cs.sun.ac.za" target="_blank" rel="noopener noreferrer">B. Fischer</a>, <a href="https://www.gssi.it/people/professors/lectures-computer-science/item/1018-inverso-omar" target="_blank" rel="noopener noreferrer">O. Inverso</a>, and G. Parlato<br>28<sup>th</sup> IEEE/ACM International Conference on Automated Software Engineering (<a href="https://conf.researchr.org/home/ase-2013" target="_blank" rel="noopener noreferrer">ASE</a>)<br>Palo Alto, CA, USA, 2013<br><a href="https://eprints.soton.ac.uk/365366/" target="_blank" rel="noopener noreferrer">PDF</a>, <a href="https://gennaro-parlato.github.io/paper/cseq-ase.pptx" target="_blank" rel="noopener noreferrer">PPT</a>, <a href="https://github.com/CSeq/Overview" target="_blank" rel="noopener noreferrer">CSeq webpage</a></div>
+               <div class="item"><strong>CSeq: A Concurrency Pre-Processor for Sequential C Verification Tools (Tool Demonstration)</strong><br><a href="https://bfischer.pages.cs.sun.ac.za" target="_blank" rel="noopener noreferrer">B. Fischer</a>, <a href="https://www.gssi.it/people/professors/lectures-computer-science/item/1018-inverso-omar" target="_blank" rel="noopener noreferrer">O. Inverso</a>, and G. Parlato<br>28<sup>th</sup> IEEE/ACM International Conference on Automated Software Engineering (<a href="https://conf.researchr.org/home/ase-2013" target="_blank" rel="noopener noreferrer">ASE</a>)<br>Palo Alto, CA, USA, 2013<br><a href="https://eprints.soton.ac.uk/365366/" target="_blank" rel="noopener noreferrer">PDF</a>, <a href="https://gennaro-parlato.github.io/paper/cseq-ase.pptx" target="_blank" rel="noopener noreferrer">PPT</a>, <a href="https://github.com/CSeq/Overview" target="_blank" rel="noopener noreferrer">CSeq webpage</a></div>
             </div>
             
             <div class="paper-entry">
                <div class="bullet">&#8226;</div>
-               <div class="item"><strong>Quantified Data Automata on Skinny Trees: an Abstract Domain for Lists<br></strong><a href="http://pranav-garg.com" target="_blank" rel="noopener noreferrer">P. Garg</a>, <a href="https://madhu.cs.illinois.edu" target="_blank" rel="noopener noreferrer">P. Madhusudan</a>, and G. Parlato<br>20<sup>th</sup> Static Analysis Symposium (<a href="https://research.microsoft.com/en-us/events/sas2013/" target="_blank" rel="noopener noreferrer">SAS</a>)<br>Seattle, WA, USA, 2013<br><a href="https://eprints.soton.ac.uk/351906/" target="_blank" rel="noopener noreferrer">PDF</a>, <a href="http://pranav-garg.com/papers/sas13.pptx" target="_blank" rel="noopener noreferrer">PPT</a>, <a href="http://pranav-garg.com/qsdas.html" target="_blank" rel="noopener noreferrer">Experiments</a></div>
+               <div class="item"><strong>Quantified Data Automata on Skinny Trees: an Abstract Domain for Lists</strong><br><a href="http://pranav-garg.com" target="_blank" rel="noopener noreferrer">P. Garg</a>, <a href="https://madhu.cs.illinois.edu" target="_blank" rel="noopener noreferrer">P. Madhusudan</a>, and G. Parlato<br>20<sup>th</sup> Static Analysis Symposium (<a href="https://research.microsoft.com/en-us/events/sas2013/" target="_blank" rel="noopener noreferrer">SAS</a>)<br>Seattle, WA, USA, 2013<br><a href="https://eprints.soton.ac.uk/351906/" target="_blank" rel="noopener noreferrer">PDF</a>, <a href="http://pranav-garg.com/papers/sas13.pptx" target="_blank" rel="noopener noreferrer">PPT</a>, <a href="http://pranav-garg.com/qsdas.html" target="_blank" rel="noopener noreferrer">Experiments</a></div>
             </div>
             
             <div class="paper-entry">
                <div class="bullet">&#8226;</div>
-               <div class="item"><strong>Policy Analysis for Self-Administrated Role-Based Access Control<br></strong><a href="http://docenti.unimol.it/index.php?u=a.ferrara8" target="_blank" rel="noopener noreferrer">A. L. Ferrara</a>, <a href="https://madhu.cs.illinois.edu" target="_blank" rel="noopener noreferrer">P. Madhusudan</a>, and G. Parlato<br>19<sup>th</sup> Int'l Conference on Tools and Algorithms for the Construction and Analysis of Systems (<a href="https://www.etaps.org/2013/tacas" target="_blank" rel="noopener noreferrer">TACAS</a>) <br>Rome, Italy, 2013<br><a href="https://eprints.soton.ac.uk/344391/" target="_blank" rel="noopener noreferrer">PDF</a>, <a href="https://gennaro-parlato.github.io/paper/TACAS2013.ppt" target="_blank" rel="noopener noreferrer">PPT</a>, <a href="https://users.ecs.soton.ac.uk/gp4/VAC.html" target="_blank" rel="noopener noreferrer">VAC webpage</a> (for tools, benchmarks and experiments)</div>
+               <div class="item"><strong>Policy Analysis for Self-Administrated Role-Based Access Control</strong><br><a href="http://docenti.unimol.it/index.php?u=a.ferrara8" target="_blank" rel="noopener noreferrer">A. L. Ferrara</a>, <a href="https://madhu.cs.illinois.edu" target="_blank" rel="noopener noreferrer">P. Madhusudan</a>, and G. Parlato<br>19<sup>th</sup> Int'l Conference on Tools and Algorithms for the Construction and Analysis of Systems (<a href="https://www.etaps.org/2013/tacas" target="_blank" rel="noopener noreferrer">TACAS</a>) <br>Rome, Italy, 2013<br><a href="https://eprints.soton.ac.uk/344391/" target="_blank" rel="noopener noreferrer">PDF</a>, <a href="https://gennaro-parlato.github.io/paper/TACAS2013.ppt" target="_blank" rel="noopener noreferrer">PPT</a>, <a href="https://users.ecs.soton.ac.uk/gp4/VAC.html" target="_blank" rel="noopener noreferrer">VAC webpage</a> (for tools, benchmarks and experiments)</div>
             </div>
             
             <div class="paper-entry">
                <div class="bullet">&#8226;</div>
-               <div class="item"><strong>CSeq: A Sequentialization Tool for C (Competition Contribution)<br></strong><a href="https://bfischer.pages.cs.sun.ac.za" target="_blank" rel="noopener noreferrer">B. Fischer</a>, <a href="https://www.gssi.it/people/professors/lectures-computer-science/item/1018-inverso-omar" target="_blank" rel="noopener noreferrer">O. Inverso</a>, and G. Parlato<br>2<sup>nd</sup> Int'l Competition on Software Verification (<a href="https://sv-comp.sosy-lab.org/2013/" target="_blank" rel="noopener noreferrer">SV-COMP</a>), held at <a href="https://www.etaps.org/2013/tacas" target="_blank" rel="noopener noreferrer">TACAS</a> <br>Rome, Italy, 2013<br>[<em>CSeq won the silver medal in the concurrency category</em>]<br><a href="https://eprints.soton.ac.uk/351904/" target="_blank" rel="noopener noreferrer">PDF</a>, <a href="https://github.com/CSeq/Overview" target="_blank" rel="noopener noreferrer">CSeq webpage</a></div>
+               <div class="item"><strong>CSeq: A Sequentialization Tool for C (Competition Contribution)</strong><br><a href="https://bfischer.pages.cs.sun.ac.za" target="_blank" rel="noopener noreferrer">B. Fischer</a>, <a href="https://www.gssi.it/people/professors/lectures-computer-science/item/1018-inverso-omar" target="_blank" rel="noopener noreferrer">O. Inverso</a>, and G. Parlato<br>2<sup>nd</sup> Int'l Competition on Software Verification (<a href="https://sv-comp.sosy-lab.org/2013/" target="_blank" rel="noopener noreferrer">SV-COMP</a>), held at <a href="https://www.etaps.org/2013/tacas" target="_blank" rel="noopener noreferrer">TACAS</a> <br>Rome, Italy, 2013<br>[<em>CSeq won the silver medal in the concurrency category</em>]<br><a href="https://eprints.soton.ac.uk/351904/" target="_blank" rel="noopener noreferrer">PDF</a>, <a href="https://github.com/CSeq/Overview" target="_blank" rel="noopener noreferrer">CSeq webpage</a></div>
             </div>
             
             <div class="paper-entry">
                <div class="bullet">&#8226;</div>
-               <div class="item"><strong>Scope-bounded Multistack Pushdown Systems: Fixed-Point, Sequentialization, and Tree-Width<br></strong><a href="https://docenti.unisa.it/004821/en/home" target="_blank" rel="noopener noreferrer">S. La Torre</a>, and G. Parlato<br>32<sup>nd</sup> Foundations of Software Technology and Theoretical Computer Science conference (<a href="https://www.fsttcs.org/" target="_blank" rel="noopener noreferrer">FSTTCS</a>)<br>IIIT Hyderabad, India, 2012<br><a href="https://eprints.soton.ac.uk/335128/" target="_blank" rel="noopener noreferrer">PDF</a>, <a href="https://gennaro-parlato.github.io/paper/scoped2012.pptx" target="_blank" rel="noopener noreferrer">PPT</a>
+               <div class="item"><strong>Scope-bounded Multistack Pushdown Systems: Fixed-Point, Sequentialization, and Tree-Width</strong><br><a href="https://docenti.unisa.it/004821/en/home" target="_blank" rel="noopener noreferrer">S. La Torre</a>, and G. Parlato<br>32<sup>nd</sup> Foundations of Software Technology and Theoretical Computer Science conference (<a href="https://www.fsttcs.org/" target="_blank" rel="noopener noreferrer">FSTTCS</a>)<br>IIIT Hyderabad, India, 2012<br><a href="https://eprints.soton.ac.uk/335128/" target="_blank" rel="noopener noreferrer">PDF</a>, <a href="https://gennaro-parlato.github.io/paper/scoped2012.pptx" target="_blank" rel="noopener noreferrer">PPT</a>
                <div style="margin-top: 12px; font-size: 17px; line-height: 1.4; color: #222;">Slides of a presentation I gave at the post-conference workshop on "Verification of Infinite-State Systems":<br><strong>The tree-width of Decidable Problems</strong>: <a href="https://gennaro-parlato.github.io/paper/tree-width-of-decidable-problems.ppt" target="_blank" rel="noopener noreferrer">PPT</a> (the definition of the open problem "abab problem" can be found in the last five slides)</div></div>
             </div>
             
             <div class="paper-entry">
                <div class="bullet">&#8226;</div>
-               <div class="item"><strong>Security Analysis of Role-based Access Control through Program Verification<br></strong><a href="http://docenti.unimol.it/index.php?u=a.ferrara8" target="_blank" rel="noopener noreferrer">A. L. Ferrara</a>, <a href="https://madhu.cs.illinois.edu" target="_blank" rel="noopener noreferrer">P. Madhusudan</a>, and G. Parlato<br>25<sup>th</sup> IEEE Computer Security Foundations Symposium (<a href="http://csf2012.seas.harvard.edu/" target="_blank" rel="noopener noreferrer">CSF</a>)<br>Harvard University, Cambridge MA, USA, 2012<br><a href="https://eprints.soton.ac.uk/348418/" target="_blank" rel="noopener noreferrer">PDF</a>, <a href="https://gennaro-parlato.github.io/paper/CSF2012.ppt" target="_blank" rel="noopener noreferrer">PPT</a>, <a href="https://users.ecs.soton.ac.uk/gp4/VAC.html" target="_blank" rel="noopener noreferrer">VAC webpage</a> (for tools, benchmarks and experiments)</div>
+               <div class="item"><strong>Security Analysis of Role-based Access Control through Program Verification</strong><br><a href="http://docenti.unimol.it/index.php?u=a.ferrara8" target="_blank" rel="noopener noreferrer">A. L. Ferrara</a>, <a href="https://madhu.cs.illinois.edu" target="_blank" rel="noopener noreferrer">P. Madhusudan</a>, and G. Parlato<br>25<sup>th</sup> IEEE Computer Security Foundations Symposium (<a href="http://csf2012.seas.harvard.edu/" target="_blank" rel="noopener noreferrer">CSF</a>)<br>Harvard University, Cambridge MA, USA, 2012<br><a href="https://eprints.soton.ac.uk/348418/" target="_blank" rel="noopener noreferrer">PDF</a>, <a href="https://gennaro-parlato.github.io/paper/CSF2012.ppt" target="_blank" rel="noopener noreferrer">PPT</a>, <a href="https://users.ecs.soton.ac.uk/gp4/VAC.html" target="_blank" rel="noopener noreferrer">VAC webpage</a> (for tools, benchmarks and experiments)</div>
             </div>
             
             <div class="paper-entry">
                <div class="bullet">&#8226;</div>
-               <div class="item"><strong>Sequentializing Parameterized Programs<br></strong><a href="https://docenti.unisa.it/004821/en/home" target="_blank" rel="noopener noreferrer">S. La Torre</a>, <a href="https://madhu.cs.illinois.edu" target="_blank" rel="noopener noreferrer">P. Madhusudan</a>, and G. Parlato<br>4<sup>th</sup> International Workshop on Foundations of Interface Technologies (<a href="http://fit2012.pst.ifi.lmu.de/" target="_blank" rel="noopener noreferrer">FIT</a>)<br>Tallinn, Estonia, 2012<br><a href="https://eprints.soton.ac.uk/272453/" target="_blank" rel="noopener noreferrer">PDF</a>, <a href="https://gennaro-parlato.github.io/paper/FIT2012.ppt" target="_blank" rel="noopener noreferrer">PPT</a></div>
+               <div class="item"><strong>Sequentializing Parameterized Programs</strong><br><a href="https://docenti.unisa.it/004821/en/home" target="_blank" rel="noopener noreferrer">S. La Torre</a>, <a href="https://madhu.cs.illinois.edu" target="_blank" rel="noopener noreferrer">P. Madhusudan</a>, and G. Parlato<br>4<sup>th</sup> International Workshop on Foundations of Interface Technologies (<a href="http://fit2012.pst.ifi.lmu.de/" target="_blank" rel="noopener noreferrer">FIT</a>)<br>Tallinn, Estonia, 2012<br><a href="https://eprints.soton.ac.uk/272453/" target="_blank" rel="noopener noreferrer">PDF</a>, <a href="https://gennaro-parlato.github.io/paper/FIT2012.ppt" target="_blank" rel="noopener noreferrer">PPT</a></div>
             </div>
             
             <div class="paper-entry">
                <div class="bullet">&#8226;</div>
-               <div class="item"><strong>Analyzing Temporal Role Based Access Control Models<br></strong> E. Uzun, <a href="https://sites.rutgers.edu/vijay-atluri/" target="_blank" rel="noopener noreferrer">V. Atluri</a>, <a href="http://www.facweb.iitkgp.ernet.in/~shamik/" target="_blank" rel="noopener noreferrer">S. Sural</a>, <a href="https://www.business.rutgers.edu/faculty/jaideep-vaidya" target="_blank" rel="noopener noreferrer">J. Vaidya</a>, G. Parlato, <a href="http://docenti.unimol.it/index.php?u=a.ferrara8" target="_blank" rel="noopener noreferrer">A. L. Ferrara</a>, and <a href="https://madhu.cs.illinois.edu" target="_blank" rel="noopener noreferrer">P. Madhusudan</a><br>17<sup>th</sup> ACM Symposium on Access Control Models and Technologies (<a href="https://www.sacmat.org/2012/index.php" target="_blank" rel="noopener noreferrer">SACMAT</a>)<br>Newark, USA, 2012<br><a href="https://eprints.soton.ac.uk/340533/" target="_blank" rel="noopener noreferrer">PDF</a></div>
+               <div class="item"><strong>Analyzing Temporal Role Based Access Control Models</strong><br> E. Uzun, <a href="https://sites.rutgers.edu/vijay-atluri/" target="_blank" rel="noopener noreferrer">V. Atluri</a>, <a href="http://www.facweb.iitkgp.ernet.in/~shamik/" target="_blank" rel="noopener noreferrer">S. Sural</a>, <a href="https://www.business.rutgers.edu/faculty/jaideep-vaidya" target="_blank" rel="noopener noreferrer">J. Vaidya</a>, G. Parlato, <a href="http://docenti.unimol.it/index.php?u=a.ferrara8" target="_blank" rel="noopener noreferrer">A. L. Ferrara</a>, and <a href="https://madhu.cs.illinois.edu" target="_blank" rel="noopener noreferrer">P. Madhusudan</a><br>17<sup>th</sup> ACM Symposium on Access Control Models and Technologies (<a href="https://www.sacmat.org/2012/index.php" target="_blank" rel="noopener noreferrer">SACMAT</a>)<br>Newark, USA, 2012<br><a href="https://eprints.soton.ac.uk/340533/" target="_blank" rel="noopener noreferrer">PDF</a></div>
             </div>
             
             <div class="paper-entry">
                <div class="bullet">&#8226;</div>
-               <div class="item"><strong>On Sequentializing Concurrent Programs<br></strong><a href="https://www.irif.fr/~abou/" target="_blank" rel="noopener noreferrer">A. Bouajjani</a>, <a href="http://michael-emmi.github.io" target="_blank" rel="noopener noreferrer">M. Emmi</a>, and G. Parlato<br>18<sup>th</sup> Int'l Static Analysis Symposium (<a href="http://sas2011.cs.technion.ac.il/" target="_blank" rel="noopener noreferrer">SAS</a>)<br>Venice, Italy, 2011<br><a href="https://eprints.soton.ac.uk/272451/" target="_blank" rel="noopener noreferrer">PDF</a>, <a href="https://gennaro-parlato.github.io/paper/SAS2011.pptx" target="_blank" rel="noopener noreferrer">PPT</a></div>
+               <div class="item"><strong>On Sequentializing Concurrent Programs</strong><br><a href="https://www.irif.fr/~abou/" target="_blank" rel="noopener noreferrer">A. Bouajjani</a>, <a href="http://michael-emmi.github.io" target="_blank" rel="noopener noreferrer">M. Emmi</a>, and G. Parlato<br>18<sup>th</sup> Int'l Static Analysis Symposium (<a href="http://sas2011.cs.technion.ac.il/" target="_blank" rel="noopener noreferrer">SAS</a>)<br>Venice, Italy, 2011<br><a href="https://eprints.soton.ac.uk/272451/" target="_blank" rel="noopener noreferrer">PDF</a>, <a href="https://gennaro-parlato.github.io/paper/SAS2011.pptx" target="_blank" rel="noopener noreferrer">PPT</a></div>
             </div>
             
             <div class="paper-entry">
                <div class="bullet">&#8226;</div>
-               <div class="item"><strong>Getting Rid of Store-Buffers in the Analysis of Weak Memory Models<br></strong><a href="https://www.uu.se/en/contact-and-organisation/staff?query=N10-529" target="_blank" rel="noopener noreferrer">F. M. Atig</a>, <a href="https://www.irif.fr/~abou/" target="_blank" rel="noopener noreferrer">A. Bouajjani</a>, and G. Parlato<br>23<sup>rd</sup> Int'l Conference on Computer Aided Verification (<a href="https://www.cs.utah.edu/events/conferences/cav2011/" target="_blank" rel="noopener noreferrer">CAV</a>)<br>Cliff Lodge, Snowbird, Utah, USA, 2011<br><a href="https://eprints.soton.ac.uk/272450/" target="_blank" rel="noopener noreferrer">PDF</a>, <a href="https://gennaro-parlato.github.io/paper/CAV2011.pptx" target="_blank" rel="noopener noreferrer">PPT</a>, <a href="https://gennaro-parlato.github.io/paper/CAV2011experiments.html" target="_blank" rel="noopener noreferrer">Experiments</a></div>
+               <div class="item"><strong>Getting Rid of Store-Buffers in the Analysis of Weak Memory Models</strong><br><a href="https://www.uu.se/en/contact-and-organisation/staff?query=N10-529" target="_blank" rel="noopener noreferrer">F. M. Atig</a>, <a href="https://www.irif.fr/~abou/" target="_blank" rel="noopener noreferrer">A. Bouajjani</a>, and G. Parlato<br>23<sup>rd</sup> Int'l Conference on Computer Aided Verification (<a href="https://www.cs.utah.edu/events/conferences/cav2011/" target="_blank" rel="noopener noreferrer">CAV</a>)<br>Cliff Lodge, Snowbird, Utah, USA, 2011<br><a href="https://eprints.soton.ac.uk/272450/" target="_blank" rel="noopener noreferrer">PDF</a>, <a href="https://gennaro-parlato.github.io/paper/CAV2011.pptx" target="_blank" rel="noopener noreferrer">PPT</a>, <a href="https://gennaro-parlato.github.io/paper/CAV2011experiments.html" target="_blank" rel="noopener noreferrer">Experiments</a></div>
             </div>
             
             <div class="paper-entry">
                <div class="bullet">&#8226;</div>
-               <div class="item"><strong>The Tree Width of Automata with Auxiliary Storage<br></strong><a href="https://madhu.cs.illinois.edu" target="_blank" rel="noopener noreferrer">P. Madhusudan</a> and G. Parlato <br>38<sup>th</sup> ACM SIGACT-SIGPLAN Symposium on Principles of Programming Languages (<a href="https://www.cse.psu.edu/popl/11/" target="_blank" rel="noopener noreferrer">POPL</a>)<br>Austin, Texas, USA, 2011<br><a href="https://eprints.soton.ac.uk/272444/" target="_blank" rel="noopener noreferrer">PDF</a> (<a href="https://www.ideals.illinois.edu/handle/2142/15433" target="_blank" rel="noopener noreferrer">technical report</a> has more proofs), <a href="https://gennaro-parlato.github.io/paper/graphautomata.pptx" target="_blank" rel="noopener noreferrer">PPT</a></div>
+               <div class="item"><strong>The Tree Width of Automata with Auxiliary Storage</strong><br><a href="https://madhu.cs.illinois.edu" target="_blank" rel="noopener noreferrer">P. Madhusudan</a> and G. Parlato <br>38<sup>th</sup> ACM SIGACT-SIGPLAN Symposium on Principles of Programming Languages (<a href="https://www.cse.psu.edu/popl/11/" target="_blank" rel="noopener noreferrer">POPL</a>)<br>Austin, Texas, USA, 2011<br><a href="https://eprints.soton.ac.uk/272444/" target="_blank" rel="noopener noreferrer">PDF</a> (<a href="https://www.ideals.illinois.edu/handle/2142/15433" target="_blank" rel="noopener noreferrer">technical report</a> has more proofs), <a href="https://gennaro-parlato.github.io/paper/graphautomata.pptx" target="_blank" rel="noopener noreferrer">PPT</a></div>
             </div>
             
             <div class="paper-entry">
                <div class="bullet">&#8226;</div>
-               <div class="item"><strong>Decidable Logics Combining Heap Structures and Data<br></strong><a href="https://madhu.cs.illinois.edu" target="_blank" rel="noopener noreferrer">P. Madhusudan</a>, G. Parlato, and <a href="http://people.csail.mit.edu/xkqiu/" target="_blank" rel="noopener noreferrer">X. Qiu</a><br>38<sup>th</sup> ACM SIGACT-SIGPLAN Symposium on Principles of Programming Languages (<a href="https://www.cse.psu.edu/popl/11/" target="_blank" rel="noopener noreferrer">POPL</a>)<br>Austin, Texas, USA, 2011<br><a href="https://eprints.soton.ac.uk/272448/" target="_blank" rel="noopener noreferrer">PDF</a>, <a href="https://gennaro-parlato.github.io/paper/strand.pptx" target="_blank" rel="noopener noreferrer">PPT</a>, See also the <a href="https://engineering.purdue.edu/~xqiu/strand/index.html" target="_blank" rel="noopener noreferrer">STRAND webpage</a> for the tool and experiments</div>
+               <div class="item"><strong>Decidable Logics Combining Heap Structures and Data</strong><br><a href="https://madhu.cs.illinois.edu" target="_blank" rel="noopener noreferrer">P. Madhusudan</a>, G. Parlato, and <a href="http://people.csail.mit.edu/xkqiu/" target="_blank" rel="noopener noreferrer">X. Qiu</a><br>38<sup>th</sup> ACM SIGACT-SIGPLAN Symposium on Principles of Programming Languages (<a href="https://www.cse.psu.edu/popl/11/" target="_blank" rel="noopener noreferrer">POPL</a>)<br>Austin, Texas, USA, 2011<br><a href="https://eprints.soton.ac.uk/272448/" target="_blank" rel="noopener noreferrer">PDF</a>, <a href="https://gennaro-parlato.github.io/paper/strand.pptx" target="_blank" rel="noopener noreferrer">PPT</a>, See also the <a href="https://engineering.purdue.edu/~xqiu/strand/index.html" target="_blank" rel="noopener noreferrer">STRAND webpage</a> for the tool and experiments</div>
             </div>
             
             <div class="paper-entry">
@@ -743,37 +881,37 @@
             
             <div class="paper-entry">
                <div class="bullet">&#8226;</div>
-               <div class="item"><strong>Model-checking Parameterized Concurrent Programs Using Linear Interfaces<br></strong><a href="https://docenti.unisa.it/004821/en/home" target="_blank" rel="noopener noreferrer">S. La Torre</a>, <a href="https://madhu.cs.illinois.edu" target="_blank" rel="noopener noreferrer">P. Madhusudan</a>, and G. Parlato<br>22<sup>nd</sup> Int'l Conference on Computer Aided Verification (<a href="http://www.liafa.jussieu.fr/~touili/cav2010/" target="_blank" rel="noopener noreferrer">CAV</a>)<br>Edinburgh, UK, 2010<br><a href="https://eprints.soton.ac.uk/272454/" target="_blank" rel="noopener noreferrer">PDF</a></div>
+               <div class="item"><strong>Model-checking Parameterized Concurrent Programs Using Linear Interfaces</strong><br><a href="https://docenti.unisa.it/004821/en/home" target="_blank" rel="noopener noreferrer">S. La Torre</a>, <a href="https://madhu.cs.illinois.edu" target="_blank" rel="noopener noreferrer">P. Madhusudan</a>, and G. Parlato<br>22<sup>nd</sup> Int'l Conference on Computer Aided Verification (<a href="http://www.liafa.jussieu.fr/~touili/cav2010/" target="_blank" rel="noopener noreferrer">CAV</a>)<br>Edinburgh, UK, 2010<br><a href="https://eprints.soton.ac.uk/272454/" target="_blank" rel="noopener noreferrer">PDF</a></div>
             </div>
             
             <div class="paper-entry">
                <div class="bullet">&#8226;</div>
-               <div class="item"><strong>The Language Theory of Bounded Context-Switching<br></strong><a href="https://docenti.unisa.it/004821/en/home" target="_blank" rel="noopener noreferrer">S. La Torre</a>, <a href="https://madhu.cs.illinois.edu" target="_blank" rel="noopener noreferrer">P. Madhusudan</a>, and G. Parlato<br>9<sup>th</sup> Latin American Theoretical Informatics Symposium (<a href="http://www.cs.uwaterloo.ca/conferences/latin2010/index.html" target="_blank" rel="noopener noreferrer">LATIN</a>)<br>Oaxaca, Mexico, 2010<br><a href="https://eprints.soton.ac.uk/272455/" target="_blank" rel="noopener noreferrer">PDF</a>, <a href="https://gennaro-parlato.github.io/paper/latin2010.ppt" target="_blank" rel="noopener noreferrer">PPT</a></div>
+               <div class="item"><strong>The Language Theory of Bounded Context-Switching</strong><br><a href="https://docenti.unisa.it/004821/en/home" target="_blank" rel="noopener noreferrer">S. La Torre</a>, <a href="https://madhu.cs.illinois.edu" target="_blank" rel="noopener noreferrer">P. Madhusudan</a>, and G. Parlato<br>9<sup>th</sup> Latin American Theoretical Informatics Symposium (<a href="http://www.cs.uwaterloo.ca/conferences/latin2010/index.html" target="_blank" rel="noopener noreferrer">LATIN</a>)<br>Oaxaca, Mexico, 2010<br><a href="https://eprints.soton.ac.uk/272455/" target="_blank" rel="noopener noreferrer">PDF</a>, <a href="https://gennaro-parlato.github.io/paper/latin2010.ppt" target="_blank" rel="noopener noreferrer">PPT</a></div>
             </div>
             
             <div class="paper-entry">
                <div class="bullet">&#8226;</div>
-               <div class="item"><strong>Reducing Context-bounded Concurrent Reachability to Sequential Reachability<br></strong><a href="https://docenti.unisa.it/004821/en/home" target="_blank" rel="noopener noreferrer">S. La Torre</a>, <a href="https://madhu.cs.illinois.edu" target="_blank" rel="noopener noreferrer">P. Madhusudan</a>, and G. Parlato<br>21<sup>st</sup> Int'l Conference on Computer Aided Verification (<a href="https://i-cav.org/2009" target="_blank" rel="noopener noreferrer">CAV</a>)<br>Grenoble, France, 2009<br><a href="https://eprints.soton.ac.uk/272456/" target="_blank" rel="noopener noreferrer">PDF</a>, <a href="https://gennaro-parlato.github.io/paper/ParlatoCAV09.ppt" target="_blank" rel="noopener noreferrer">PPT</a>, See also the <a href="https://madhu.cs.illinois.edu/getafix/cbp2bp/" target="_blank" rel="noopener noreferrer">cbp2bp page</a>.</div>
+               <div class="item"><strong>Reducing Context-bounded Concurrent Reachability to Sequential Reachability</strong><br><a href="https://docenti.unisa.it/004821/en/home" target="_blank" rel="noopener noreferrer">S. La Torre</a>, <a href="https://madhu.cs.illinois.edu" target="_blank" rel="noopener noreferrer">P. Madhusudan</a>, and G. Parlato<br>21<sup>st</sup> Int'l Conference on Computer Aided Verification (<a href="https://i-cav.org/2009" target="_blank" rel="noopener noreferrer">CAV</a>)<br>Grenoble, France, 2009<br><a href="https://eprints.soton.ac.uk/272456/" target="_blank" rel="noopener noreferrer">PDF</a>, <a href="https://gennaro-parlato.github.io/paper/ParlatoCAV09.ppt" target="_blank" rel="noopener noreferrer">PPT</a>, See also the <a href="https://madhu.cs.illinois.edu/getafix/cbp2bp/" target="_blank" rel="noopener noreferrer">cbp2bp page</a>.</div>
             </div>
             
             <div class="paper-entry">
                <div class="bullet">&#8226;</div>
-               <div class="item"><strong>Analyzing Recursive Programs using Fixed-point Calculus<br></strong><a href="https://docenti.unisa.it/004821/en/home" target="_blank" rel="noopener noreferrer">S. La Torre</a>, <a href="https://madhu.cs.illinois.edu" target="_blank" rel="noopener noreferrer">P. Madhusudan</a>, and G. Parlato<br>30<sup>th</sup> annual ACM SIGPLAN 2009 Conference on Programming Language Design and Implementation (<a href="http://www-plan.cs.colorado.edu/~pldi09/" target="_blank" rel="noopener noreferrer">PLDI</a>)<br>Dublin, Ireland, 2009<br><a href="https://eprints.soton.ac.uk/272457/" target="_blank" rel="noopener noreferrer">PDF</a>, <a href="https://gennaro-parlato.github.io/paper/Getafix.pptx" target="_blank" rel="noopener noreferrer">PPT</a>, See also the <a href="https://madhu.cs.illinois.edu/getafix/" target="_blank" rel="noopener noreferrer">Getafix page</a> for the tool and experiments</div>
+               <div class="item"><strong>Analyzing Recursive Programs using Fixed-point Calculus</strong><br><a href="https://docenti.unisa.it/004821/en/home" target="_blank" rel="noopener noreferrer">S. La Torre</a>, <a href="https://madhu.cs.illinois.edu" target="_blank" rel="noopener noreferrer">P. Madhusudan</a>, and G. Parlato<br>30<sup>th</sup> annual ACM SIGPLAN 2009 Conference on Programming Language Design and Implementation (<a href="http://www-plan.cs.colorado.edu/~pldi09/" target="_blank" rel="noopener noreferrer">PLDI</a>)<br>Dublin, Ireland, 2009<br><a href="https://eprints.soton.ac.uk/272457/" target="_blank" rel="noopener noreferrer">PDF</a>, <a href="https://gennaro-parlato.github.io/paper/Getafix.pptx" target="_blank" rel="noopener noreferrer">PPT</a>, See also the <a href="https://madhu.cs.illinois.edu/getafix/" target="_blank" rel="noopener noreferrer">Getafix page</a> for the tool and experiments</div>
             </div>
             
             <div class="paper-entry">
                <div class="bullet">&#8226;</div>
-               <div class="item"><strong>An Infinite Automaton Characterization of Double Exponential Time<br></strong><a href="https://docenti.unisa.it/004821/en/home" target="_blank" rel="noopener noreferrer">S. La Torre</a>, <a href="https://madhu.cs.illinois.edu" target="_blank" rel="noopener noreferrer">P. Madhusudan</a>, and G. Parlato<br>17<sup>th</sup> EACSL Annual Conference on Computer Science Logic (<a href="http://csl2008.cs.unibo.it/" target="_blank" rel="noopener noreferrer">CSL</a>)<br>Bertinoro, Italy, 2008<br><a href="https://eprints.soton.ac.uk/272460/" target="_blank" rel="noopener noreferrer">PDF</a>, <a href="https://gennaro-parlato.github.io/paper/ParlatoCSL2008.ppt" target="_blank" rel="noopener noreferrer">PPT</a></div>
+               <div class="item"><strong>An Infinite Automaton Characterization of Double Exponential Time</strong><br><a href="https://docenti.unisa.it/004821/en/home" target="_blank" rel="noopener noreferrer">S. La Torre</a>, <a href="https://madhu.cs.illinois.edu" target="_blank" rel="noopener noreferrer">P. Madhusudan</a>, and G. Parlato<br>17<sup>th</sup> EACSL Annual Conference on Computer Science Logic (<a href="http://csl2008.cs.unibo.it/" target="_blank" rel="noopener noreferrer">CSL</a>)<br>Bertinoro, Italy, 2008<br><a href="https://eprints.soton.ac.uk/272460/" target="_blank" rel="noopener noreferrer">PDF</a>, <a href="https://gennaro-parlato.github.io/paper/ParlatoCSL2008.ppt" target="_blank" rel="noopener noreferrer">PPT</a></div>
             </div>
             
             <div class="paper-entry">
                <div class="bullet">&#8226;</div>
-               <div class="item"><strong>Verification of Scope-Dependent Hierarchical State Machines<br></strong><a href="https://docenti.unisa.it/004821/en/home" target="_blank" rel="noopener noreferrer">S. La Torre</a>, <a href="http://www.di-srv.unisa.it/professori/napoli/" target="_blank" rel="noopener noreferrer">M. Napoli</a>, <a href="http://www.di-srv.unisa.it/professori/parente/" target="_blank" rel="noopener noreferrer">M. Parente</a>, and G. Parlato<br><a href="https://www.journals.elsevier.com/information-and-computation/" target="_blank" rel="noopener noreferrer">Information and Computation</a> 2008<br><a href="https://eprints.soton.ac.uk/272463/" target="_blank" rel="noopener noreferrer">PDF</a></div>
+               <div class="item"><strong>Verification of Scope-Dependent Hierarchical State Machines</strong><br><a href="https://docenti.unisa.it/004821/en/home" target="_blank" rel="noopener noreferrer">S. La Torre</a>, <a href="http://www.di-srv.unisa.it/professori/napoli/" target="_blank" rel="noopener noreferrer">M. Napoli</a>, <a href="http://www.di-srv.unisa.it/professori/parente/" target="_blank" rel="noopener noreferrer">M. Parente</a>, and G. Parlato<br><a href="https://www.journals.elsevier.com/information-and-computation/" target="_blank" rel="noopener noreferrer">Information and Computation</a> 2008<br><a href="https://eprints.soton.ac.uk/272463/" target="_blank" rel="noopener noreferrer">PDF</a></div>
             </div>
             
             <div class="paper-entry">
                <div class="bullet">&#8226;</div>
-               <div class="item"><strong>Context-Bounded Analysis of Concurrent Queue Systems<br></strong><a href="https://docenti.unisa.it/004821/en/home" target="_blank" rel="noopener noreferrer">S. La Torre</a>, <a href="https://madhu.cs.illinois.edu" target="_blank" rel="noopener noreferrer">P. Madhusudan</a>, and G. Parlato<br>14<sup>th</sup> Int'l Conference on Tools and Algorithms for the Construction and Analysis of Systems (<a href="http://www.cs.stonybrook.edu/~tacas2008/" target="_blank" rel="noopener noreferrer">TACAS</a>) <br>Budapest, Hungary, 2008<br><a href="https://eprints.soton.ac.uk/272462/" target="_blank" rel="noopener noreferrer">PDF</a>, <a href="https://gennaro-parlato.github.io/paper/ParlatoTACAS2008.ppt" target="_blank" rel="noopener noreferrer">PPT</a></div>
+               <div class="item"><strong>Context-Bounded Analysis of Concurrent Queue Systems</strong><br><a href="https://docenti.unisa.it/004821/en/home" target="_blank" rel="noopener noreferrer">S. La Torre</a>, <a href="https://madhu.cs.illinois.edu" target="_blank" rel="noopener noreferrer">P. Madhusudan</a>, and G. Parlato<br>14<sup>th</sup> Int'l Conference on Tools and Algorithms for the Construction and Analysis of Systems (<a href="http://www.cs.stonybrook.edu/~tacas2008/" target="_blank" rel="noopener noreferrer">TACAS</a>) <br>Budapest, Hungary, 2008<br><a href="https://eprints.soton.ac.uk/272462/" target="_blank" rel="noopener noreferrer">PDF</a>, <a href="https://gennaro-parlato.github.io/paper/ParlatoTACAS2008.ppt" target="_blank" rel="noopener noreferrer">PPT</a></div>
             </div>
             
             <div class="paper-entry">
@@ -783,7 +921,7 @@
             
             <div class="paper-entry">
                <div class="bullet">&#8226;</div>
-               <div class="item"><strong>On the Complexity of LTL Model-Checking of Recursive State Machines<br></strong><a href="https://docenti.unisa.it/004821/en/home" target="_blank" rel="noopener noreferrer">S. La Torre</a>, and G. Parlato<br>34<sup>th</sup> Int'l Colloquium on Automata, Languages and Programming (<a href="http://icalp07.ii.uni.wroc.pl/" target="_blank" rel="noopener noreferrer">ICALP</a>)<br>Wroclaw, Poland, 2007<br><a href="https://eprints.soton.ac.uk/272464/" target="_blank" rel="noopener noreferrer">PDF</a></div>
+               <div class="item"><strong>On the Complexity of LTL Model-Checking of Recursive State Machines</strong><br><a href="https://docenti.unisa.it/004821/en/home" target="_blank" rel="noopener noreferrer">S. La Torre</a>, and G. Parlato<br>34<sup>th</sup> Int'l Colloquium on Automata, Languages and Programming (<a href="http://icalp07.ii.uni.wroc.pl/" target="_blank" rel="noopener noreferrer">ICALP</a>)<br>Wroclaw, Poland, 2007<br><a href="https://eprints.soton.ac.uk/272464/" target="_blank" rel="noopener noreferrer">PDF</a></div>
             </div>
             
             <div class="paper-entry">
@@ -793,7 +931,7 @@
             
             <div class="paper-entry">
                <div class="bullet">&#8226;</div>
-               <div class="item"><strong>Improvements for Truthful Mechanisms with Verifiable One-Parameter Selfish Agents<br></strong> A. Ferrante, G. Parlato, F. Sorrentino, and <a href="https://www.kcl.ac.uk/people/carmine-ventre" target="_blank" rel="noopener noreferrer">C. Ventre</a><br>3<sup>rd</sup> Workshop on Approximation and Online Algorithms (<a href="http://www.cs.le.ac.uk/people/te17/WAOA2005/" target="_blank" rel="noopener noreferrer">WAOA</a>)<br>Palma de Mallorca, Mallorca, Balear Islands, Spain, 2005<br><a href="https://eprints.soton.ac.uk/272466/" target="_blank" rel="noopener noreferrer">PDF</a></div>
+               <div class="item"><strong>Improvements for Truthful Mechanisms with Verifiable One-Parameter Selfish Agents</strong><br> A. Ferrante, G. Parlato, F. Sorrentino, and <a href="https://www.kcl.ac.uk/people/carmine-ventre" target="_blank" rel="noopener noreferrer">C. Ventre</a><br>3<sup>rd</sup> Workshop on Approximation and Online Algorithms (<a href="http://www.cs.le.ac.uk/people/te17/WAOA2005/" target="_blank" rel="noopener noreferrer">WAOA</a>)<br>Palma de Mallorca, Mallorca, Balear Islands, Spain, 2005<br><a href="https://eprints.soton.ac.uk/272466/" target="_blank" rel="noopener noreferrer">PDF</a></div>
             </div>
             
             <div class="paper-entry">
@@ -803,15 +941,16 @@
             
             <div class="paper-entry">
                <div class="bullet">&#8226;</div>
-               <div class="item"><strong>Minimum Weighted Feedback Vertex Set on Diamonds<br></strong><a href="https://docenti.unisa.it/005545/en/home" target="_blank" rel="noopener noreferrer">F. Carrabs</a>, <a href="http://www.dipmat2.unisa.it/people/cerulli/www/" target="_blank" rel="noopener noreferrer">R. Cerulli</a>, <a href="https://engineering.louisville.edu/faculty/monica-gentili/" target="_blank" rel="noopener noreferrer">M. Gentili</a>, and G. Parlato<br>Electronic Notes in Discrete Mathematics (<a href="https://www.journals.elsevier.com/electronic-notes-in-discrete-mathematics" target="_blank" rel="noopener noreferrer">ENDM</a>), 2004<br><a href="https://eprints.soton.ac.uk/370687/" target="_blank" rel="noopener noreferrer">PDF</a></div>
+               <div class="item"><strong>Minimum Weighted Feedback Vertex Set on Diamonds</strong><br><a href="https://docenti.unisa.it/005545/en/home" target="_blank" rel="noopener noreferrer">F. Carrabs</a>, <a href="http://www.dipmat2.unisa.it/people/cerulli/www/" target="_blank" rel="noopener noreferrer">R. Cerulli</a>, <a href="https://engineering.louisville.edu/faculty/monica-gentili/" target="_blank" rel="noopener noreferrer">M. Gentili</a>, and G. Parlato<br>Electronic Notes in Discrete Mathematics (<a href="https://www.journals.elsevier.com/electronic-notes-in-discrete-mathematics" target="_blank" rel="noopener noreferrer">ENDM</a>), 2004<br><a href="https://eprints.soton.ac.uk/370687/" target="_blank" rel="noopener noreferrer">PDF</a></div>
             </div>
             
             <div class="paper-entry">
                <div class="bullet">&#8226;</div>
-               <div class="item"><strong>Hierarchical and Recursive State Machines with Context-Dependent Properties<br></strong><a href="https://docenti.unisa.it/004821/en/home" target="_blank" rel="noopener noreferrer">S. La Torre</a>, <a href="http://www.di-srv.unisa.it/professori/napoli/" target="_blank" rel="noopener noreferrer">M. Napoli</a>, <a href="http://www.di-srv.unisa.it/professori/parente/" target="_blank" rel="noopener noreferrer">M. Parente</a>, and G. Parlato<br>30<sup>th</sup> Int'l Colloquium on Automata, Languages and Programming (<a href="http://www.win.tue.nl/icalp2003/" target="_blank" rel="noopener noreferrer">ICALP</a>)<br>Eindhoven, The Netherlands, 2003<br><a href="https://eprints.soton.ac.uk/272469/" target="_blank" rel="noopener noreferrer">PDF</a>, <a href="https://gennaro-parlato.github.io/paper/icalp2003.ppt" target="_blank" rel="noopener noreferrer">PPT</a></div>
+               <div class="item"><strong>Hierarchical and Recursive State Machines with Context-Dependent Properties</strong><br><a href="https://docenti.unisa.it/004821/en/home" target="_blank" rel="noopener noreferrer">S. La Torre</a>, <a href="http://www.di-srv.unisa.it/professori/napoli/" target="_blank" rel="noopener noreferrer">M. Napoli</a>, <a href="http://www.di-srv.unisa.it/professori/parente/" target="_blank" rel="noopener noreferrer">M. Parente</a>, and G. Parlato<br>30<sup>th</sup> Int'l Colloquium on Automata, Languages and Programming (<a href="http://www.win.tue.nl/icalp2003/" target="_blank" rel="noopener noreferrer">ICALP</a>)<br>Eindhoven, The Netherlands, 2003<br><a href="https://eprints.soton.ac.uk/272469/" target="_blank" rel="noopener noreferrer">PDF</a>, <a href="https://gennaro-parlato.github.io/paper/icalp2003.ppt" target="_blank" rel="noopener noreferrer">PPT</a></div>
             </div>
 
-         </div> <div class="shinystat-container">
+                    </div> </details>
+            </div> <div class="shinystat-container">
             <script src="https://codice.shinystat.com/cgi-bin/getcod.cgi?USER=parlato"></script>
             <noscript>
                <a href="https://www.shinystat.com/it/" target="_top">
